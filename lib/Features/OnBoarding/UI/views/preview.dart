@@ -1,5 +1,4 @@
 import 'package:e_gem/Features/OnBoarding/ui/views/widgets/singleview.dart';
-import 'package:e_gem/Features/auth/views/LogIn.dart';
 import 'package:e_gem/constants.dart';
 import 'package:e_gem/core/utils/images.dart';
 import 'package:e_gem/core/widgets/wide_button.dart';
@@ -8,6 +7,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+import '../../../auth/ui/views/LogIn.dart';
 
 class Preview extends StatefulWidget {
   const Preview({Key? key}) : super(key: key);
