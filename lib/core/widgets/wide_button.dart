@@ -24,7 +24,6 @@ class WideButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(10.r),
             border: Border.all(color: kprimaryColor, width: 1.w)),
         child: Center(
-          //  index == 2 ? '''Let's Started''' : "Next",
           child: Text(
             title,
             style: faded.copyWith(

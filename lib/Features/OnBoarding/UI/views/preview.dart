@@ -25,6 +25,7 @@ class _PreviewState extends State<Preview> {
     return Scaffold(
       body: Column(
         children: [
+          SizedBox(height: 50.h),
           Expanded(
             child: PageView(
               controller: _controller,
