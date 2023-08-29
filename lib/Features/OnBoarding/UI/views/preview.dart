@@ -21,67 +21,65 @@ class _PreviewState extends State<Preview> {
   int index = 0;
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Column(
-          children: [
-            Expanded(
-              child: PageView(
-                controller: _controller,
-                onPageChanged: (value) {
-                  setState(() {
-                    index = value;
-                  });
-                },
-                children: const [
-                  Singleview(
-                      image: Assets.imagesP1,
-                      title: "Train with top personal coaches",
-                      subtitle:
-                          "Book virtual personal training sessions\nwith our certified coaches."),
-                  Singleview(
-                      image: Assets.imagesP2,
-                      title: "Track your progress",
-                      subtitle:
-                          "Stay motivated by tracking your\nprogress on your fitness journey."),
-                  Singleview(
-                      image: Assets.imagesP3,
-                      title: "Plan your meal",
-                      subtitle:
-                          "Take control of your nutrition with our\nmeal planning feature."),
-                ],
-              ),
-            ),
-            SmoothPageIndicator(
+    return Scaffold(
+      body: Column(
+        children: [
+          Expanded(
+            child: PageView(
               controller: _controller,
-              count: 3,
-              effect: ExpandingDotsEffect(activeDotColor: kprimaryColor),
+              onPageChanged: (value) {
+                setState(() {
+                  index = value;
+                });
+              },
+              children: const [
+                Singleview(
+                    image: Assets.imagesP1,
+                    title: "Train with top personal coaches",
+                    subtitle:
+                        "Book virtual personal training sessions\nwith our certified coaches."),
+                Singleview(
+                    image: Assets.imagesP2,
+                    title: "Track your progress",
+                    subtitle:
+                        "Stay motivated by tracking your\nprogress on your fitness journey."),
+                Singleview(
+                    image: Assets.imagesP3,
+                    title: "Plan your meal",
+                    subtitle:
+                        "Take control of your nutrition with our\nmeal planning feature."),
+              ],
             ),
-            SizedBox(
-              height: 50.h,
-            ),
-            index == 2
-                ? WideButton(
-                    title: '''Let's Started''',
-                    onTap: () {
-                      Get.to(() => LogIn());
-                      dispose();
-                    },
-                  )
-                : WideButton(
-                    onTap: () {
-                      _controller.nextPage(
-                          duration: Duration(milliseconds: 500),
-                          curve: Curves.linear);
-                    },
-                    color: Color(0xFFEFEFEF),
-                    title: "Next",
-                  ),
-            SizedBox(
-              height: 50.h,
-            )
-          ],
-        ),
+          ),
+          SmoothPageIndicator(
+            controller: _controller,
+            count: 3,
+            effect: ExpandingDotsEffect(activeDotColor: kprimaryColor),
+          ),
+          SizedBox(
+            height: 50.h,
+          ),
+          index == 2
+              ? WideButton(
+                  title: '''Let's Started''',
+                  onTap: () {
+                    Get.to(() => LogIn());
+                    dispose();
+                  },
+                )
+              : WideButton(
+                  onTap: () {
+                    _controller.nextPage(
+                        duration: Duration(milliseconds: 500),
+                        curve: Curves.linear);
+                  },
+                  color: Color(0xFFEFEFEF),
+                  title: "Next",
+                ),
+          SizedBox(
+            height: 50.h,
+          )
+        ],
       ),
     );
   }

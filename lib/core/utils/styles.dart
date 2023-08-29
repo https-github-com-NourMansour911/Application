@@ -15,4 +15,5 @@ final TextStyle faded = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeight.w500,
     color: Color(0xff626262),
-    letterSpacing: 0.5);
+    height: 1.5,
+    letterSpacing: 0.7);
