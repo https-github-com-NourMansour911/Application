@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:e_gem/constants.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CkBox extends StatelessWidget {
   final void Function(bool?)? onChanged;
@@ -18,7 +19,7 @@ class CkBox extends StatelessWidget {
       value: Value,
       side: BorderSide(color: kfadedColor),
       onChanged: onChanged,
-      visualDensity: VisualDensity(horizontal: -4.0, vertical: -4.0),
+      visualDensity: VisualDensity(horizontal: -3.6.w, vertical: 0.h),
       checkColor: Colors.white,
       fillColor: MaterialStateProperty.all(kprimaryColor),
     );

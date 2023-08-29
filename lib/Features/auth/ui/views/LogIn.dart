@@ -1,9 +1,10 @@
 import 'package:e_gem/Features/auth/ui/view_models/login/login_cubit.dart';
 import 'package:e_gem/Features/auth/ui/view_models/password/password_cubit.dart';
-import 'package:e_gem/Features/auth/ui/views/widgets/Custom_CheckBox.dart';
+import 'package:e_gem/Features/auth/ui/views/widgets/rem_password.dart';
 import 'package:e_gem/constants.dart';
 import 'package:e_gem/core/utils/styles.dart';
 import 'package:e_gem/Features/auth/ui/views/widgets/TxtField.dart';
+import 'package:e_gem/core/widgets/wide_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -33,7 +34,7 @@ class LogIn extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               SizedBox(
-                height: 70.h,
+                height: 90.h,
               ),
               Text(
                 "Hello,\nWelcome Back!",
@@ -50,9 +51,9 @@ class LogIn extends StatelessWidget {
                   color: kfadedColor,
                 ),
               ),
-              SizedBox(height: 26.h),
+              SizedBox(height: 36.h),
               CustomTextField(hint: 'Email', icon: Assets.imagesEmailIcon),
-              SizedBox(height: 26.h),
+              SizedBox(height: 16.h),
               CustomTextField(
                   hint: 'Password', icon: Assets.imagesPasswordIcon),
               Row(
@@ -64,40 +65,15 @@ class LogIn extends StatelessWidget {
                       child: Text("Forget password ?", style: notes)),
                 ],
               ),
+              SizedBox(
+                height: 40.h,
+              ),
+              WideButton(
+                title: "Sign In",
+              ),
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class RememberPassword extends StatelessWidget {
-  const RememberPassword({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: BlocBuilder<PasswordCubit, PasswordState>(
-        builder: (context, state) {
-          return Row(
-            children: [
-              Transform.scale(
-                scale: 0.8,
-                child: CkBox(
-                  Value: BlocProvider.of<PasswordCubit>(context).isSaved,
-                  onChanged: (bool? newValue) {
-                    BlocProvider.of<PasswordCubit>(context)
-                        .SavePassword(newValue);
-                  },
-                ),
-              ),
-              Text('Remember Password', style: notes),
-            ],
-          );
-        },
       ),
     );
   }

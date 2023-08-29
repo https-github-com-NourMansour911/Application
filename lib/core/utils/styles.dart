@@ -13,7 +13,7 @@ final TextStyle subtitle_20 =
 
 final TextStyle faded = TextStyle(
   fontSize: 16.sp,
-  fontWeight: FontWeight.w500,
+  fontWeight: FontWeight.w600,
   color: const Color(0xff626262),
 );
 

@@ -18,7 +18,6 @@ class WideButton extends StatelessWidget {
       child: Container(
         width: 320.w,
         height: 50.h,
-        margin: EdgeInsets.symmetric(horizontal: 16.w),
         decoration: BoxDecoration(
             color: color,
             borderRadius: BorderRadius.circular(10.r),
