@@ -1,6 +1,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesEmailIcon
+  /// assets/images/email_icon.png
+  static const String imagesEmailIcon = "assets/images/email_icon.png";
+
   /// Assets for imagesP1
   /// assets/images/p1.svg
   static const String imagesP1 = "assets/images/p1.svg";
@@ -12,6 +16,10 @@ class Assets {
   /// Assets for imagesP3
   /// assets/images/p3.svg
   static const String imagesP3 = "assets/images/p3.svg";
+
+  /// Assets for imagesPasswordIcon
+  /// assets/images/password_icon.png
+  static const String imagesPasswordIcon = "assets/images/password_icon.png";
 
   /// Assets for imagesSplash
   /// assets/images/splash.svg

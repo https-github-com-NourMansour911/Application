@@ -35,7 +35,7 @@ class _SingleviewState extends State<Singleview> {
         ),
         Text(
           widget.title,
-          style: subtitle,
+          style: subtitle_20,
         ),
         SizedBox(
           height: 12.h,

@@ -55,7 +55,7 @@ class _PreviewState extends State<Preview> {
           SmoothPageIndicator(
             controller: _controller,
             count: 3,
-            effect: ExpandingDotsEffect(activeDotColor: kprimaryColor),
+            effect: const ExpandingDotsEffect(activeDotColor: kprimaryColor),
           ),
           SizedBox(
             height: 50.h,
@@ -64,16 +64,16 @@ class _PreviewState extends State<Preview> {
               ? WideButton(
                   title: '''Let's Started''',
                   onTap: () {
-                    GoRouter.of(context).push(AppRouter.klogin);
+                    GoRouter.of(context).pushReplacement(AppRouter.klogin);
                   },
                 )
               : WideButton(
                   onTap: () {
                     _controller.nextPage(
-                        duration: Duration(milliseconds: 500),
+                        duration: const Duration(milliseconds: 500),
                         curve: Curves.linear);
                   },
-                  color: Color(0xFFEFEFEF),
+                  color: const Color(0xFFEFEFEF),
                   title: "Next",
                 ),
           SizedBox(

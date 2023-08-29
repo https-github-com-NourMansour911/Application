@@ -14,7 +14,7 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(milliseconds: 1500), () {
-      GoRouter.of(context).push(AppRouter.kpreview);
+      GoRouter.of(context).pushReplacement(AppRouter.klogin);
     });
 
     return Scaffold(
@@ -28,14 +28,11 @@ class SplashView extends StatelessWidget {
             height: 155.h,
             width: 206.w,
           ),
-          SizedBox(height: 28.h),
+          SizedBox(height: 24.h),
           Text(
             'E-Gem',
             style: title.copyWith(color: Colors.white),
             textAlign: TextAlign.center,
-          ),
-          SizedBox(
-            height: 3.h,
           ),
           Text(
             "Choose Your coach",
