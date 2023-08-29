@@ -4,11 +4,10 @@ import 'package:e_gem/core/utils/images.dart';
 import 'package:e_gem/core/widgets/wide_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
+import 'package:go_router/go_router.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../../../auth/ui/views/LogIn.dart';
+import '../../../../core/utils/routes.dart';
 
 class Preview extends StatefulWidget {
   const Preview({Key? key}) : super(key: key);
@@ -65,8 +64,7 @@ class _PreviewState extends State<Preview> {
               ? WideButton(
                   title: '''Let's Started''',
                   onTap: () {
-                    Get.to(() => LogIn());
-                    dispose();
+                    GoRouter.of(context).push(AppRouter.klogin);
                   },
                 )
               : WideButton(

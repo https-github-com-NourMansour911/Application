@@ -1,12 +1,12 @@
-import 'package:e_gem/Features/OnBoarding/UI/views/preview.dart';
 import 'package:e_gem/constants.dart';
 import 'package:e_gem/core/utils/images.dart';
 import 'package:e_gem/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../core/utils/routes.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({Key? key}) : super(key: key);
@@ -14,9 +14,9 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(milliseconds: 1500), () {
-      Get.to(() => Preview(),
-          transition: Transition.fade, duration: const Duration(seconds: 1));
+      GoRouter.of(context).push(AppRouter.kpreview);
     });
+
     return Scaffold(
       backgroundColor: kprimaryColor,
       body: Column(
