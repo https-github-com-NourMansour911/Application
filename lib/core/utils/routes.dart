@@ -3,7 +3,7 @@ import 'package:e_gem/Features/auth/ui/views/LogIn.dart';
 import 'package:e_gem/Features/auth/ui/views/SignUp.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../Features/OnBoarding/UI/views/Splash_view.dart';
+import '../../Features/OnBoarding/views/Splash_view.dart';
 
 abstract class AppRouter {
   static const kHome = '/home';

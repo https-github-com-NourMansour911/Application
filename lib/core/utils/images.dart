@@ -5,6 +5,14 @@ class Assets {
   /// assets/images/email_icon.png
   static const String imagesEmailIcon = "assets/images/email_icon.png";
 
+  /// Assets for imagesFacebookIcon
+  /// assets/images/facebook_icon.svg
+  static const String imagesFacebookIcon = "assets/images/facebook_icon.svg";
+
+  /// Assets for imagesGoogleIcon
+  /// assets/images/google_icon.svg
+  static const String imagesGoogleIcon = "assets/images/google_icon.svg";
+
   /// Assets for imagesP1
   /// assets/images/p1.svg
   static const String imagesP1 = "assets/images/p1.svg";

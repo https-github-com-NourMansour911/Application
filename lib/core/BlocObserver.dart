@@ -4,17 +4,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class SimpleBlocObserver implements BlocObserver {
   @override
   void onChange(StateStreamableSource<dynamic> bloc, Change change) {
-    debugPrint('Change = ${change.toString()}');
+    debugPrint('Change = ${change.toString().replaceAll("Instance of ", "")}');
   }
 
   @override
   void onClose(BlocBase bloc) {
-    debugPrint('Close = ${bloc.toString()}');
+    debugPrint('Close = ${bloc.toString().replaceAll("Instance of ", "")}');
   }
 
   @override
   void onCreate(BlocBase bloc) {
-    debugPrint('Create = ${bloc.toString()}');
+    debugPrint('Create = ${bloc.toString().replaceAll("Instance of ", "")}');
   }
 
   @override

@@ -21,7 +21,7 @@ class CkBox extends StatelessWidget {
       onChanged: onChanged,
       visualDensity: VisualDensity(horizontal: -3.6.w, vertical: 0.h),
       checkColor: Colors.white,
-      fillColor: MaterialStateProperty.all(kprimaryColor),
+      activeColor: kprimaryColor,
     );
   }
 }

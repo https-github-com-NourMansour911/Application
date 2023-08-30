@@ -10,8 +10,12 @@ class CustomTextField extends StatelessWidget {
     this.onSaved,
     this.onChanged,
     required this.icon,
+    this.obscure = false,
+    this.suffixIcon,
   });
+  final bool obscure;
   final String icon;
+  final Widget? suffixIcon;
   final String hint;
   final int maxLines;
 
@@ -23,6 +27,7 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       onChanged: onChanged,
+      obscureText: obscure,
       onSaved: onSaved,
       validator: (value) {
         if (value?.isEmpty ?? true) {
@@ -34,12 +39,13 @@ class CustomTextField extends StatelessWidget {
       cursorColor: Color(0xff9D9FA0),
       maxLines: maxLines,
       decoration: InputDecoration(
+        suffixIcon: suffixIcon,
         prefixIcon: Image.asset(
           icon,
         ),
         hintText: hint,
         hintStyle: TextStyle(
-            fontSize: 16, fontWeight: FontWeight.w400, color: kfadedColor),
+            fontSize: 16.sp, fontWeight: FontWeight.w400, color: kfadedColor),
         border: buildBorder(),
         enabledBorder: buildBorder(),
         focusedBorder: buildBorder(),
@@ -52,6 +58,6 @@ class CustomTextField extends StatelessWidget {
         borderRadius: BorderRadius.circular(
           8.r,
         ),
-        borderSide: BorderSide(color: Color(0xff9D9FA0), width: 1.h));
+        borderSide: BorderSide(color: Colors.black, width: 1.h));
   }
 }
