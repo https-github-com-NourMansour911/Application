@@ -11,13 +11,13 @@ class AuthOptions extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         SquareTile(
-          platform: Platform.google,
+          platform: Platform.facebook,
         ),
         SizedBox(
           width: 24.w,
         ),
         SquareTile(
-          platform: Platform.facebook,
+          platform: Platform.google,
         ),
       ],
     );
