@@ -1,4 +1,3 @@
-import 'package:e_gem/Features/auth/ui/view_models/auth_bloc/auth_bloc.dart';
 import 'package:e_gem/constants.dart';
 import 'package:e_gem/core/utils/styles.dart';
 import 'package:flutter/material.dart';
