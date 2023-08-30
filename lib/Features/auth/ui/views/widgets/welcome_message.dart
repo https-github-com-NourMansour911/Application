@@ -7,9 +7,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class WelcomeMessage extends StatelessWidget {
   const WelcomeMessage({
     super.key,
-    this.authMode = AuthMode.LogIn,
+    required this.title,
+    required this.subtitle,
   });
-  final AuthMode authMode;
+  final String title;
+  final String subtitle;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -20,14 +22,12 @@ class WelcomeMessage extends StatelessWidget {
           height: 70.h,
         ),
         Text(
-          authMode == AuthMode.LogIn
-              ? "Hello,\nWelcome Back!"
-              : "Create\nNew Account",
+          title,
           style: subtitle_32,
         ),
         SizedBox(height: 16.h),
         Text(
-          'Sign in and get your health personalized with our E-Gem',
+          subtitle,
           style: TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.w600,
