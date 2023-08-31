@@ -1,8 +1,8 @@
+import 'package:e_gem/Features/auth/ui/view_models/UserForm_cubit/UserForm_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/utils/styles.dart';
-import '../../view_models/password_cubit/password_cubit.dart';
 import 'Custom_CheckBox.dart';
 
 class RememberPassword extends StatelessWidget {
@@ -15,14 +15,14 @@ class RememberPassword extends StatelessWidget {
     return Expanded(
       child: Row(
         children: [
-          BlocBuilder<PasswordCubit, PasswordState>(
+          BlocBuilder<UserFormCubit, UserFormState>(
             builder: (context, state) {
               return Transform.scale(
                 scale: 0.8,
                 child: CkBox(
-                  Value: BlocProvider.of<PasswordCubit>(context).isSaved,
+                  Value: BlocProvider.of<UserFormCubit>(context).isSaved,
                   onChanged: (bool? newValue) {
-                    BlocProvider.of<PasswordCubit>(context)
+                    BlocProvider.of<UserFormCubit>(context)
                         .SavePassword(newValue);
                   },
                 ),

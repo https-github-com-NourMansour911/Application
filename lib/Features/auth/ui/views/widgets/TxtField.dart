@@ -1,4 +1,4 @@
-import 'package:e_gem/constants.dart';
+import 'package:e_gem/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,13 +12,14 @@ class CustomTextField extends StatelessWidget {
     required this.icon,
     this.obscure = false,
     this.suffixIcon,
+    this.textInputType = TextInputType.text,
   });
   final bool obscure;
   final String icon;
   final Widget? suffixIcon;
   final String hint;
   final int maxLines;
-
+  final TextInputType textInputType;
   final void Function(String?)? onSaved;
 
   final Function(String)? onChanged;
@@ -38,14 +39,14 @@ class CustomTextField extends StatelessWidget {
       },
       cursorColor: Color(0xff9D9FA0),
       maxLines: maxLines,
+      keyboardType: textInputType,
       decoration: InputDecoration(
         suffixIcon: suffixIcon,
         prefixIcon: Image.asset(
           icon,
         ),
         hintText: hint,
-        hintStyle: TextStyle(
-            fontSize: 16.sp, fontWeight: FontWeight.w400, color: kfadedColor),
+        hintStyle: formStyle,
         border: buildBorder(),
         enabledBorder: buildBorder(),
         focusedBorder: buildBorder(),

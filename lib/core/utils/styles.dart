@@ -1,3 +1,4 @@
+import 'package:e_gem/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,6 +17,8 @@ final TextStyle faded = TextStyle(
   fontWeight: FontWeight.w600,
   color: const Color(0xff626262),
 );
+final TextStyle formStyle =
+    TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w400, color: kfadedColor);
 
 final TextStyle subtitle_32 = TextStyle(
   fontSize: 32,

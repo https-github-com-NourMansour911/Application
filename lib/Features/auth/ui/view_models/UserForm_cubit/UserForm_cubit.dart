@@ -1,12 +1,14 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
-part 'password_state.dart';
+part 'UserForm_state.dart';
 
-class PasswordCubit extends Cubit<PasswordState> {
-  PasswordCubit() : super(PasswordForget());
+class UserFormCubit extends Cubit<UserFormState> {
+  UserFormCubit() : super(UserFormInitial());
+  String Gender = 'Gender';
   bool isSaved = false;
   bool isHidden = true;
+
   void SavePassword(isSaved) {
     this.isSaved = isSaved;
     emit(PasswordSave());
@@ -15,5 +17,10 @@ class PasswordCubit extends Cubit<PasswordState> {
   showPassword() {
     isHidden = !isHidden;
     emit(PasswordHidden());
+  }
+
+  selectGender(String gender) {
+    Gender = gender;
+    emit(GenderSelected());
   }
 }
