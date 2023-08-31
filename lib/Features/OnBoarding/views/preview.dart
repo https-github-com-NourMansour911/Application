@@ -60,22 +60,25 @@ class _PreviewState extends State<Preview> {
           SizedBox(
             height: 50.h,
           ),
-          index == 2
-              ? WideButton(
-                  title: '''Let's Started''',
-                  onPressed: () {
-                    GoRouter.of(context).pushReplacement(AppRouter.klogin);
-                  },
-                )
-              : WideButton(
-                  onPressed: () {
-                    _controller.nextPage(
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.linear);
-                  },
-                  color: const Color(0xFFEFEFEF),
-                  title: "Next",
-                ),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 16.h),
+            child: index == 2
+                ? WideButton(
+                    title: '''Let's Started''',
+                    onPressed: () {
+                      GoRouter.of(context).pushReplacement(AppRouter.klogin);
+                    },
+                  )
+                : WideButton(
+                    onPressed: () {
+                      _controller.nextPage(
+                          duration: const Duration(milliseconds: 500),
+                          curve: Curves.linear);
+                    },
+                    color: const Color(0xFFEFEFEF),
+                    title: "Next",
+                  ),
+          ),
           SizedBox(
             height: 50.h,
           )

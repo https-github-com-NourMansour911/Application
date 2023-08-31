@@ -1,6 +1,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesCheckMail
+  /// assets/images/check_mail.svg
+  static const String imagesCheckMail = "assets/images/check_mail.svg";
+
   /// Assets for imagesDropDownIcon
   /// assets/images/drop_down_icon.jpg
   static const String imagesDropDownIcon = "assets/images/drop_down_icon.jpg";
@@ -12,6 +16,10 @@ class Assets {
   /// Assets for imagesFacebookIcon
   /// assets/images/facebook_icon.svg
   static const String imagesFacebookIcon = "assets/images/facebook_icon.svg";
+
+  /// Assets for imagesForgotPassword
+  /// assets/images/forgot_password.svg
+  static const String imagesForgotPassword = "assets/images/forgot_password.svg";
 
   /// Assets for imagesGenderIcon
   /// assets/images/gender_icon.jpg
@@ -33,9 +41,17 @@ class Assets {
   /// assets/images/p3.svg
   static const String imagesP3 = "assets/images/p3.svg";
 
+  /// Assets for imagesPasswordChanged
+  /// assets/images/password_changed.svg
+  static const String imagesPasswordChanged = "assets/images/password_changed.svg";
+
   /// Assets for imagesPasswordIcon
   /// assets/images/password_icon.png
   static const String imagesPasswordIcon = "assets/images/password_icon.png";
+
+  /// Assets for imagesResetPassword
+  /// assets/images/reset_password.svg
+  static const String imagesResetPassword = "assets/images/reset_password.svg";
 
   /// Assets for imagesSplash
   /// assets/images/splash.svg

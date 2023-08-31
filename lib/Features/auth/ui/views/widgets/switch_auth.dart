@@ -20,7 +20,7 @@ class SwitchAuth extends StatelessWidget {
               ? "Don't have an account?  "
               : authMode == AuthMode.SignUp
                   ? "Already have an account?  "
-                  : authMode == AuthMode.SendCode
+                  : authMode == AuthMode.Verifying
                       ? "Send code again:  "
                       : "Remember password?  ",
           style: notes,
@@ -34,7 +34,7 @@ class SwitchAuth extends StatelessWidget {
                 ? "Create Account"
                 : authMode == AuthMode.SignUp
                     ? "Sign In"
-                    : authMode == AuthMode.SendCode
+                    : authMode == AuthMode.Verifying
                         ? "00:20"
                         : "Login",
             style: TextStyle(
@@ -48,10 +48,3 @@ class SwitchAuth extends StatelessWidget {
     );
   }
 }
- /* authMode == AuthMode.LogIn
-              ? "Create Account"
-              : authMode == AuthMode.SignUp
-                  ? "Sign In"
-                  : authMode == AuthMode.SendCode
-                      ? "00:20"
-                      : "Login" */

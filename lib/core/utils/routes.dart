@@ -1,4 +1,5 @@
 import 'package:e_gem/Features/OnBoarding/views/preview.dart';
+import 'package:e_gem/Features/auth/ui/views/ForgetPassword.dart';
 import 'package:e_gem/Features/auth/ui/views/LogIn.dart';
 import 'package:e_gem/Features/auth/ui/views/SignUp.dart';
 import 'package:go_router/go_router.dart';
@@ -10,6 +11,7 @@ abstract class AppRouter {
   static const klogin = '/login';
   static const kSignUp = '/signup';
   static const kpreview = '/preview';
+  static const kforgetpassword = '/forgetpassword';
 
   static final router = GoRouter(
     routes: [
@@ -28,6 +30,10 @@ abstract class AppRouter {
       GoRoute(
         path: kSignUp,
         builder: (context, state) => const SignUp(),
+      ),
+      GoRoute(
+        path: kforgetpassword,
+        builder: (context, state) => const ForgetPassword(),
       ),
     ],
   );

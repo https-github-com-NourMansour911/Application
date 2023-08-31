@@ -5,7 +5,7 @@ import 'package:e_gem/Features/auth/ui/views/widgets/TxtField.dart';
 import 'package:e_gem/Features/auth/ui/views/widgets/auth_options.dart';
 import 'package:e_gem/Features/auth/ui/views/widgets/password_field.dart';
 import 'package:e_gem/Features/auth/ui/views/widgets/switch_auth.dart';
-import 'package:e_gem/Features/auth/ui/views/widgets/welcome_message.dart';
+import 'package:e_gem/Features/auth/ui/views/widgets/auth_messages.dart';
 import 'package:e_gem/core/utils/images.dart';
 import 'package:e_gem/core/widgets/wide_button.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +21,7 @@ class SignUpBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           SizedBox(height: 70.h),
-          WelcomeMessage(
+          AuthMessages(
               title: "Create\nNew Account",
               subtitle:
                   "Sign Up and get your health personalized with our E-Gem"),

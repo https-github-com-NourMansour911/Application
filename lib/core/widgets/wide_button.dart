@@ -2,8 +2,6 @@ import 'package:e_gem/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../utils/styles.dart';
-
 class WideButton extends StatelessWidget {
   const WideButton(
       {Key? key,
@@ -19,7 +17,7 @@ class WideButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        width: 320.w,
+        width: double.infinity,
         height: 50.h,
         decoration: BoxDecoration(
             color: color,
@@ -28,7 +26,9 @@ class WideButton extends StatelessWidget {
         child: Center(
           child: Text(
             title,
-            style: faded.copyWith(
+            style: TextStyle(
+              fontSize: 16.sp,
+              fontWeight: FontWeight.w600,
               color: color == kprimaryColor ? Colors.white : kprimaryColor,
             ),
           ),
