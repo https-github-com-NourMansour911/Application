@@ -38,7 +38,7 @@ class CustomTextField extends StatelessWidget {
           return null;
         }
       },
-      cursorColor: Color(0xff9D9FA0),
+      cursorColor: const Color(0xff9D9FA0),
       maxLines: maxLines,
       keyboardType: textInputType,
       decoration: InputDecoration(

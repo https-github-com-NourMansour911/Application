@@ -9,23 +9,40 @@ import '../../../../../core/utils/images.dart';
 class PasswordField extends StatelessWidget {
   const PasswordField({
     Key? key,
+    this.mode = PasswordFieldMode.Password,
   }) : super(key: key);
+  final PasswordFieldMode mode;
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<UserFormCubit, UserFormState>(
       builder: (context, state) {
         return CustomTextField(
-          hint: 'Password',
+          hint: mode == PasswordFieldMode.Password
+              ? 'Password'
+              : mode == PasswordFieldMode.New
+                  ? 'New Password'
+                  : "Confirm New Password",
           icon: Assets.imagesPasswordIcon,
-          obscure: BlocProvider.of<UserFormCubit>(context).isHidden,
+          obscure: mode == PasswordFieldMode.Password ||
+                  mode == PasswordFieldMode.New
+              ? BlocProvider.of<UserFormCubit>(context).isHidden
+              : BlocProvider.of<UserFormCubit>(context).ConfirmisHidden,
           suffixIcon: GestureDetector(
             onTap: () {
-              BlocProvider.of<UserFormCubit>(context).showPassword();
+              if (mode == PasswordFieldMode.Confirm) {
+                BlocProvider.of<UserFormCubit>(context).showConfirmPassword();
+              } else {
+                BlocProvider.of<UserFormCubit>(context).showPassword();
+              }
             },
             child: Icon(
-              !BlocProvider.of<UserFormCubit>(context).isHidden
-                  ? Icons.visibility_outlined
-                  : Icons.visibility_off_outlined,
+              mode == PasswordFieldMode.Confirm
+                  ? !BlocProvider.of<UserFormCubit>(context).ConfirmisHidden
+                      ? Icons.visibility_outlined
+                      : Icons.visibility_off_outlined
+                  : !BlocProvider.of<UserFormCubit>(context).isHidden
+                      ? Icons.visibility_outlined
+                      : Icons.visibility_off_outlined,
               color: kfadedColor,
             ),
           ),
@@ -34,3 +51,5 @@ class PasswordField extends StatelessWidget {
     );
   }
 }
+
+enum PasswordFieldMode { Password, New, Confirm }

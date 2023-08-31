@@ -1,18 +1,18 @@
-import 'package:e_gem/Features/auth/ui/view_models/UserForm_cubit/UserForm_cubit.dart';
-import 'package:e_gem/Features/auth/ui/views/Bodies/SignUp_body.dart';
+import 'package:e_gem/Features/auth/ui/view_models/auth_bloc/auth_bloc.dart';
+import 'package:e_gem/Features/auth/ui/views/Bodies/Verify_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SignUp extends StatelessWidget {
-  const SignUp({Key? key}) : super(key: key);
+class VerifyCodeView extends StatelessWidget {
+  const VerifyCodeView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => UserFormCubit(),
+          create: (context) => AuthBloc(),
         ),
       ],
       child: Scaffold(
@@ -23,7 +23,7 @@ class SignUp extends StatelessWidget {
             right: 16.w,
             bottom: MediaQuery.of(context).viewInsets.bottom,
           ),
-          child: const SignUpBody(),
+          child: const VerifyCodeViewBody(),
         ),
       ),
     );

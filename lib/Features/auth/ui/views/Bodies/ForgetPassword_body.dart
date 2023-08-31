@@ -5,33 +5,9 @@ import 'package:e_gem/core/utils/images.dart';
 import 'package:e_gem/core/utils/routes.dart';
 import 'package:e_gem/core/widgets/wide_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-
-class ForgetPassword extends StatelessWidget {
-  const ForgetPassword({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(
-          create: (context) => AuthBloc(),
-        ),
-      ],
-      child: Scaffold(
-        body: Container(
-          margin: EdgeInsets.symmetric(
-            horizontal: 16,
-          ),
-          child: ForgetPasswordBody(),
-        ),
-      ),
-    );
-  }
-}
 
 class ForgetPasswordBody extends StatelessWidget {
   const ForgetPasswordBody({Key? key}) : super(key: key);
@@ -43,14 +19,14 @@ class ForgetPasswordBody extends StatelessWidget {
         children: [
           SizedBox(height: 70.h),
           SvgPicture.asset(Assets.imagesForgotPassword),
-          AuthMessages(
+          const AuthMessages(
             title: 'Forgot Password?',
             subtitle:
                 "Don’t worry! It happens. Please enter the email associated with your account.",
             authMode: AuthMode.Verifying,
           ),
           SizedBox(height: 25.h),
-          CustomTextField(hint: 'Email', icon: Assets.imagesEmailIcon),
+          const CustomTextField(hint: 'Email', icon: Assets.imagesEmailIcon),
           SizedBox(height: 30.h),
           WideButton(
             title: 'SendCode',

@@ -7,7 +7,7 @@ class OTPfield extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         OTPSingleField(first: true, last: false),
@@ -31,7 +31,7 @@ class OTPSingleField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 55.w,
       child: AspectRatio(
         aspectRatio: 0.85,
@@ -52,9 +52,10 @@ class OTPSingleField extends StatelessWidget {
           keyboardType: TextInputType.number,
           maxLength: 1,
           decoration: InputDecoration(
-            counter: Offstage(),
+            counter: const Offstage(),
             enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(width: 2.w, color: Color(0xff9D9FA0)),
+                borderSide:
+                    BorderSide(width: 2.w, color: const Color(0xff9D9FA0)),
                 borderRadius: BorderRadius.circular(12.r)),
             focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(width: 2.w, color: kprimaryColor),

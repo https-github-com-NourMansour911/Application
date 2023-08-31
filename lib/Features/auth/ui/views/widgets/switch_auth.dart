@@ -25,17 +25,20 @@ class SwitchAuth extends StatelessWidget {
                       : "Remember password?  ",
           style: authMode == AuthMode.LogIn
               ? notes
-              : TextStyle(
+              : const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w400,
                 ),
         ),
         GestureDetector(
-          onTap: authMode == AuthMode.LogIn
-              ? () => GoRouter.of(context).pushReplacement(AppRouter.kSignUp)
-              : authMode == AuthMode.SignUp
-                  ? () => GoRouter.of(context).pushReplacement(AppRouter.klogin)
-                  : () {},
+          onTap: () {
+            if (authMode == AuthMode.LogIn) {
+              GoRouter.of(context).pushReplacement(AppRouter.kSignUp);
+            } else if (authMode == AuthMode.SignUp ||
+                authMode == AuthMode.Verified) {
+              GoRouter.of(context).pushReplacement(AppRouter.klogin);
+            } else {}
+          },
           child: Text(
             authMode == AuthMode.LogIn
                 ? "Create Account"
@@ -43,9 +46,11 @@ class SwitchAuth extends StatelessWidget {
                     ? "Sign In"
                     : authMode == AuthMode.Verifying
                         ? "00:20"
-                        : "Login",
+                        : "Log in",
             style: TextStyle(
               fontSize: 16,
+              decorationStyle: TextDecorationStyle.solid,
+              decoration: TextDecoration.underline,
               fontWeight: authMode == AuthMode.LogIn
                   ? FontWeight.w700
                   : FontWeight.w400,

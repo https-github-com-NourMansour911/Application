@@ -19,7 +19,7 @@ class SquareTile extends StatelessWidget {
     return GestureDetector(
       onTap: authMode == AuthMode.LogIn ? () {} : () {},
       child: Container(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         width: 60.w,
         height: 56.h,
         decoration: BoxDecoration(

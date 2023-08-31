@@ -8,6 +8,7 @@ class UserFormCubit extends Cubit<UserFormState> {
   String Gender = 'Gender';
   bool isSaved = false;
   bool isHidden = true;
+  bool ConfirmisHidden = true;
 
   void SavePassword(isSaved) {
     this.isSaved = isSaved;
@@ -17,6 +18,11 @@ class UserFormCubit extends Cubit<UserFormState> {
   showPassword() {
     isHidden = !isHidden;
     emit(PasswordHidden());
+  }
+
+  showConfirmPassword() {
+    ConfirmisHidden = !ConfirmisHidden;
+    emit(ConfirmPasswordHidden());
   }
 
   selectGender(String gender) {

@@ -16,8 +16,9 @@ class AuthMessages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: authMode == AuthMode.Verified
+          ? CrossAxisAlignment.center
+          : CrossAxisAlignment.start,
       children: [
         Text(
           title,
@@ -33,9 +34,12 @@ class AuthMessages extends StatelessWidget {
                       : FontWeight.w700,
                 ),
         ),
-        SizedBox(height: 14.h),
+        SizedBox(height: 8.h),
         Text(
           subtitle,
+          textAlign: authMode == AuthMode.Verified
+              ? TextAlign.center
+              : TextAlign.start,
           style: authMode == AuthMode.LogIn
               ? TextStyle(
                   fontSize: 12.sp,

@@ -11,4 +11,6 @@ final class PasswordForget extends UserFormState {}
 
 final class PasswordHidden extends UserFormState {}
 
+final class ConfirmPasswordHidden extends UserFormState {}
+
 final class GenderSelected extends UserFormState {}

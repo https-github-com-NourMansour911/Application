@@ -17,7 +17,7 @@ class CkBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Checkbox(
       value: Value,
-      side: BorderSide(color: kfadedColor),
+      side: const BorderSide(color: kfadedColor),
       onChanged: onChanged,
       visualDensity: VisualDensity(horizontal: -3.6.w, vertical: 0.h),
       checkColor: Colors.white,

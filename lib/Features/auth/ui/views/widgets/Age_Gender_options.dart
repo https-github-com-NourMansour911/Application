@@ -14,7 +14,7 @@ class AgeGenderOptions extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(
+        const Expanded(
             child: CustomTextField(
           hint: 'Age',
           icon: Assets.imagesGenderIcon,
@@ -34,27 +34,27 @@ class AgeGenderOptions extends StatelessWidget {
                   style: formStyle,
                   alignment: Alignment.center,
                   padding: EdgeInsets.symmetric(horizontal: 10.w),
-                  icon: Icon(Icons.keyboard_arrow_down),
+                  icon: const Icon(Icons.keyboard_arrow_down),
                   items: [
                     DropdownMenuItem(
                       value: "Gender",
                       child: Container(
                         margin: EdgeInsets.only(left: 35.w),
-                        child: Text("Gender"),
+                        child: const Text("Gender"),
                       ),
                     ),
                     DropdownMenuItem(
                       value: "Male",
                       child: Container(
                         margin: EdgeInsets.only(left: 35.w),
-                        child: Text("Male"),
+                        child: const Text("Male"),
                       ),
                     ),
                     DropdownMenuItem(
                       value: "Female",
                       child: Container(
                           margin: EdgeInsets.only(left: 35.w),
-                          child: Text("Female")),
+                          child: const Text("Female")),
                     )
                   ],
                   onChanged: (value) {
