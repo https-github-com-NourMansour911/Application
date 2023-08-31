@@ -6,15 +6,18 @@ import '../utils/styles.dart';
 
 class WideButton extends StatelessWidget {
   const WideButton(
-      {Key? key, required this.title, this.color = kprimaryColor, this.onTap})
+      {Key? key,
+      required this.title,
+      this.color = kprimaryColor,
+      this.onPressed})
       : super(key: key);
   final String title;
   final Color color;
-  final Function()? onTap;
+  final Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: onPressed,
       child: Container(
         width: 320.w,
         height: 50.h,

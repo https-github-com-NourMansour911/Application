@@ -23,6 +23,7 @@ class LogInBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
+          SizedBox(height: 70.h),
           WelcomeMessage(
             title: "Hello,\nWelcome Back!",
             subtitle: "Sign in and get your health personalized with our E-Gem",

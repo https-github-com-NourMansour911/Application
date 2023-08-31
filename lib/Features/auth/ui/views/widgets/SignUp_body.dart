@@ -20,6 +20,7 @@ class SignUpBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
+          SizedBox(height: 70.h),
           WelcomeMessage(
               title: "Create\nNew Account",
               subtitle:

@@ -63,12 +63,12 @@ class _PreviewState extends State<Preview> {
           index == 2
               ? WideButton(
                   title: '''Let's Started''',
-                  onTap: () {
+                  onPressed: () {
                     GoRouter.of(context).pushReplacement(AppRouter.klogin);
                   },
                 )
               : WideButton(
-                  onTap: () {
+                  onPressed: () {
                     _controller.nextPage(
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.linear);

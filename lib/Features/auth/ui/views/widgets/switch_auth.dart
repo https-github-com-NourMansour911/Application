@@ -18,7 +18,11 @@ class SwitchAuth extends StatelessWidget {
         Text(
           authMode == AuthMode.LogIn
               ? "Don't have an account?  "
-              : "Already have an account?  ",
+              : authMode == AuthMode.SignUp
+                  ? "Already have an account?  "
+                  : authMode == AuthMode.SendCode
+                      ? "Send code again:  "
+                      : "Remember password?  ",
           style: notes,
         ),
         GestureDetector(
@@ -26,7 +30,13 @@ class SwitchAuth extends StatelessWidget {
               ? () => GoRouter.of(context).pushReplacement(AppRouter.kSignUp)
               : () => GoRouter.of(context).pushReplacement(AppRouter.klogin),
           child: Text(
-            authMode == AuthMode.LogIn ? "Create Account" : "Sign In",
+            authMode == AuthMode.LogIn
+                ? "Create Account"
+                : authMode == AuthMode.SignUp
+                    ? "Sign In"
+                    : authMode == AuthMode.SendCode
+                        ? "00:20"
+                        : "Login",
             style: TextStyle(
               fontSize: 13,
               fontWeight: FontWeight.w700,
@@ -38,3 +48,10 @@ class SwitchAuth extends StatelessWidget {
     );
   }
 }
+ /* authMode == AuthMode.LogIn
+              ? "Create Account"
+              : authMode == AuthMode.SignUp
+                  ? "Sign In"
+                  : authMode == AuthMode.SendCode
+                      ? "00:20"
+                      : "Login" */

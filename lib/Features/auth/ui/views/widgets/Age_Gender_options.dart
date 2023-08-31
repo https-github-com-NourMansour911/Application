@@ -24,6 +24,7 @@ class AgeGenderOptions extends StatelessWidget {
         Expanded(
           child: CustomTextField(
             hint: '',
+            textInputType: TextInputType.none,
             icon: Assets.imagesGenderIcon,
             suffixIcon: BlocBuilder<UserFormCubit, UserFormState>(
               builder: (context, state) {

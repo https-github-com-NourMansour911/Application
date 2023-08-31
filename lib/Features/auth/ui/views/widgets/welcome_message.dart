@@ -17,9 +17,6 @@ class WelcomeMessage extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
-        SizedBox(
-          height: 70.h,
-        ),
         Text(
           title,
           style: subtitle_32,
