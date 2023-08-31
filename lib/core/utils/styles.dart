@@ -13,6 +13,6 @@ final TextStyle formStyle =
     TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w400, color: kfadedColor);
 
 final TextStyle notes = TextStyle(
-  fontSize: 13,
+  fontSize: 12.sp,
   fontWeight: FontWeight.w400,
 );

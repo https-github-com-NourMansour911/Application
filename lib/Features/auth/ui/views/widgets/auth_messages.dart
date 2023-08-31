@@ -28,7 +28,9 @@ class AuthMessages extends StatelessWidget {
                 )
               : TextStyle(
                   fontSize: 24,
-                  fontWeight: FontWeight.w600,
+                  fontWeight: authMode != AuthMode.Verifying
+                      ? FontWeight.w600
+                      : FontWeight.w700,
                 ),
         ),
         SizedBox(height: 14.h),

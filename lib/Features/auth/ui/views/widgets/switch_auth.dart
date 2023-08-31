@@ -21,14 +21,21 @@ class SwitchAuth extends StatelessWidget {
               : authMode == AuthMode.SignUp
                   ? "Already have an account?  "
                   : authMode == AuthMode.Verifying
-                      ? "Send code again:  "
+                      ? "Send code again  "
                       : "Remember password?  ",
-          style: notes,
+          style: authMode == AuthMode.LogIn
+              ? notes
+              : TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                ),
         ),
         GestureDetector(
           onTap: authMode == AuthMode.LogIn
               ? () => GoRouter.of(context).pushReplacement(AppRouter.kSignUp)
-              : () => GoRouter.of(context).pushReplacement(AppRouter.klogin),
+              : authMode == AuthMode.SignUp
+                  ? () => GoRouter.of(context).pushReplacement(AppRouter.klogin)
+                  : () {},
           child: Text(
             authMode == AuthMode.LogIn
                 ? "Create Account"
@@ -38,8 +45,10 @@ class SwitchAuth extends StatelessWidget {
                         ? "00:20"
                         : "Login",
             style: TextStyle(
-              fontSize: 13,
-              fontWeight: FontWeight.w700,
+              fontSize: 16,
+              fontWeight: authMode == AuthMode.LogIn
+                  ? FontWeight.w700
+                  : FontWeight.w400,
               color: kprimaryColor,
             ),
           ),

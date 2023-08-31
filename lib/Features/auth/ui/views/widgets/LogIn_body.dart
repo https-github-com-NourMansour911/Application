@@ -39,8 +39,8 @@ class LogInBody extends StatelessWidget {
             children: [
               RememberPassword(),
               GestureDetector(
-                  onTap: () => GoRouter.of(context)
-                      .pushReplacement(AppRouter.kforgetpassword),
+                  onTap: () =>
+                      GoRouter.of(context).push(AppRouter.kforgetpassword),
                   child: Text("Forget password ?", style: notes)),
             ],
           ),
