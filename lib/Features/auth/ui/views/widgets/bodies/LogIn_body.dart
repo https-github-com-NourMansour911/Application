@@ -1,3 +1,4 @@
+import 'package:e_gem/Features/auth/ui/view_models/auth_bloc/auth_bloc.dart';
 import 'package:e_gem/Features/auth/ui/views/widgets/ScreenDivider.dart';
 import 'package:e_gem/Features/auth/ui/views/widgets/TxtField.dart';
 import 'package:e_gem/Features/auth/ui/views/widgets/auth_options.dart';
@@ -54,7 +55,9 @@ class LogInBody extends StatelessWidget {
           SizedBox(
             height: 35.h,
           ),
-          const SwitchAuth(),
+          const SwitchAuth(
+            authMode: AuthMode.LogIn,
+          ),
         ],
       ),
     );
