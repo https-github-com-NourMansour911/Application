@@ -1,3 +1,7 @@
+import 'package:e_gem/Features/Auth/ui/views/ForgetPassword_view.dart';
+import 'package:e_gem/Features/Auth/ui/views/PasswordChanged_view.dart';
+import 'package:e_gem/Features/Auth/ui/views/ResetPassword_view.dart';
+import 'package:e_gem/Features/Auth/ui/views/Verify_view.dart';
 import 'package:e_gem/Features/Chat/ui/views/chats_view.dart';
 import 'package:e_gem/Features/Chat/ui/views/messaging_view.dart';
 import 'package:e_gem/Features/Home/ui/views/appointment_view.dart';
@@ -11,10 +15,7 @@ import 'package:e_gem/Features/OnBoarding/views/Splash_view.dart';
 import 'package:e_gem/Features/OnBoarding/views/preview.dart';
 import 'package:e_gem/Features/Profile/ui/views/edit_profile_view.dart';
 import 'package:e_gem/Features/Profile/ui/views/profile_view.dart';
-import 'package:e_gem/Features/auth/ui/views/ForgetPassword_Views/ForgetPassword_view.dart';
-import 'package:e_gem/Features/auth/ui/views/ForgetPassword_Views/PasswordChanged_view.dart';
-import 'package:e_gem/Features/auth/ui/views/ForgetPassword_Views/ResetPassword_view.dart';
-import 'package:e_gem/Features/auth/ui/views/ForgetPassword_Views/Verify_view.dart';
+
 import 'package:e_gem/Features/auth/ui/views/LogIn_view.dart';
 import 'package:e_gem/Features/auth/ui/views/SignUp_view.dart';
 import 'package:go_router/go_router.dart';
