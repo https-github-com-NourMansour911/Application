@@ -1,6 +1,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesChatIcon
+  /// assets/images/chat_icon.svg
+  static const String imagesChatIcon = "assets/images/chat_icon.svg";
+
   /// Assets for imagesCheckMail
   /// assets/images/check_mail.svg
   static const String imagesCheckMail = "assets/images/check_mail.svg";
@@ -12,6 +16,10 @@ class Assets {
   /// Assets for imagesEmailIcon
   /// assets/images/email_icon.png
   static const String imagesEmailIcon = "assets/images/email_icon.png";
+
+  /// Assets for imagesExerciseIcon
+  /// assets/images/exercise_icon.svg
+  static const String imagesExerciseIcon = "assets/images/exercise_icon.svg";
 
   /// Assets for imagesFacebookIcon
   /// assets/images/facebook_icon.svg
@@ -28,6 +36,10 @@ class Assets {
   /// Assets for imagesGoogleIcon
   /// assets/images/google_icon.svg
   static const String imagesGoogleIcon = "assets/images/google_icon.svg";
+
+  /// Assets for imagesHomeIcon
+  /// assets/images/home_icon.svg
+  static const String imagesHomeIcon = "assets/images/home_icon.svg";
 
   /// Assets for imagesP1
   /// assets/images/p1.svg
