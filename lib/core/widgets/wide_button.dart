@@ -1,3 +1,4 @@
+import 'package:e_gem/Features/Home/home/Captain/captain_details.dart';
 import 'package:e_gem/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
