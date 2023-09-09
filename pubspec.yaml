@@ -43,7 +43,6 @@ dependencies:
   go_router: ^10.1.1
   decorated_dropdownbutton: ^0.0.3
   quickalert: ^1.0.2
-  google_nav_bar: ^5.0.6
   carousel_slider: ^4.2.1
   flutter_rating_bar: ^4.0.1
 
