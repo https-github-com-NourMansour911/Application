@@ -22,7 +22,7 @@ class CoachCard extends StatelessWidget {
         color: Color(0xFFEFEFEF),
         elevation: 0,
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 12.h),
+          padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 10.h),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -38,7 +38,6 @@ class CoachCard extends StatelessWidget {
               Text(
                 'Mohamed Ali',
                 style: TextStyle(
-                  color: Colors.black,
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w600,
                 ),

@@ -14,7 +14,7 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(milliseconds: 1500), () {
-      GoRouter.of(context).pushReplacement(AppRouter.kpreview);
+      GoRouter.of(context).pushReplacement(AppRouter.kNavBar);
     });
 
     return Scaffold(

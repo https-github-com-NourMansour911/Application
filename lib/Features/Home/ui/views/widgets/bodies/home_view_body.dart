@@ -13,6 +13,7 @@ class HomeViewBody extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        SizedBox(height: 16.h),
         HomeAppBar(),
         SizedBox(height: 10.h),
         CustomSearchBar(hint: 'Search your coach'),
@@ -21,6 +22,7 @@ class HomeViewBody extends StatelessWidget {
         Category(categoryType: CategoryType.Top_Rated),
         SizedBox(height: 10.h),
         Category(categoryType: CategoryType.Super_Heroes),
+        SizedBox(height: 16.h),
       ],
     );
   }
