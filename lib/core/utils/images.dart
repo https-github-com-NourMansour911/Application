@@ -1,6 +1,18 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesCap1
+  /// assets/images/cap1.png
+  static const String imagesCap1 = "assets/images/cap1.png";
+
+  /// Assets for imagesCap1Zoom
+  /// assets/images/cap1_zoom.png
+  static const String imagesCap1Zoom = "assets/images/cap1_zoom.png";
+
+  /// Assets for imagesCap2
+  /// assets/images/cap2.png
+  static const String imagesCap2 = "assets/images/cap2.png";
+
   /// Assets for imagesChatIcon
   /// assets/images/chat_icon.svg
   static const String imagesChatIcon = "assets/images/chat_icon.svg";
@@ -8,6 +20,10 @@ class Assets {
   /// Assets for imagesCheckMail
   /// assets/images/check_mail.svg
   static const String imagesCheckMail = "assets/images/check_mail.svg";
+
+  /// Assets for imagesCreditCard
+  /// assets/images/credit_card.svg
+  static const String imagesCreditCard = "assets/images/credit_card.svg";
 
   /// Assets for imagesDropDownIcon
   /// assets/images/drop_down_icon.jpg
@@ -41,6 +57,14 @@ class Assets {
   /// assets/images/home_icon.svg
   static const String imagesHomeIcon = "assets/images/home_icon.svg";
 
+  /// Assets for imagesLogo
+  /// assets/images/logo.png
+  static const String imagesLogo = "assets/images/logo.png";
+
+  /// Assets for imagesNotification
+  /// assets/images/Notification.svg
+  static const String imagesNotification = "assets/images/Notification.svg";
+
   /// Assets for imagesP1
   /// assets/images/p1.svg
   static const String imagesP1 = "assets/images/p1.svg";
@@ -61,9 +85,37 @@ class Assets {
   /// assets/images/password_icon.png
   static const String imagesPasswordIcon = "assets/images/password_icon.png";
 
+  /// Assets for imagesProfile
+  /// assets/images/profile.svg
+  static const String imagesProfile = "assets/images/profile.svg";
+
   /// Assets for imagesResetPassword
   /// assets/images/reset_password.svg
   static const String imagesResetPassword = "assets/images/reset_password.svg";
+
+  /// Assets for imagesReview1
+  /// assets/images/review1.svg
+  static const String imagesReview1 = "assets/images/review1.svg";
+
+  /// Assets for imagesReview2
+  /// assets/images/review2.svg
+  static const String imagesReview2 = "assets/images/review2.svg";
+
+  /// Assets for imagesSearch
+  /// assets/images/search.svg
+  static const String imagesSearch = "assets/images/search.svg";
+
+  /// Assets for imagesSlider
+  /// assets/images/slider.png
+  static const String imagesSlider = "assets/images/slider.png";
+
+  /// Assets for imagesSlider2
+  /// assets/images/slider2.png
+  static const String imagesSlider2 = "assets/images/slider2.png";
+
+  /// Assets for imagesSlider3
+  /// assets/images/slider3.png
+  static const String imagesSlider3 = "assets/images/slider3.png";
 
   /// Assets for imagesSplash
   /// assets/images/splash.svg

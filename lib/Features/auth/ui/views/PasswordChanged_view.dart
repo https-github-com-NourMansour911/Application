@@ -15,15 +15,17 @@ class PasswordChanged extends StatelessWidget {
           create: (context) => AuthBloc(),
         ),
       ],
-      child: Scaffold(
-        resizeToAvoidBottomInset: false,
-        body: Container(
-          margin: EdgeInsets.only(
-            left: 16.w,
-            right: 16.w,
-            bottom: MediaQuery.of(context).viewInsets.bottom,
+      child: SafeArea(
+        child: Scaffold(
+          resizeToAvoidBottomInset: false,
+          body: Container(
+            margin: EdgeInsets.only(
+              left: 16.w,
+              right: 16.w,
+              bottom: MediaQuery.of(context).viewInsets.bottom,
+            ),
+            child: const PasswordChangedBody(),
           ),
-          child: const PasswordChangedBody(),
         ),
       ),
     );

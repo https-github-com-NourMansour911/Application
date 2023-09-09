@@ -4,12 +4,7 @@ import 'package:e_gem/Features/Auth/ui/views/ResetPassword_view.dart';
 import 'package:e_gem/Features/Auth/ui/views/Verify_view.dart';
 import 'package:e_gem/Features/Chat/ui/views/chats_view.dart';
 import 'package:e_gem/Features/Chat/ui/views/messaging_view.dart';
-import 'package:e_gem/Features/Home/ui/views/appointment_view.dart';
-import 'package:e_gem/Features/Home/ui/views/coach_plans_view.dart';
-import 'package:e_gem/Features/Home/ui/views/coach_profile_view.dart';
-import 'package:e_gem/Features/Home/ui/views/home_view.dart';
-import 'package:e_gem/Features/Home/ui/views/payment_status_view.dart';
-import 'package:e_gem/Features/Home/ui/views/payment_view.dart';
+import 'package:e_gem/Features/Nav_Bar/ui/views/nav_bar.dart';
 import 'package:e_gem/Features/Notifications/ui/views/notifications_view.dart';
 import 'package:e_gem/Features/OnBoarding/views/Splash_view.dart';
 import 'package:e_gem/Features/OnBoarding/views/preview.dart';
@@ -33,12 +28,8 @@ abstract class AppRouter {
   static const kchatsView = '/chatsView';
   static const kmessagingView = '/messagingView';
   // Home
-  static const kHomeView = '/HomeView';
-  static const kCoachProfileView = '/CoachProfileView';
-  static const kCoachPlansView = '/CoachPlansView';
-  static const kAppointmentView = '/AppointmentView';
-  static const kPaymentView = '/PaymentView';
-  static const kPaymentStatusView = '/messagingView';
+  static const kNavBar = '/NavBar';
+
   // Profile
   static const kProfileView = '/ProfileView';
   static const kEditProfileView = '/EditProfileView';
@@ -83,29 +74,10 @@ abstract class AppRouter {
       ),
       // Home
       GoRoute(
-        path: kHomeView,
-        builder: (context, state) => const HomeView(),
+        path: kNavBar,
+        builder: (context, state) => const NavBar(),
       ),
-      GoRoute(
-        path: kCoachProfileView,
-        builder: (context, state) => const CoachProfileView(),
-      ),
-      GoRoute(
-        path: kCoachPlansView,
-        builder: (context, state) => const CoachPlansView(),
-      ),
-      GoRoute(
-        path: kAppointmentView,
-        builder: (context, state) => const AppointmentView(),
-      ),
-      GoRoute(
-        path: kPaymentView,
-        builder: (context, state) => const PaymentView(),
-      ),
-      GoRoute(
-        path: kPaymentStatusView,
-        builder: (context, state) => const PaymentStatusView(),
-      ),
+
       // Chat
       GoRoute(
         path: kchatsView,

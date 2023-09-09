@@ -18,7 +18,7 @@ class VerifyCodeViewBody extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          SizedBox(height: 70.h),
+          SizedBox(height: 50.h),
           SvgPicture.asset(Assets.imagesCheckMail),
           const AuthMessages(
             title: 'Please check your email',

@@ -17,7 +17,7 @@ class PasswordChangedBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          SizedBox(height: 70.h),
+          SizedBox(height: 50.h),
           SvgPicture.asset(Assets.imagesPasswordChanged),
           SizedBox(height: 30.h),
           const AuthMessages(

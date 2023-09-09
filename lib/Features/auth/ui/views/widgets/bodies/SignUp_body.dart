@@ -20,19 +20,18 @@ class SignUpBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          SizedBox(height: 70.h),
+          SizedBox(height: 50.h),
           const AuthMessages(
               title: "Create\nNew Account",
               subtitle:
-                  "Sign Up and get your health personalized with our E-Gem"),
+                  "Sign in and get your health personalized with our E-Gem"),
           SizedBox(height: 26.h),
           const CustomTextField(hint: 'Email', icon: Assets.imagesEmailIcon),
           SizedBox(height: 16.h),
           const AgeGenderOptions(),
           SizedBox(height: 16.h),
           const PasswordField(),
-          SizedBox(height: 16.h),
-          SizedBox(height: 20.h),
+          SizedBox(height: 36.h),
           const WideButton(title: "Sign Up"),
           SizedBox(height: 30.h),
           const ScreenDivider(),

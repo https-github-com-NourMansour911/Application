@@ -25,7 +25,7 @@ class LogInBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          SizedBox(height: 70.h),
+          SizedBox(height: 50.h),
           const AuthMessages(
             title: "Hello,\nWelcome Back!",
             subtitle: "Sign in and get your health personalized with our E-Gem",
@@ -47,7 +47,12 @@ class LogInBody extends StatelessWidget {
           SizedBox(
             height: 25.h,
           ),
-          const WideButton(title: "Sign In"),
+          WideButton(
+            title: "Sign In",
+            onPressed: () {
+              GoRouter.of(context).pushReplacement(AppRouter.kNavBar);
+            },
+          ),
           SizedBox(height: 40.h),
           const ScreenDivider(),
           SizedBox(height: 25.h),

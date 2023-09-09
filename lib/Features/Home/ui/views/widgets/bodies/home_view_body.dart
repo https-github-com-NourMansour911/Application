@@ -1,10 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:e_gem/Features/Home/ui/views/widgets/category.dart';
+import 'package:e_gem/Features/Home/ui/views/widgets/home_app_bar.dart';
+import 'package:e_gem/Features/Home/ui/views/widgets/image_slider.dart';
+import 'package:e_gem/Features/Home/ui/views/widgets/search_bar.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        HomeAppBar(),
+        SizedBox(height: 10.h),
+        CustomSearchBar(hint: 'Search your coach'),
+        SizedBox(height: 10.h),
+        ImageSlider(),
+        Category(categoryType: CategoryType.Top_Rated),
+        SizedBox(height: 10.h),
+        Category(categoryType: CategoryType.Super_Heroes),
+      ],
+    );
   }
 }

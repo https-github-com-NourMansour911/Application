@@ -23,7 +23,7 @@ class ResetPasswordBody extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            SizedBox(height: 70.h),
+            SizedBox(height: 50.h),
             SvgPicture.asset(Assets.imagesResetPassword),
             SizedBox(height: 25.h),
             const AuthMessages(

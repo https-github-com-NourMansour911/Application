@@ -21,68 +21,74 @@ class _PreviewState extends State<Preview> {
   int index = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          SizedBox(height: 50.h),
-          Expanded(
-            child: PageView(
-              controller: _controller,
-              onPageChanged: (value) {
-                setState(() {
-                  index = value;
-                });
-              },
-              children: const [
-                Singleview(
-                    image: Assets.imagesP1,
-                    title: "Train with top personal coaches",
-                    subtitle:
-                        "Book virtual personal training sessions\nwith our certified coaches."),
-                Singleview(
-                    image: Assets.imagesP2,
-                    title: "Track your progress",
-                    subtitle:
-                        "Stay motivated by tracking your\nprogress on your fitness journey."),
-                Singleview(
-                    image: Assets.imagesP3,
-                    title: "Plan your meal",
-                    subtitle:
-                        "Take control of your nutrition with our\nmeal planning feature."),
-              ],
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+          children: [
+            SizedBox(height: 50.h),
+            Expanded(
+              child: PageView(
+                controller: _controller,
+                onPageChanged: (value) {
+                  setState(() {
+                    index = value;
+                  });
+                },
+                children: const [
+                  Singleview(
+                      image: Assets.imagesP1,
+                      title: "Train with top personal coaches",
+                      subtitle:
+                          "Book virtual personal training sessions\nwith our certified coaches."),
+                  Singleview(
+                      image: Assets.imagesP2,
+                      title: "Track your progress",
+                      subtitle:
+                          "Stay motivated by tracking your\nprogress on your fitness journey."),
+                  Singleview(
+                      image: Assets.imagesP3,
+                      title: "Plan your meal",
+                      subtitle:
+                          "Take control of your nutrition with our\nmeal planning feature."),
+                ],
+              ),
             ),
-          ),
-          SmoothPageIndicator(
-            controller: _controller,
-            count: 3,
-            effect: const ExpandingDotsEffect(activeDotColor: kprimaryColor),
-          ),
-          SizedBox(
-            height: 50.h,
-          ),
-          Container(
-            margin: EdgeInsets.symmetric(horizontal: 16.h),
-            child: index == 2
-                ? WideButton(
-                    title: '''Let's Started''',
-                    onPressed: () {
-                      GoRouter.of(context).pushReplacement(AppRouter.klogin);
-                    },
-                  )
-                : WideButton(
-                    onPressed: () {
-                      _controller.nextPage(
-                          duration: const Duration(milliseconds: 500),
-                          curve: Curves.linear);
-                    },
-                    color: const Color(0xFFEFEFEF),
-                    title: "Next",
-                  ),
-          ),
-          SizedBox(
-            height: 50.h,
-          )
-        ],
+            SizedBox(height: 5.h),
+            AnimatedSmoothIndicator(
+              activeIndex: index,
+              count: 3,
+              effect: ExpandingDotsEffect(
+                dotColor: Colors.black12,
+                activeDotColor: kprimaryColor,
+                dotHeight: 12.h,
+                dotWidth: 12.w,
+              ),
+            ),
+            SizedBox(height: 40.h),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 16.h),
+              child: index == 2
+                  ? WideButton(
+                      title: '''Let's Started''',
+                      onPressed: () {
+                        GoRouter.of(context).pushReplacement(AppRouter.klogin);
+                      },
+                    )
+                  : WideButton(
+                      onPressed: () {
+                        _controller.nextPage(
+                            duration: const Duration(milliseconds: 500),
+                            curve: Curves.linear);
+                      },
+                      color: const Color(0xFFEFEFEF),
+                      title: "Next",
+                    ),
+            ),
+            SizedBox(
+              height: 50.h,
+            )
+          ],
+        ),
       ),
     );
   }
