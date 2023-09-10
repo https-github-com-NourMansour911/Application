@@ -19,6 +19,10 @@ class Assets {
 
   /// Assets for imagesCheckMail
   /// assets/images/check_mail.svg
+  static const String imagesCheck = "assets/images/check.svg";
+
+  /// Assets for imagesCheckMail
+  /// assets/images/check_mail.svg
   static const String imagesCheckMail = "assets/images/check_mail.svg";
 
   /// Assets for imagesCreditCard
