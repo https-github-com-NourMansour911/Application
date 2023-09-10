@@ -15,33 +15,31 @@ class ResetPasswordBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          SizedBox(height: 50.h),
-          SvgPicture.asset(Assets.imagesResetPassword),
-          SizedBox(height: 25.h),
-          const AuthMessages(
-            title: 'Reset password',
-            subtitle: "Please type something you’ll remember",
-            authMode: AuthMode.Verifying,
-          ),
-          SizedBox(height: 20.h),
-          const PasswordField(mode: PasswordFieldMode.New),
-          SizedBox(height: 16.h),
-          const PasswordField(mode: PasswordFieldMode.Confirm),
-          SizedBox(height: 20.h),
-          WideButton(
-            title: 'Reset Password',
-            onPressed: () {
-              GoRouter.of(context).pushReplacement(AppRouter.kpasswordchanged);
-            },
-          ),
-          SizedBox(height: 25.h),
-          const SwitchAuth(authMode: AuthMode.Verified),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        SizedBox(height: 50.h),
+        SvgPicture.asset(Assets.imagesResetPassword),
+        SizedBox(height: 25.h),
+        const AuthMessages(
+          title: 'Reset password',
+          subtitle: "Please type something you’ll remember",
+          authMode: AuthMode.Verifying,
+        ),
+        SizedBox(height: 20.h),
+        const PasswordField(mode: PasswordFieldMode.New),
+        SizedBox(height: 16.h),
+        const PasswordField(mode: PasswordFieldMode.Confirm),
+        SizedBox(height: 20.h),
+        WideButton(
+          title: 'Reset Password',
+          onPressed: () {
+            GoRouter.of(context).pushReplacement(AppRouter.kpasswordchanged);
+          },
+        ),
+        SizedBox(height: 25.h),
+        const SwitchAuth(authMode: AuthMode.Verified),
+      ],
     );
   }
 }

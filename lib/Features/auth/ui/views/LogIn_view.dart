@@ -20,9 +20,7 @@ class LogIn extends StatelessWidget {
               right: 16.w,
               bottom: MediaQuery.of(context).viewInsets.bottom,
             ),
-            child: Builder(builder: (context) {
-              return const LogInBody();
-            }),
+            child: SingleChildScrollView(child: const LogInBody()),
           ),
         ),
       ),

@@ -20,7 +20,7 @@ class SignUp extends StatelessWidget {
               right: 16.w,
               bottom: MediaQuery.of(context).viewInsets.bottom,
             ),
-            child: const SignUpBody(),
+            child: SingleChildScrollView(child: const SignUpBody()),
           ),
         ),
       ),

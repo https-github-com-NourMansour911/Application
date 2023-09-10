@@ -11,7 +11,7 @@ class HomeView extends StatelessWidget {
     return BlocProvider(
       create: (context) => HomeCubit(),
       child: Container(
-        padding: EdgeInsets.only(right: 16, left: 16),
+        margin: EdgeInsets.symmetric(horizontal: 16),
         child: SingleChildScrollView(
           child: HomeViewBody(),
         ),

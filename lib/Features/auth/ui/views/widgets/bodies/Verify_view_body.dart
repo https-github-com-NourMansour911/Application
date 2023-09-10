@@ -15,29 +15,27 @@ class VerifyCodeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          SizedBox(height: 50.h),
-          SvgPicture.asset(Assets.imagesCheckMail),
-          const AuthMessages(
-            title: 'Please check your email',
-            subtitle: "We’ve sent a code to helloworld@gmail.com",
-            authMode: AuthMode.Verifying,
-          ),
-          SizedBox(height: 25.h),
-          const OTPfield(),
-          SizedBox(height: 25.h),
-          WideButton(
-            title: 'Verify',
-            onPressed: () {
-              GoRouter.of(context).pushReplacement(AppRouter.kresetpassword);
-            },
-          ),
-          SizedBox(height: 35.h),
-          const SwitchAuth(authMode: AuthMode.Verifying),
-        ],
-      ),
+    return Column(
+      children: [
+        SizedBox(height: 50.h),
+        SvgPicture.asset(Assets.imagesCheckMail),
+        const AuthMessages(
+          title: 'Please check your email',
+          subtitle: "We’ve sent a code to helloworld@gmail.com",
+          authMode: AuthMode.Verifying,
+        ),
+        SizedBox(height: 25.h),
+        const OTPfield(),
+        SizedBox(height: 25.h),
+        WideButton(
+          title: 'Verify',
+          onPressed: () {
+            GoRouter.of(context).pushReplacement(AppRouter.kresetpassword);
+          },
+        ),
+        SizedBox(height: 35.h),
+        const SwitchAuth(authMode: AuthMode.Verifying),
+      ],
     );
   }
 }

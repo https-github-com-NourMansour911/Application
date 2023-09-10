@@ -20,7 +20,7 @@ class EditProfileView extends StatelessWidget {
               left: 16.w,
               bottom: MediaQuery.of(context).viewInsets.bottom,
             ),
-            child: EditProfileViewBody(),
+            child: SingleChildScrollView(child: EditProfileViewBody()),
           ),
         ),
       ),
