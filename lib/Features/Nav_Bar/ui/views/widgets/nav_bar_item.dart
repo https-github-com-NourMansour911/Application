@@ -23,7 +23,7 @@ class NavBarItem extends StatelessWidget {
           colorFilter: ColorFilter.mode(
             index == BlocProvider.of<NavBarCubit>(context).currentIndex
                 ? kprimaryColor
-                : kfadedColor,
+                : k_grey,
             BlendMode.srcIn,
           ),
         );

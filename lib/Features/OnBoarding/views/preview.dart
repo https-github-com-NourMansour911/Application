@@ -21,11 +21,11 @@ class _PreviewState extends State<Preview> {
   int index = 0;
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Column(
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
           children: [
-            SizedBox(height: 50.h),
+            SizedBox(height: 20.h),
             Expanded(
               child: PageView(
                 controller: _controller,

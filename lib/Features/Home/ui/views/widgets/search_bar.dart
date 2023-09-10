@@ -13,11 +13,11 @@ class CustomSearchBar extends StatelessWidget {
       height: 45.h,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Color(0xFFEFEFEF),
-        borderRadius: BorderRadius.circular(4.r),
+        color: k_lightGrey,
+        borderRadius: BorderRadius.circular(8.r),
         border: Border.all(
-          width: 0.8.w,
-          color: Color(0xFF626262),
+          width: 0.3.w,
+          color: k_grey,
         ),
       ),
       child: Row(
@@ -31,12 +31,12 @@ class CustomSearchBar extends StatelessWidget {
           Expanded(
             child: TextField(
               maxLines: 1,
-              cursorColor: kfadedColor,
+              cursorColor: k_grey,
               decoration: InputDecoration(
                 fillColor: Colors.transparent,
                 hintText: hint,
                 hintStyle: TextStyle(
-                  color: kfadedColor,
+                  color: k_grey,
                   fontSize: 15.sp,
                   fontWeight: FontWeight.w400,
                 ),

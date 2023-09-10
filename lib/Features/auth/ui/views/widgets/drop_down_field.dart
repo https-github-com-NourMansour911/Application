@@ -8,8 +8,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DropDownField extends StatelessWidget {
-  const DropDownField({Key? key}) : super(key: key);
-
+  const DropDownField({Key? key, required this.label}) : super(key: key);
+  final String label;
   @override
   Widget build(BuildContext context) {
     return CustomTextField(
@@ -30,7 +30,7 @@ class DropDownField extends StatelessWidget {
                 value: "Gender",
                 child: Container(
                   margin: EdgeInsets.only(left: 35.w),
-                  child: const Text("Gender"),
+                  child: Text(label),
                 ),
               ),
               DropdownMenuItem(

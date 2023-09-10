@@ -1,6 +1,8 @@
+import 'package:e_gem/Features/Chat/ui/views/chats_view.dart';
 import 'package:e_gem/Features/Home/ui/views/home_view.dart';
 import 'package:e_gem/Features/Nav_Bar/ui/view_models/nav_bar_cubit/nav_bar_cubit.dart';
 import 'package:e_gem/Features/Nav_Bar/ui/views/widgets/nav_bar_item.dart';
+import 'package:e_gem/Features/Profile/ui/views/profile_view.dart';
 import 'package:e_gem/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,8 +21,8 @@ class _NavBarState extends State<NavBar> {
     List<Widget> navScreens = [
       HomeView(),
       Container(),
-      Container(),
-      Container()
+      ChatsView(),
+      ProfileView(),
     ];
 
     List<BottomNavigationBarItem> items = [
@@ -30,42 +32,40 @@ class _NavBarState extends State<NavBar> {
       BottomNavigationBarItem(icon: NavBarItem(index: 3), label: "Profile"),
     ];
 
-    return SafeArea(
-      child: BlocProvider(
-        create: (context) => NavBarCubit(),
-        child: BlocBuilder<NavBarCubit, NavBarState>(
-          builder: (context, state) {
-            var cubit = BlocProvider.of<NavBarCubit>(context);
-            return Scaffold(
-              bottomNavigationBar: SizedBox(
-                  height: 75.h,
-                  child: BottomNavigationBar(
-                    showUnselectedLabels: true,
-                    showSelectedLabels: true,
-                    unselectedLabelStyle: TextStyle(
-                      color: kfadedColor,
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w400,
-                    ),
-                    selectedItemColor: kprimaryColor,
-                    selectedLabelStyle: TextStyle(
-                      color: kprimaryColor,
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w600,
-                      height: 2.5.h,
-                    ),
-                    type: BottomNavigationBarType.fixed,
-                    currentIndex: cubit.currentIndex,
-                    iconSize: 24,
-                    onTap: (value) {
-                      cubit.select(value);
-                    },
-                    items: items,
-                  )),
-              body: navScreens[cubit.currentIndex],
-            );
-          },
-        ),
+    return BlocProvider(
+      create: (context) => NavBarCubit(),
+      child: BlocBuilder<NavBarCubit, NavBarState>(
+        builder: (context, state) {
+          var cubit = BlocProvider.of<NavBarCubit>(context);
+          return Scaffold(
+            bottomNavigationBar: SizedBox(
+                height: 75.h,
+                child: BottomNavigationBar(
+                  showUnselectedLabels: true,
+                  showSelectedLabels: true,
+                  unselectedLabelStyle: TextStyle(
+                    color: k_grey,
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                  selectedItemColor: kprimaryColor,
+                  selectedLabelStyle: TextStyle(
+                    color: kprimaryColor,
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w600,
+                    height: 2.5.h,
+                  ),
+                  type: BottomNavigationBarType.fixed,
+                  currentIndex: cubit.currentIndex,
+                  iconSize: 24,
+                  onTap: (value) {
+                    cubit.select(value);
+                  },
+                  items: items,
+                )),
+            body: SafeArea(child: navScreens[cubit.currentIndex]),
+          );
+        },
       ),
     );
   }

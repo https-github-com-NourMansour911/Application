@@ -16,31 +16,29 @@ class SignUpBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          SizedBox(height: 50.h),
-          const AuthMessages(
-              title: "Create\nNew Account",
-              subtitle:
-                  "Sign in and get your health personalized with our E-Gem"),
-          SizedBox(height: 26.h),
-          const CustomTextField(hint: 'Email', icon: Assets.imagesEmailIcon),
-          SizedBox(height: 16.h),
-          const AgeGenderOptions(),
-          SizedBox(height: 16.h),
-          const PasswordField(),
-          SizedBox(height: 36.h),
-          const WideButton(title: "Sign Up"),
-          SizedBox(height: 30.h),
-          const ScreenDivider(),
-          SizedBox(height: 25.h),
-          const AuthOptions(authMode: AuthMode.SignUp),
-          SizedBox(height: 20.h),
-          const SwitchAuth(authMode: AuthMode.SignUp),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        SizedBox(height: 50.h),
+        const AuthMessages(
+            title: "Create\nNew Account",
+            subtitle:
+                "Sign in and get your health personalized with our E-Gem"),
+        SizedBox(height: 26.h),
+        const CustomTextField(hint: 'Email', icon: Assets.imagesEmailIcon),
+        SizedBox(height: 16.h),
+        const AgeGenderOptions(),
+        SizedBox(height: 16.h),
+        const PasswordField(),
+        SizedBox(height: 36.h),
+        const WideButton(title: "Sign Up"),
+        SizedBox(height: 30.h),
+        const ScreenDivider(),
+        SizedBox(height: 25.h),
+        const AuthOptions(authMode: AuthMode.SignUp),
+        SizedBox(height: 20.h),
+        const SwitchAuth(authMode: AuthMode.SignUp),
+      ],
     );
   }
 }

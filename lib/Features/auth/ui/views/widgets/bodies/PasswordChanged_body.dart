@@ -13,27 +13,25 @@ class PasswordChangedBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          SizedBox(height: 50.h),
-          SvgPicture.asset(Assets.imagesPasswordChanged),
-          SizedBox(height: 30.h),
-          const AuthMessages(
-            title: 'Password changed',
-            subtitle: "Your password has been changed successfully.",
-            authMode: AuthMode.Verified,
-          ),
-          SizedBox(height: 40.h),
-          WideButton(
-            title: 'Back To Login',
-            onPressed: () {
-              GoRouter.of(context).pushReplacement(AppRouter.klogin);
-            },
-          ),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        SizedBox(height: 50.h),
+        SvgPicture.asset(Assets.imagesPasswordChanged),
+        SizedBox(height: 30.h),
+        const AuthMessages(
+          title: 'Password changed',
+          subtitle: "Your password has been changed successfully.",
+          authMode: AuthMode.Verified,
+        ),
+        SizedBox(height: 40.h),
+        WideButton(
+          title: 'Back To Login',
+          onPressed: () {
+            GoRouter.of(context).pushReplacement(AppRouter.klogin);
+          },
+        ),
+      ],
     );
   }
 }

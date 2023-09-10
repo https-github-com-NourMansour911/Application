@@ -14,32 +14,34 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(milliseconds: 1500), () {
-      GoRouter.of(context).pushReplacement(AppRouter.kNavBar);
+      GoRouter.of(context).pushReplacement(AppRouter.klogin);
     });
 
     return Scaffold(
       backgroundColor: kprimaryColor,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          SvgPicture.asset(
-            Assets.imagesSplash,
-            height: 155.h,
-            width: 206.w,
-          ),
-          SizedBox(height: 24.h),
-          Text(
-            'E-Gem',
-            style: title.copyWith(color: Colors.white),
-            textAlign: TextAlign.center,
-          ),
-          Text(
-            "Choose Your coach",
-            style: regular.copyWith(color: Colors.white),
-            textAlign: TextAlign.center,
-          ),
-        ],
+      body: SafeArea(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            SvgPicture.asset(
+              Assets.imagesSplash,
+              height: 155.h,
+              width: 206.w,
+            ),
+            SizedBox(height: 24.h),
+            Text(
+              'E-Gem',
+              style: title.copyWith(color: Colors.white),
+              textAlign: TextAlign.center,
+            ),
+            Text(
+              "Choose Your coach",
+              style: regular.copyWith(color: Colors.white),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
       ),
     );
   }

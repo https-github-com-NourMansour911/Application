@@ -21,50 +21,48 @@ class LogInBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          SizedBox(height: 50.h),
-          const AuthMessages(
-            title: "Hello,\nWelcome Back!",
-            subtitle: "Sign in and get your health personalized with our E-Gem",
-          ),
-          SizedBox(height: 26.h),
-          const CustomTextField(hint: 'Email', icon: Assets.imagesEmailIcon),
-          SizedBox(height: 16.h),
-          const PasswordField(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              const RememberPassword(),
-              GestureDetector(
-                  onTap: () =>
-                      GoRouter.of(context).push(AppRouter.kforgetpassword),
-                  child: Text("Forget password ?", style: notes)),
-            ],
-          ),
-          SizedBox(
-            height: 25.h,
-          ),
-          WideButton(
-            title: "Sign In",
-            onPressed: () {
-              GoRouter.of(context).pushReplacement(AppRouter.kNavBar);
-            },
-          ),
-          SizedBox(height: 40.h),
-          const ScreenDivider(),
-          SizedBox(height: 25.h),
-          const AuthOptions(),
-          SizedBox(
-            height: 35.h,
-          ),
-          const SwitchAuth(
-            authMode: AuthMode.LogIn,
-          ),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        SizedBox(height: 50.h),
+        const AuthMessages(
+          title: "Hello,\nWelcome Back!",
+          subtitle: "Sign in and get your health personalized with our E-Gem",
+        ),
+        SizedBox(height: 26.h),
+        const CustomTextField(hint: 'Email', icon: Assets.imagesEmailIcon),
+        SizedBox(height: 16.h),
+        const PasswordField(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            const RememberPassword(),
+            GestureDetector(
+                onTap: () =>
+                    GoRouter.of(context).push(AppRouter.kforgetpassword),
+                child: Text("Forget password ?", style: notes)),
+          ],
+        ),
+        SizedBox(
+          height: 25.h,
+        ),
+        WideButton(
+          title: "Sign In",
+          onPressed: () {
+            GoRouter.of(context).pushReplacement(AppRouter.kNavBar);
+          },
+        ),
+        SizedBox(height: 40.h),
+        const ScreenDivider(),
+        SizedBox(height: 25.h),
+        const AuthOptions(),
+        SizedBox(
+          height: 35.h,
+        ),
+        const SwitchAuth(
+          authMode: AuthMode.LogIn,
+        ),
+      ],
     );
   }
 }

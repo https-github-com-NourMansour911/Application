@@ -9,22 +9,18 @@ class SignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(
-          create: (context) => UserFormCubit(),
-        ),
-      ],
-      child: SafeArea(
-        child: Scaffold(
-          resizeToAvoidBottomInset: false,
-          body: Container(
+    return BlocProvider(
+      create: (context) => UserFormCubit(),
+      child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        body: SafeArea(
+          child: Container(
             margin: EdgeInsets.only(
               left: 16.w,
               right: 16.w,
               bottom: MediaQuery.of(context).viewInsets.bottom,
             ),
-            child: const SignUpBody(),
+            child: SingleChildScrollView(child: const SignUpBody()),
           ),
         ),
       ),

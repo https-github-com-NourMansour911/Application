@@ -15,16 +15,16 @@ class ForgetPassword extends StatelessWidget {
           create: (context) => AuthBloc(),
         ),
       ],
-      child: SafeArea(
-        child: Scaffold(
-          resizeToAvoidBottomInset: false,
-          body: Container(
+      child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        body: SafeArea(
+          child: Container(
             margin: EdgeInsets.only(
               left: 16.w,
               right: 16.w,
               bottom: MediaQuery.of(context).viewInsets.bottom,
             ),
-            child: const ForgetPasswordBody(),
+            child: SingleChildScrollView(child: const ForgetPasswordBody()),
           ),
         ),
       ),

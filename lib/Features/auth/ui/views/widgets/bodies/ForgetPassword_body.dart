@@ -14,28 +14,26 @@ class ForgetPasswordBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          SizedBox(height: 50.h),
-          SvgPicture.asset(Assets.imagesForgotPassword),
-          const AuthMessages(
-            title: 'Forgot Password?',
-            subtitle:
-                "Don’t worry! It happens. Please enter the email associated with your account.",
-            authMode: AuthMode.Verifying,
-          ),
-          SizedBox(height: 25.h),
-          const CustomTextField(hint: 'Email', icon: Assets.imagesEmailIcon),
-          SizedBox(height: 30.h),
-          WideButton(
-            title: 'SendCode',
-            onPressed: () {
-              GoRouter.of(context).pushReplacement(AppRouter.kverifycodeview);
-            },
-          ),
-        ],
-      ),
+    return Column(
+      children: [
+        SizedBox(height: 50.h),
+        SvgPicture.asset(Assets.imagesForgotPassword),
+        const AuthMessages(
+          title: 'Forgot Password?',
+          subtitle:
+              "Don’t worry! It happens. Please enter the email associated with your account.",
+          authMode: AuthMode.Verifying,
+        ),
+        SizedBox(height: 25.h),
+        const CustomTextField(hint: 'Email', icon: Assets.imagesEmailIcon),
+        SizedBox(height: 30.h),
+        WideButton(
+          title: 'SendCode',
+          onPressed: () {
+            GoRouter.of(context).pushReplacement(AppRouter.kverifycodeview);
+          },
+        ),
+      ],
     );
   }
 }

@@ -6,6 +6,9 @@ class ProfileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ProfileViewBody();
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+      child: ProfileViewBody(),
+    );
   }
 }

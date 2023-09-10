@@ -1,6 +1,14 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesArrowBackIcon
+  /// assets/images/arrow_back_icon.svg
+  static const String imagesArrowBackIcon = "assets/images/arrow_back_icon.svg";
+
+  /// Assets for imagesAsCoachIcon
+  /// assets/images/as_coach_icon.svg
+  static const String imagesAsCoachIcon = "assets/images/as_coach_icon.svg";
+
   /// Assets for imagesCap1
   /// assets/images/cap1.png
   static const String imagesCap1 = "assets/images/cap1.png";
@@ -33,6 +41,10 @@ class Assets {
   /// assets/images/drop_down_icon.jpg
   static const String imagesDropDownIcon = "assets/images/drop_down_icon.jpg";
 
+  /// Assets for imagesEditProfileIcon
+  /// assets/images/edit_profile_icon.svg
+  static const String imagesEditProfileIcon = "assets/images/edit_profile_icon.svg";
+
   /// Assets for imagesEmailIcon
   /// assets/images/email_icon.png
   static const String imagesEmailIcon = "assets/images/email_icon.png";
@@ -44,6 +56,10 @@ class Assets {
   /// Assets for imagesFacebookIcon
   /// assets/images/facebook_icon.svg
   static const String imagesFacebookIcon = "assets/images/facebook_icon.svg";
+
+  /// Assets for imagesFlagIcon
+  /// assets/images/flag_icon.png
+  static const String imagesFlagIcon = "assets/images/flag_icon.png";
 
   /// Assets for imagesForgotPassword
   /// assets/images/forgot_password.svg
@@ -61,6 +77,10 @@ class Assets {
   /// assets/images/home_icon.svg
   static const String imagesHomeIcon = "assets/images/home_icon.svg";
 
+  /// Assets for imagesLogOutIcon
+  /// assets/images/log_out_icon.svg
+  static const String imagesLogOutIcon = "assets/images/log_out_icon.svg";
+
   /// Assets for imagesLogo
   /// assets/images/logo.png
   static const String imagesLogo = "assets/images/logo.png";
@@ -68,6 +88,10 @@ class Assets {
   /// Assets for imagesNotification
   /// assets/images/Notification.svg
   static const String imagesNotification = "assets/images/Notification.svg";
+
+  /// Assets for imagesNotificationIcon
+  /// assets/images/notification_icon.svg
+  static const String imagesNotificationIcon = "assets/images/notification_icon.svg";
 
   /// Assets for imagesP1
   /// assets/images/p1.svg
@@ -108,6 +132,10 @@ class Assets {
   /// Assets for imagesSearch
   /// assets/images/search.svg
   static const String imagesSearch = "assets/images/search.svg";
+
+  /// Assets for imagesShareIcon
+  /// assets/images/share_icon.svg
+  static const String imagesShareIcon = "assets/images/share_icon.svg";
 
   /// Assets for imagesSlider
   /// assets/images/slider.png
