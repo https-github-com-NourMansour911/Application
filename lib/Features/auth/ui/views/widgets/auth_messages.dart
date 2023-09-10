@@ -44,7 +44,7 @@ class AuthMessages extends StatelessWidget {
               ? TextStyle(
                   fontSize: 12.sp,
                   fontWeight: FontWeight.w600,
-                  color: kfadedColor,
+                  color: k_grey,
                 )
               : TextStyle(
                   fontSize: 16.sp,

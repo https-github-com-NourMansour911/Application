@@ -17,7 +17,7 @@ class CustomSearchBar extends StatelessWidget {
         borderRadius: BorderRadius.circular(4.r),
         border: Border.all(
           width: 0.8.w,
-          color: kExtra_FadedColor,
+          color: k_heavyGrey,
         ),
       ),
       child: Row(
@@ -31,12 +31,12 @@ class CustomSearchBar extends StatelessWidget {
           Expanded(
             child: TextField(
               maxLines: 1,
-              cursorColor: kfadedColor,
+              cursorColor: k_grey,
               decoration: InputDecoration(
                 fillColor: Colors.transparent,
                 hintText: hint,
                 hintStyle: TextStyle(
-                  color: kfadedColor,
+                  color: k_grey,
                   fontSize: 15.sp,
                   fontWeight: FontWeight.w400,
                 ),

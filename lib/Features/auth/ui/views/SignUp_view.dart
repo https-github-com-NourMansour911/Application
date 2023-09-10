@@ -9,13 +9,9 @@ class SignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(
-          create: (context) => UserFormCubit(),
-        ),
-      ],
-      child: SafeArea(
+    return SafeArea(
+      child: BlocProvider(
+        create: (context) => UserFormCubit(),
         child: Scaffold(
           resizeToAvoidBottomInset: false,
           body: Container(

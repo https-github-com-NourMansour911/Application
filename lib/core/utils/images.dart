@@ -1,6 +1,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesArrowBackIcon
+  /// assets/images/arrow_back_icon.svg
+  static const String imagesArrowBackIcon = "assets/images/arrow_back_icon.svg";
+
   /// Assets for imagesAsCoachIcon
   /// assets/images/as_coach_icon.svg
   static const String imagesAsCoachIcon = "assets/images/as_coach_icon.svg";
@@ -48,6 +52,10 @@ class Assets {
   /// Assets for imagesFacebookIcon
   /// assets/images/facebook_icon.svg
   static const String imagesFacebookIcon = "assets/images/facebook_icon.svg";
+
+  /// Assets for imagesFlagIcon
+  /// assets/images/flag_icon.png
+  static const String imagesFlagIcon = "assets/images/flag_icon.png";
 
   /// Assets for imagesForgotPassword
   /// assets/images/forgot_password.svg

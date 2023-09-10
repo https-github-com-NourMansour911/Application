@@ -43,7 +43,7 @@ class PasswordField extends StatelessWidget {
                   : !BlocProvider.of<UserFormCubit>(context).isHidden
                       ? Icons.visibility_outlined
                       : Icons.visibility_off_outlined,
-              color: kfadedColor,
+              color: k_grey,
             ),
           ),
         );

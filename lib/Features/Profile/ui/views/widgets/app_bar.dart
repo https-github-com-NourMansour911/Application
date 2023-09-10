@@ -1,26 +1,34 @@
+import 'package:e_gem/core/utils/images.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
-class AppBar extends StatelessWidget {
-  const AppBar({Key? key}) : super(key: key);
+class CustomAppBar extends StatelessWidget {
+  const CustomAppBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Container(
-          width: 50,
-          height: 50,
-          decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.03),
-            borderRadius: BorderRadius.circular(16),
+        GestureDetector(
+          onTap: () {
+            GoRouter.of(context).pop();
+          },
+          child: SvgPicture.asset(
+            Assets.imagesArrowBackIcon,
+            height: 35,
           ),
-          child: IconButton(onPressed: () {}, icon: Icon(Icons.more_vert)),
         ),
         Text(
           "Edit Profile",
-          style: const TextStyle(fontSize: 28),
+          style: TextStyle(
+            fontSize: 18.sp,
+            fontWeight: FontWeight.w600,
+          ),
         ),
+        SizedBox(width: 35),
       ],
     );
   }

@@ -15,9 +15,9 @@ class UserInfo extends StatelessWidget {
       children: [
         Center(
           child: CircleAvatar(
-              radius: 70.w, backgroundImage: AssetImage(Assets.imagesCap1)),
+              radius: 65.w, backgroundImage: AssetImage(Assets.imagesCap1)),
         ),
-        SizedBox(height: 22.h),
+        SizedBox(height: 18.h),
         Text(
           name,
           style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700),
@@ -26,9 +26,7 @@ class UserInfo extends StatelessWidget {
         Text(
           email,
           style: TextStyle(
-              fontSize: 12.sp,
-              color: kExtra_FadedColor,
-              fontWeight: FontWeight.w400),
+              fontSize: 12.sp, color: k_heavyGrey, fontWeight: FontWeight.w400),
         )
       ],
     );

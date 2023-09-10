@@ -18,8 +18,8 @@ class OptionTile extends StatelessWidget {
           GoRouter.of(context).push(path!);
         }
       },
-      child: Container(
-        margin: EdgeInsets.symmetric(vertical: 16.h),
+      child: SizedBox(
+        height: 50.h,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

@@ -44,7 +44,7 @@ class _NavBarState extends State<NavBar> {
                     showUnselectedLabels: true,
                     showSelectedLabels: true,
                     unselectedLabelStyle: TextStyle(
-                      color: kfadedColor,
+                      color: k_grey,
                       fontSize: 12.sp,
                       fontWeight: FontWeight.w400,
                     ),

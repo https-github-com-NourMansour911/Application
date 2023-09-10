@@ -9,13 +9,9 @@ class LogIn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(
-          create: (context) => UserFormCubit(),
-        ),
-      ],
-      child: SafeArea(
+    return SafeArea(
+      child: BlocProvider(
+        create: (context) => UserFormCubit(),
         child: Scaffold(
           resizeToAvoidBottomInset: false,
           body: Container(
@@ -24,7 +20,9 @@ class LogIn extends StatelessWidget {
               right: 16.w,
               bottom: MediaQuery.of(context).viewInsets.bottom,
             ),
-            child: const LogInBody(),
+            child: Builder(builder: (context) {
+              return const LogInBody();
+            }),
           ),
         ),
       ),

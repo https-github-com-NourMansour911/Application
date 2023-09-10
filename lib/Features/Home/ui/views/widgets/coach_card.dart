@@ -61,7 +61,7 @@ class CoachCard extends StatelessWidget {
                   Text(
                     '7 Years Ex',
                     style: TextStyle(
-                      color: kfadedColor,
+                      color: k_grey,
                       fontSize: 12.sp,
                       fontWeight: FontWeight.w400,
                     ),
@@ -76,7 +76,7 @@ class CoachCard extends StatelessWidget {
                       Text(
                         '5',
                         style: TextStyle(
-                          color: kfadedColor,
+                          color: k_grey,
                           fontSize: 10.sp,
                           fontWeight: FontWeight.w400,
                         ),

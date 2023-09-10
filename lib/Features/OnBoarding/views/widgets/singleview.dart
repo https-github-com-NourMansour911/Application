@@ -41,7 +41,7 @@ class Singleview extends StatelessWidget {
           style: TextStyle(
             fontSize: 16.sp,
             fontWeight: FontWeight.w600,
-            color: kExtra_FadedColor,
+            color: k_heavyGrey,
           ),
         ),
       ],

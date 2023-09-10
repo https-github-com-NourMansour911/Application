@@ -12,14 +12,17 @@ class AgeGenderOptions extends StatelessWidget {
     return Row(
       children: [
         const Expanded(
-            child: CustomTextField(
-          hint: 'Age',
-          icon: Assets.imagesGenderIcon,
-          textInputType: TextInputType.number,
-        )),
+          child: CustomTextField(
+            hint: 'Age',
+            icon: Assets.imagesGenderIcon,
+            textInputType: TextInputType.number,
+          ),
+        ),
         SizedBox(width: 16.w),
         Expanded(
-          child: DropDownField(),
+          child: DropDownField(
+            label: 'Gender',
+          ),
         ),
       ],
     );

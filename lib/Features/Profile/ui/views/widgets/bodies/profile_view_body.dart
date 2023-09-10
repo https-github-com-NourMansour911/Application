@@ -18,7 +18,8 @@ class ProfileViewBody extends StatelessWidget {
         SizedBox(height: 18.h),
         OptionTile(
             pre_icon: SvgPicture.asset(Assets.imagesEditProfileIcon),
-            title: "Edit Profile"),
+            title: "Edit Profile",
+            path: AppRouter.kEditProfileView),
         OptionTile(
             pre_icon: SvgPicture.asset(Assets.imagesNotificationIcon),
             title: "Notifications"),
