@@ -10,7 +10,6 @@ class CoachCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 130.w,
-      height: 175.h,
       child: Card(
         shape: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.r),

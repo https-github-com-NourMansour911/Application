@@ -17,7 +17,7 @@ class CustomSearchBar extends StatelessWidget {
         borderRadius: BorderRadius.circular(4.r),
         border: Border.all(
           width: 0.8.w,
-          color: Color(0xFF626262),
+          color: kExtra_FadedColor,
         ),
       ),
       child: Row(

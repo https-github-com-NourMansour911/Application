@@ -1,6 +1,7 @@
 import 'package:e_gem/Features/Home/ui/views/home_view.dart';
 import 'package:e_gem/Features/Nav_Bar/ui/view_models/nav_bar_cubit/nav_bar_cubit.dart';
 import 'package:e_gem/Features/Nav_Bar/ui/views/widgets/nav_bar_item.dart';
+import 'package:e_gem/Features/Profile/ui/views/profile_view.dart';
 import 'package:e_gem/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,7 +21,7 @@ class _NavBarState extends State<NavBar> {
       HomeView(),
       Container(),
       Container(),
-      Container()
+      ProfileView(),
     ];
 
     List<BottomNavigationBarItem> items = [
