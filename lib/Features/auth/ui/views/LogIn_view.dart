@@ -9,18 +9,20 @@ class LogIn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: BlocProvider(
-        create: (context) => UserFormCubit(),
-        child: Scaffold(
-          resizeToAvoidBottomInset: false,
-          body: Container(
+    return BlocProvider(
+      create: (context) => UserFormCubit(),
+      child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        body: SafeArea(
+          child: Container(
             margin: EdgeInsets.only(
               left: 16.w,
               right: 16.w,
               bottom: MediaQuery.of(context).viewInsets.bottom,
             ),
-            child: SingleChildScrollView(child: const LogInBody()),
+            child: Builder(builder: (context) {
+              return SingleChildScrollView(child: const LogInBody());
+            }),
           ),
         ),
       ),

@@ -9,12 +9,12 @@ class EditProfileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: BlocProvider(
-        create: (context) => UserFormCubit(),
-        child: Scaffold(
-          resizeToAvoidBottomInset: false,
-          body: Container(
+    return BlocProvider(
+      create: (context) => UserFormCubit(),
+      child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        body: SafeArea(
+          child: Container(
             margin: EdgeInsets.only(
               right: 16.w,
               left: 16.w,

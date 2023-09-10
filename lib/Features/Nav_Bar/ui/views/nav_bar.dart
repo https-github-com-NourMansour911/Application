@@ -32,42 +32,40 @@ class _NavBarState extends State<NavBar> {
       BottomNavigationBarItem(icon: NavBarItem(index: 3), label: "Profile"),
     ];
 
-    return SafeArea(
-      child: BlocProvider(
-        create: (context) => NavBarCubit(),
-        child: BlocBuilder<NavBarCubit, NavBarState>(
-          builder: (context, state) {
-            var cubit = BlocProvider.of<NavBarCubit>(context);
-            return Scaffold(
-              bottomNavigationBar: SizedBox(
-                  height: 75.h,
-                  child: BottomNavigationBar(
-                    showUnselectedLabels: true,
-                    showSelectedLabels: true,
-                    unselectedLabelStyle: TextStyle(
-                      color: k_grey,
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w400,
-                    ),
-                    selectedItemColor: kprimaryColor,
-                    selectedLabelStyle: TextStyle(
-                      color: kprimaryColor,
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w600,
-                      height: 2.5.h,
-                    ),
-                    type: BottomNavigationBarType.fixed,
-                    currentIndex: cubit.currentIndex,
-                    iconSize: 24,
-                    onTap: (value) {
-                      cubit.select(value);
-                    },
-                    items: items,
-                  )),
-              body: navScreens[cubit.currentIndex],
-            );
-          },
-        ),
+    return BlocProvider(
+      create: (context) => NavBarCubit(),
+      child: BlocBuilder<NavBarCubit, NavBarState>(
+        builder: (context, state) {
+          var cubit = BlocProvider.of<NavBarCubit>(context);
+          return Scaffold(
+            bottomNavigationBar: SizedBox(
+                height: 75.h,
+                child: BottomNavigationBar(
+                  showUnselectedLabels: true,
+                  showSelectedLabels: true,
+                  unselectedLabelStyle: TextStyle(
+                    color: k_grey,
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                  selectedItemColor: kprimaryColor,
+                  selectedLabelStyle: TextStyle(
+                    color: kprimaryColor,
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w600,
+                    height: 2.5.h,
+                  ),
+                  type: BottomNavigationBarType.fixed,
+                  currentIndex: cubit.currentIndex,
+                  iconSize: 24,
+                  onTap: (value) {
+                    cubit.select(value);
+                  },
+                  items: items,
+                )),
+            body: SafeArea(child: navScreens[cubit.currentIndex]),
+          );
+        },
       ),
     );
   }

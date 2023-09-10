@@ -16,12 +16,12 @@ class ResetPassword extends StatelessWidget {
           create: (context) => AuthBloc(),
         ),
       ],
-      child: SafeArea(
-        child: BlocProvider(
-          create: (context) => UserFormCubit(),
-          child: Scaffold(
-            resizeToAvoidBottomInset: false,
-            body: Container(
+      child: BlocProvider(
+        create: (context) => UserFormCubit(),
+        child: Scaffold(
+          resizeToAvoidBottomInset: false,
+          body: SafeArea(
+            child: Container(
               margin: EdgeInsets.only(
                 left: 16.w,
                 right: 16.w,
