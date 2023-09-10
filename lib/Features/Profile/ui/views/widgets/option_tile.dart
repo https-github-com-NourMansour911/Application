@@ -12,8 +12,13 @@ class OptionTile extends StatelessWidget {
   final String? path;
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        shadowColor: Colors.transparent,
+      ),
+      onPressed: () {
         if (path != null) {
           GoRouter.of(context).push(path!);
         }

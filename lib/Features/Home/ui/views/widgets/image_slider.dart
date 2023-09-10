@@ -37,7 +37,7 @@ class _ImageSliderState extends State<ImageSlider> {
               },
               options: CarouselOptions(
                   autoPlay: true,
-                  reverse: true,
+                  reverse: false,
                   height: 140.h,
                   autoPlayInterval: Duration(seconds: 2),
                   viewportFraction: 1,
@@ -59,8 +59,8 @@ class _ImageSliderState extends State<ImageSlider> {
                     : cubit.slider_Index == 1
                         ? Color(0xFFB04242)
                         : Color(0xFFFF6078),
-                dotHeight: 12.h,
-                dotWidth: 12.w,
+                dotHeight: 8.h,
+                dotWidth: 10.w,
               ),
             ),
           ],
