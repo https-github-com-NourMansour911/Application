@@ -5,8 +5,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({Key? key}) : super(key: key);
-
+  const CustomAppBar({Key? key, required this.title}) : super(key: key);
+  final String title;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -22,7 +22,7 @@ class CustomAppBar extends StatelessWidget {
           ),
         ),
         Text(
-          "Edit Profile",
+          title,
           style: TextStyle(
             fontSize: 18.sp,
             fontWeight: FontWeight.w600,

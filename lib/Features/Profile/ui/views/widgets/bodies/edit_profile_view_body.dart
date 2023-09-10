@@ -15,7 +15,9 @@ class EditProfileViewBody extends StatelessWidget {
     return Column(
       children: [
         SizedBox(height: 18.h),
-        CustomAppBar(),
+        CustomAppBar(
+          title: 'Edit Profile',
+        ),
         SizedBox(height: 16.h),
         UserInfo(name: "Yahia Ahmed", email: "yehiaahmed4589@gmail.com"),
         SizedBox(height: 35.h),

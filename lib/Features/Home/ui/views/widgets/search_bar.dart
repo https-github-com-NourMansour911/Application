@@ -13,11 +13,11 @@ class CustomSearchBar extends StatelessWidget {
       height: 45.h,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Color(0xFFEFEFEF),
-        borderRadius: BorderRadius.circular(4.r),
+        color: k_lightGrey,
+        borderRadius: BorderRadius.circular(8.r),
         border: Border.all(
-          width: 0.8.w,
-          color: k_heavyGrey,
+          width: 0.3.w,
+          color: k_grey,
         ),
       ),
       child: Row(
