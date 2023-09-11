@@ -34,4 +34,10 @@ final TextStyle plansProvideText = TextStyle(
   fontFamily: 'Roboto',
   fontWeight: FontWeight.w400,
 );
+final TextStyle dateTime = TextStyle(
+  color: Color(0xFF110805),
+  fontSize: 14,
+  fontFamily: 'Open Sans',
+  fontWeight: FontWeight.w600,
+);
 

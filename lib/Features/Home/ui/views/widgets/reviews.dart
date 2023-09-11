@@ -1,3 +1,4 @@
+import 'package:e_gem/Features/Home/ui/views/widgets/customized_ratebar.dart';
 import 'package:e_gem/constants.dart';
 import 'package:e_gem/generated/assets.dart';
 import 'package:flutter/material.dart';
@@ -43,22 +44,7 @@ class Reviews extends StatelessWidget {
                               fontWeight: FontWeight.w600,
                             ),
                           ),
-                          RatingBar.builder(
-                            initialRating: 3,
-                            minRating: 1,
-                            direction: Axis.horizontal,
-                            allowHalfRating: true,
-                            itemCount: 5,
-                            itemSize: 20,
-                            //itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                            itemBuilder: (context, _) => Icon(
-                              Icons.star,
-                              color: Colors.amber,
-                            ),
-                            onRatingUpdate: (rating) {
-                              print(rating);
-                            },
-                          ),
+                          CustomizedRateBar(),
                         ],
                       ),
                       SizedBox(width: 150,),
