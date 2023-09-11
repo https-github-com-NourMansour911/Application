@@ -16,3 +16,22 @@ final TextStyle notes = TextStyle(
   fontSize: 12.sp,
   fontWeight: FontWeight.w400,
 );
+final TextStyle scoresNum = TextStyle(
+    color: kprimaryColor,
+    fontSize: 22.sp,
+    fontFamily: 'Open Sans',
+    fontWeight: FontWeight.w600,
+);
+final TextStyle scoresText = TextStyle(
+    color: Color(0xFF110805),
+    fontSize: 11.sp,
+    fontFamily: 'Open Sans',
+    fontWeight: FontWeight.w400,
+);
+final TextStyle plansProvideText = TextStyle(
+  color: Color(0xFF110805),
+  fontSize: 13,
+  fontFamily: 'Roboto',
+  fontWeight: FontWeight.w400,
+);
+

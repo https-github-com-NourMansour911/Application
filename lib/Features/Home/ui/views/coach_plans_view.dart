@@ -6,6 +6,6 @@ class CoachPlansView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CoachPlansViewBody();
+    return Scaffold(body: SafeArea(child: CoachPlansViewBody()));
   }
 }

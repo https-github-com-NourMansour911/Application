@@ -1,5 +1,8 @@
+import 'package:e_gem/constants.dart';
+import 'package:e_gem/core/utils/images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Transformation extends StatelessWidget {
   const Transformation({Key? key}) : super(key: key);
@@ -11,38 +14,37 @@ class Transformation extends StatelessWidget {
         crossAxisCount: 2,
         crossAxisSpacing: 1,
         mainAxisSpacing: 1,
-        mainAxisExtent: 165,
+        mainAxisExtent: 166,
       ),
       shrinkWrap: true,
       children: [
         Card(
           shape: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
-            borderSide: BorderSide(width: 0.25, color: Colors.transparent,),
+            borderSide: BorderSide(width: 0.25.w, color: Colors.transparent,),
           ),
-          color: Color(0xFFEFEFEF),
+          color: k_lightGrey,
           elevation: 0,
           child: Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: const EdgeInsets.symmetric(vertical: 12,horizontal: 8),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset("assets/images/transformation.png",width: double.infinity,fit: BoxFit.fitHeight,),
-                SizedBox(height: 8,),
+                Image.asset(Assets.imagesTransformation,width: double.infinity,fit: BoxFit.fitHeight,),
+                SizedBox(height: 5.h,),
                 Text('Ahmed Mohsen',
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 13,
+                    fontSize: 12.sp,
                     fontFamily: 'Open Sans',
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                SizedBox(height: 3,),
                 Text('20 Years',
               style: TextStyle(
-                color: Color(0xFF848484),
-                fontSize: 12,
+                color: k_grey,
+                fontSize: 10.sp,
                 fontFamily: 'Open Sans',
                 fontWeight: FontWeight.w400,
               ),

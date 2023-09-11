@@ -27,7 +27,7 @@ class Review extends StatelessWidget {
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      SvgPicture.asset(Assets.imagesReview1,height: 38,width: 38,),
+                      SvgPicture.asset(Assets.imagesReview2,height: 38,width: 38,),
                       SizedBox(width: 19,),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,

@@ -4,13 +4,15 @@ import 'package:e_gem/Features/Auth/ui/views/ResetPassword_view.dart';
 import 'package:e_gem/Features/Auth/ui/views/Verify_view.dart';
 import 'package:e_gem/Features/Chat/ui/views/chats_view.dart';
 import 'package:e_gem/Features/Chat/ui/views/messaging_view.dart';
+import 'package:e_gem/Features/Home/ui/views/appointment_view.dart';
+import 'package:e_gem/Features/Home/ui/views/coach_plans_view.dart';
+import 'package:e_gem/Features/Home/ui/views/home_view.dart';
 import 'package:e_gem/Features/Nav_Bar/ui/views/nav_bar.dart';
 import 'package:e_gem/Features/Notifications/ui/views/notifications_view.dart';
 import 'package:e_gem/Features/OnBoarding/views/Splash_view.dart';
 import 'package:e_gem/Features/OnBoarding/views/preview.dart';
 import 'package:e_gem/Features/Profile/ui/views/edit_profile_view.dart';
 import 'package:e_gem/Features/Profile/ui/views/profile_view.dart';
-
 import 'package:e_gem/Features/auth/ui/views/LogIn_view.dart';
 import 'package:e_gem/Features/auth/ui/views/SignUp_view.dart';
 import 'package:go_router/go_router.dart';
@@ -29,6 +31,9 @@ abstract class AppRouter {
   static const kmessagingView = '/messagingView';
   // Home
   static const kNavBar = '/NavBar';
+  static const kHomeView = '/home_view';
+  static const kAppointmentView = '/appointment_view';
+  static const kCoachPlansView = '/coachPlansView';
 
   // Profile
   static const kProfileView = '/ProfileView';
@@ -72,10 +77,23 @@ abstract class AppRouter {
         path: kpasswordchanged,
         builder: (context, state) => const PasswordChanged(),
       ),
+
       // Home
       GoRoute(
         path: kNavBar,
         builder: (context, state) => const NavBar(),
+      ),
+      GoRoute(
+        path: kHomeView,
+        builder: (context, state) => const HomeView(),
+      ),
+      GoRoute(
+        path: kAppointmentView,
+        builder: (context, state) => const AppointmentView(),
+      ),
+      GoRoute(
+        path: kCoachPlansView,
+        builder: (context, state) => const CoachPlansView(),
       ),
 
       // Chat
@@ -87,6 +105,7 @@ abstract class AppRouter {
         path: kmessagingView,
         builder: (context, state) => const MessagingView(),
       ),
+
       // Profile
       GoRoute(
         path: kProfileView,
