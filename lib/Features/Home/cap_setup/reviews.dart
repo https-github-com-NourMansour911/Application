@@ -1,5 +1,6 @@
 import 'package:e_gem/constants/colors.dart';
 import 'package:e_gem/core/utils/images.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_svg/svg.dart';
@@ -17,7 +18,7 @@ class Review extends StatelessWidget {
           height: 150,
           padding: const EdgeInsets.all(18),
           decoration: ShapeDecoration(
-            color: MyColors.lightGrey,
+            color: Color(0xFFEFEFEF),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16),
             ),
@@ -99,5 +100,3 @@ class Review extends StatelessWidget {
     ));
   }
 }
-
-class GoogleFonts {}

@@ -7,9 +7,11 @@ import 'package:e_gem/Features/auth/presentation/views/widgets/password_field.da
 import 'package:e_gem/Features/auth/presentation/views/widgets/switch_auth.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/auth_messages.dart';
 import 'package:e_gem/core/utils/images.dart';
+import 'package:e_gem/core/utils/routes.dart';
 import 'package:e_gem/core/widgets/wide_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 class SignUpBody extends StatelessWidget {
   const SignUpBody({Key? key}) : super(key: key);
@@ -31,7 +33,10 @@ class SignUpBody extends StatelessWidget {
         SizedBox(height: 16.h),
         const PasswordField(),
         SizedBox(height: 36.h),
-        const WideButton(title: "Sign Up"),
+        WideButton(
+            title: "Sign Up",
+            onPressed: () =>
+                GoRouter.of(context).pushReplacement(AppRouter.kNavBar)),
         SizedBox(height: 30.h),
         const ScreenDivider(),
         SizedBox(height: 25.h),

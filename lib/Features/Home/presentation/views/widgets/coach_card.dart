@@ -1,4 +1,4 @@
-import 'package:e_gem/constants/colors.dart';
+import 'package:e_gem/constants.dart';
 import 'package:e_gem/core/utils/images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,7 +18,7 @@ class CoachCard extends StatelessWidget {
             color: Colors.transparent,
           ),
         ),
-        color: MyColors.lightGrey,
+        color: Color(0xFFEFEFEF),
         elevation: 0,
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 10.h),
@@ -61,7 +61,7 @@ class CoachCard extends StatelessWidget {
                   Text(
                     '7 Years Ex',
                     style: TextStyle(
-                      color: MyColors.grey,
+                      color: k_grey,
                       fontSize: 12.sp,
                       fontWeight: FontWeight.w400,
                     ),
@@ -76,7 +76,7 @@ class CoachCard extends StatelessWidget {
                       Text(
                         '5',
                         style: TextStyle(
-                          color: MyColors.grey,
+                          color: k_grey,
                           fontSize: 10.sp,
                           fontWeight: FontWeight.w400,
                         ),

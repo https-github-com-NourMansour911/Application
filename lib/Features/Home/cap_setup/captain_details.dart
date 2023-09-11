@@ -1,6 +1,5 @@
 import 'package:e_gem/Features/Home/cap_setup/reviews.dart';
 import 'package:e_gem/Features/Home/cap_setup/transformation.dart';
-import 'package:e_gem/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class CaptainDetails extends StatefulWidget {
@@ -15,7 +14,7 @@ class _CaptainDetailsState extends State<CaptainDetails>
   TabController? _tabController;
   @override
   void initState() {
-    _tabController = TabController(length: 2, vsync: this);
+    _tabController = new TabController(length: 2, vsync: this);
     super.initState();
   }
 
@@ -75,7 +74,7 @@ class _CaptainDetailsState extends State<CaptainDetails>
                       bottom: 16,
                     ),
                     decoration: ShapeDecoration(
-                      color: MyColors.lightGrey,
+                      color: Color(0xFFEFEFEF),
                       shape: RoundedRectangleBorder(
                         side: BorderSide(width: 1.5, color: Color(0xFFAF4141)),
                         borderRadius: BorderRadius.circular(16),
@@ -169,7 +168,7 @@ class _CaptainDetailsState extends State<CaptainDetails>
                     width: double.infinity,
                     height: 41,
                     decoration: ShapeDecoration(
-                      color: MyColors.lightGrey,
+                      color: Color(0xFFEFEFEF),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(3)),
                     ),
@@ -186,26 +185,28 @@ class _CaptainDetailsState extends State<CaptainDetails>
                           labelColor: Colors.white,
                           tabs: [
                             Tab(
-                              height: 41,
                               child: Text(
                                 'Reviews',
                                 textAlign: TextAlign.right,
                                 style: TextStyle(
                                   fontSize: 12,
+                                  fontFamily: 'Open Sans',
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
+                              height: 41,
                             ),
                             Tab(
-                              height: 41,
                               child: Text(
                                 'Transformation',
                                 textAlign: TextAlign.right,
                                 style: TextStyle(
                                   fontSize: 12,
+                                  fontFamily: 'Open Sans',
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
+                              height: 41,
                             )
                           ]),
                     ),
@@ -228,20 +229,26 @@ class _CaptainDetailsState extends State<CaptainDetails>
                     width: double.infinity,
                     height: 53,
                     child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFFBB2525),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8)),
-                      ),
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ChoosePlan()));
+                      },
                       child: Text(
                         'Book an Appointment',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 17,
+                          fontFamily: 'Open Sans',
                           fontWeight: FontWeight.w600,
                         ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color(0xFFBB2525),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8)),
                       ),
                     ),
                   ),
