@@ -4,7 +4,7 @@ import 'package:e_gem/Features/Auth/ui/views/ResetPassword_view.dart';
 import 'package:e_gem/Features/Auth/ui/views/Verify_view.dart';
 import 'package:e_gem/Features/Chat/ui/views/chats_view.dart';
 import 'package:e_gem/Features/Chat/ui/views/messaging_view.dart';
-import 'package:e_gem/Features/Home/ui/views/appointment_view.dart';
+import 'package:e_gem/Features/Home/ui/views/coach_profile_view.dart';
 import 'package:e_gem/Features/Home/ui/views/coach_plans_view.dart';
 import 'package:e_gem/Features/Home/ui/views/home_view.dart';
 import 'package:e_gem/Features/Nav_Bar/ui/views/nav_bar.dart';
@@ -89,7 +89,7 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: kAppointmentView,
-        builder: (context, state) => const AppointmentView(),
+        builder: (context, state) => const CoachProfileView(),
       ),
       GoRoute(
         path: kCoachPlansView,

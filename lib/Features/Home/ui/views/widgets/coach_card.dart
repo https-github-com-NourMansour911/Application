@@ -1,4 +1,4 @@
-import 'package:e_gem/Features/Home/ui/views/appointment_view.dart';
+import 'package:e_gem/Features/Home/ui/views/coach_profile_view.dart';
 import 'package:e_gem/constants.dart';
 import 'package:e_gem/core/utils/images.dart';
 import 'package:e_gem/core/utils/routes.dart';
