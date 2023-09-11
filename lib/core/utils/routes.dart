@@ -7,6 +7,7 @@ import 'package:e_gem/Features/Chat/ui/views/messaging_view.dart';
 import 'package:e_gem/Features/Home/ui/views/coach_profile_view.dart';
 import 'package:e_gem/Features/Home/ui/views/coach_plans_view.dart';
 import 'package:e_gem/Features/Home/ui/views/home_view.dart';
+import 'package:e_gem/Features/Home/ui/views/payment_view.dart';
 import 'package:e_gem/Features/Nav_Bar/ui/views/nav_bar.dart';
 import 'package:e_gem/Features/Notifications/ui/views/notifications_view.dart';
 import 'package:e_gem/Features/OnBoarding/views/Splash_view.dart';
@@ -34,6 +35,7 @@ abstract class AppRouter {
   static const kHomeView = '/home_view';
   static const kAppointmentView = '/appointment_view';
   static const kCoachPlansView = '/coachPlansView';
+  static const kPaymentView = '/payment_view';
 
   // Profile
   static const kProfileView = '/ProfileView';
@@ -94,6 +96,10 @@ abstract class AppRouter {
       GoRoute(
         path: kCoachPlansView,
         builder: (context, state) => const CoachPlansView(),
+      ),
+      GoRoute(
+        path: kPaymentView,
+        builder: (context, state) => const PaymentView(),
       ),
 
       // Chat

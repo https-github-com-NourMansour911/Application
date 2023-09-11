@@ -3,6 +3,7 @@ class Assets {
   Assets._();
 
   static const String assetsImagesChoosePlan = 'assets/images/choose_plan.svg';
+  static const String assetsImagesCreditCard = 'assets/images/credit_card.svg';
   static const String fontsOpenSansBold = 'assets/fonts/OpenSans-Bold.ttf';
   static const String fontsOpenSansExtraBold = 'assets/fonts/OpenSans-ExtraBold.ttf';
   static const String fontsOpenSansLight = 'assets/fonts/OpenSans-Light.ttf';
@@ -18,7 +19,7 @@ class Assets {
   static const String imagesCheck = 'assets/images/check.svg';
   static const String imagesCheckMail = 'assets/images/check_mail.svg';
   static const String imagesChoosePlan = 'assets/images/choose_plan.png';
-  static const String imagesCreditCard = 'assets/images/credit_card.svg';
+  static const String imagesCreditCard = 'assets/images/credit_card.png';
   static const String imagesDropDownIcon = 'assets/images/drop_down_icon.jpg';
   static const String imagesEditProfileIcon = 'assets/images/edit_profile_icon.svg';
   static const String imagesEmailIcon = 'assets/images/email_icon.png';

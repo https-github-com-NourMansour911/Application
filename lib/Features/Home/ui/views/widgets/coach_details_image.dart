@@ -18,7 +18,7 @@ class CoachImage extends StatelessWidget {
           child: Image.asset(Assets.imagesMohamedAli,
             width: double.infinity,fit: BoxFit.fitWidth,),
         ),
-        CostomizedBackButton(),
+        CustomizedBackButton(),
       ],
     );
   }

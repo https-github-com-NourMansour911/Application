@@ -2,9 +2,11 @@ import 'package:e_gem/Features/Home/ui/views/widgets/back_button.dart';
 import 'package:e_gem/Features/Home/ui/views/widgets/plan.dart';
 import 'package:e_gem/Features/Home/ui/views/widgets/plans_provide.dart';
 import 'package:e_gem/core/utils/images.dart';
+import 'package:e_gem/core/utils/routes.dart';
 import 'package:e_gem/core/widgets/wide_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
 class CoachPlansViewBody extends StatelessWidget {
    CoachPlansViewBody({Key? key}) : super(key: key);
@@ -19,7 +21,7 @@ class CoachPlansViewBody extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CostomizedBackButton(),
+            CustomizedBackButton(),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),
               child: SvgPicture.asset(Assets.imagesChoosePlan,width: 340,),
@@ -41,7 +43,9 @@ class CoachPlansViewBody extends StatelessWidget {
             SizedBox(height: 8,),
             Plan(choosedPlan: '12 months', planType: 'Premium', planPrice: '450', planTime: 'Y', groupValue: groupValue,),
             SizedBox(height: 26,),
-            WideButton(title: 'Choose'),
+            WideButton(title: 'Choose',
+                onPressed: () => GoRouter.of(context).push(AppRouter.kPaymentView)
+            ),
           ],
         ),
     );

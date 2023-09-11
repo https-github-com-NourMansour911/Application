@@ -42,8 +42,8 @@ class Assets {
   static const String imagesChoosePlan = "assets/images/choose_plan.svg";
 
   /// Assets for imagesCreditCard
-  /// assets/images/credit_card.svg
-  static const String imagesCreditCard = "assets/images/credit_card.svg";
+  /// assets/images/credit_card.png
+  static const String imagesCreditCard = "assets/images/credit_card.png";
 
   /// Assets for imagesDropDownIcon
   /// assets/images/drop_down_icon.jpg
