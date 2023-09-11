@@ -3,10 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/utils/styles.dart';
 
-class CardDefault extends StatelessWidget {
+class CardDefault extends StatefulWidget {
   CardDefault({super.key,});
 
+  @override
+  State<CardDefault> createState() => _CardDefaultState();
+}
+
+class _CardDefaultState extends State<CardDefault> {
   bool isDefault = false;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -18,7 +24,9 @@ class CardDefault extends StatelessWidget {
                 child: CkBox(
                   Value: isDefault,
                   onChanged: (newValue) {
-                    isDefault = newValue!;
+                    setState(() {
+                      isDefault = newValue!;
+                    });
                   },
                 ),
               ),
