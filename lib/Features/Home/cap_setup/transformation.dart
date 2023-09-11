@@ -1,3 +1,4 @@
+import 'package:e_gem/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class Transformation extends StatelessWidget {
@@ -22,7 +23,7 @@ class Transformation extends StatelessWidget {
               color: Colors.transparent,
             ),
           ),
-          color: Color(0xFFEFEFEF),
+          color: MyColors.lightGrey,
           elevation: 0,
           child: Padding(
             padding: const EdgeInsets.all(12.0),

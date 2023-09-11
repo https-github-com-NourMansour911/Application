@@ -1,5 +1,6 @@
 import 'package:e_gem/Features/Home/cap_setup/reviews.dart';
 import 'package:e_gem/Features/Home/cap_setup/transformation.dart';
+import 'package:e_gem/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class CaptainDetails extends StatefulWidget {
@@ -74,7 +75,7 @@ class _CaptainDetailsState extends State<CaptainDetails>
                       bottom: 16,
                     ),
                     decoration: ShapeDecoration(
-                      color: Color(0xFFEFEFEF),
+                      color: MyColors.lightGrey,
                       shape: RoundedRectangleBorder(
                         side: BorderSide(width: 1.5, color: Color(0xFFAF4141)),
                         borderRadius: BorderRadius.circular(16),
@@ -168,7 +169,7 @@ class _CaptainDetailsState extends State<CaptainDetails>
                     width: double.infinity,
                     height: 41,
                     decoration: ShapeDecoration(
-                      color: Color(0xFFEFEFEF),
+                      color: MyColors.lightGrey,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(3)),
                     ),

@@ -1,4 +1,4 @@
-import 'package:e_gem/constants.dart';
+import 'package:e_gem/constants/colors.dart';
 import 'package:e_gem/core/utils/images.dart';
 import 'package:e_gem/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +18,7 @@ class SplashView extends StatelessWidget {
     });
 
     return Scaffold(
-      backgroundColor: kprimaryColor,
+      backgroundColor: MyColors.primaryColor,
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

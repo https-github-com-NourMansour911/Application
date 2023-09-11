@@ -1,18 +1,18 @@
-import 'package:e_gem/Features/Auth/ui/views/ForgetPassword_view.dart';
-import 'package:e_gem/Features/Auth/ui/views/PasswordChanged_view.dart';
-import 'package:e_gem/Features/Auth/ui/views/ResetPassword_view.dart';
-import 'package:e_gem/Features/Auth/ui/views/Verify_view.dart';
-import 'package:e_gem/Features/Chat/ui/views/chats_view.dart';
-import 'package:e_gem/Features/Chat/ui/views/messaging_view.dart';
-import 'package:e_gem/Features/Nav_Bar/ui/views/nav_bar.dart';
-import 'package:e_gem/Features/Notifications/ui/views/notifications_view.dart';
+import 'package:e_gem/Features/Auth/presentation/views/ForgetPassword_view.dart';
+import 'package:e_gem/Features/Auth/presentation/views/PasswordChanged_view.dart';
+import 'package:e_gem/Features/Auth/presentation/views/ResetPassword_view.dart';
+import 'package:e_gem/Features/Auth/presentation/views/Verify_view.dart';
+import 'package:e_gem/Features/Chat/presentation/views/chats_view.dart';
+import 'package:e_gem/Features/Chat/presentation/views/messaging_view.dart';
+import 'package:e_gem/Features/Nav_Bar/presentation/views/nav_bar.dart';
+import 'package:e_gem/Features/Notifications/presentation/views/notifications_view.dart';
 import 'package:e_gem/Features/OnBoarding/views/Splash_view.dart';
 import 'package:e_gem/Features/OnBoarding/views/preview.dart';
-import 'package:e_gem/Features/Profile/ui/views/edit_profile_view.dart';
-import 'package:e_gem/Features/Profile/ui/views/profile_view.dart';
+import 'package:e_gem/Features/Profile/presentation/views/edit_profile_view.dart';
+import 'package:e_gem/Features/Profile/presentation/views/profile_view.dart';
 
-import 'package:e_gem/Features/auth/ui/views/LogIn_view.dart';
-import 'package:e_gem/Features/auth/ui/views/SignUp_view.dart';
+import 'package:e_gem/Features/auth/presentation/views/LogIn_view.dart';
+import 'package:e_gem/Features/auth/presentation/views/SignUp_view.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
