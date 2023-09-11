@@ -1,9 +1,9 @@
-import 'package:e_gem/Features/Home/cap_setup/reviews.dart';
-import 'package:e_gem/Features/Home/cap_setup/transformation.dart';
 import 'package:e_gem/Features/Home/ui/views/widgets/coach_details_image.dart';
 import 'package:e_gem/Features/Home/ui/views/widgets/coach_details_name_and_rate.dart';
 import 'package:e_gem/Features/Home/ui/views/widgets/coach_details_scores.dart';
 import 'package:e_gem/Features/Home/ui/views/widgets/coach_details_tabBar.dart';
+import 'package:e_gem/Features/Home/ui/views/widgets/reviews.dart';
+import 'package:e_gem/Features/Home/ui/views/widgets/transformations.dart';
 import 'package:e_gem/core/widgets/wide_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -45,7 +45,7 @@ with SingleTickerProviderStateMixin{
                   child: TabBarView(
                       controller: _tabController,
                       children: [
-                        Review(),
+                        Reviews(),
                         Transformation(),
                       ]),
                 ),
