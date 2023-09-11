@@ -1,10 +1,9 @@
-import 'package:e_gem/constants.dart';
+import 'package:e_gem/constants/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CoachTabBar extends StatelessWidget {
-  CoachTabBar({Key? key,required this.tabController}) : super(key: key);
+  CoachTabBar({Key? key, required this.tabController}) : super(key: key);
   TabController? tabController;
   @override
   Widget build(BuildContext context) {
@@ -12,24 +11,25 @@ class CoachTabBar extends StatelessWidget {
       width: double.infinity,
       height: 41.h,
       decoration: ShapeDecoration(
-        color: k_lightGrey,
+        color: MyColors.lightGrey,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(3)),
       ),
       child: Material(
         child: TabBar(
             indicator: BoxDecoration(
-              color: kprimaryColor,
+              color: MyColors.primaryColor,
               borderRadius: BorderRadius.circular(3),
             ),
             indicatorColor: Colors.transparent,
             controller: tabController,
             indicatorSize: TabBarIndicatorSize.tab,
-            unselectedLabelColor: k_grey,
+            unselectedLabelColor: MyColors.grey,
             labelColor: Colors.white,
             tabs: [
               Tab(
                 height: 41.h,
-                child: Text('Reviews',
+                child: Text(
+                  'Reviews',
                   textAlign: TextAlign.right,
                   style: TextStyle(
                     fontSize: 12.sp,
@@ -40,7 +40,8 @@ class CoachTabBar extends StatelessWidget {
               ),
               Tab(
                 height: 41.h,
-                child: Text('Transformation',
+                child: Text(
+                  'Transformation',
                   textAlign: TextAlign.right,
                   style: TextStyle(
                     fontSize: 12.sp,
@@ -49,8 +50,7 @@ class CoachTabBar extends StatelessWidget {
                   ),
                 ),
               )
-            ]
-        ),
+            ]),
       ),
     );
   }

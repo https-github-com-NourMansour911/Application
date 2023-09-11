@@ -1,24 +1,23 @@
-import 'package:e_gem/constants.dart';
+import 'package:e_gem/constants/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Plan extends StatefulWidget {
-  Plan({Key? key, required this.choosedPlan,
+  Plan({
+    Key? key,
+    required this.choosedPlan,
     required this.planType,
     required this.planPrice,
     required this.planTime,
     required this.groupValue,
-
   }) : super(key: key);
 
-   var choosedPlan,planType,planPrice,planTime,groupValue;
+  var choosedPlan, planType, planPrice, planTime, groupValue;
 
   @override
   State<Plan> createState() => _PlanState();
 }
 
 class _PlanState extends State<Plan> {
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,10 +25,14 @@ class _PlanState extends State<Plan> {
       height: 65,
       padding: const EdgeInsets.all(12),
       decoration: ShapeDecoration(
-        color: k_lightGrey,
+        color: MyColors.lightGrey,
         shape: RoundedRectangleBorder(
-          side: BorderSide(width: 1.0,
-            color: widget.choosedPlan == widget.groupValue? Color(0xFFBB2525): Color(0xff848484),),
+          side: BorderSide(
+            width: 1.0,
+            color: widget.choosedPlan == widget.groupValue
+                ? Color(0xFFBB2525)
+                : Color(0xff848484),
+          ),
           borderRadius: BorderRadius.circular(8),
         ),
       ),
@@ -50,13 +53,15 @@ class _PlanState extends State<Plan> {
                     scale: 1.5,
                     child: Radio(
                       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                      fillColor:MaterialStateProperty.resolveWith<Color>(
-                              (Set<MaterialState> states) {
-                            return (widget.choosedPlan == widget.groupValue) ? Color(0xFFBB2525) : Color(0xff848484);
-                          }),
+                      fillColor: MaterialStateProperty.resolveWith<Color>(
+                          (Set<MaterialState> states) {
+                        return (widget.choosedPlan == widget.groupValue)
+                            ? Color(0xFFBB2525)
+                            : Color(0xff848484);
+                      }),
                       value: widget.choosedPlan,
                       groupValue: widget.groupValue,
-                      onChanged:  (val) {
+                      onChanged: (val) {
                         setState(() {
                           widget.groupValue = val!;
                         });
@@ -83,7 +88,9 @@ class _PlanState extends State<Plan> {
                         Text(
                           widget.planType,
                           style: TextStyle(
-                            color: widget.choosedPlan == widget.groupValue? Color(0xFFBB2525): Color(0xff848484),
+                            color: widget.choosedPlan == widget.groupValue
+                                ? Color(0xFFBB2525)
+                                : Color(0xff848484),
                             fontSize: 9,
                             fontFamily: 'Open Sans',
                             fontWeight: FontWeight.w400,

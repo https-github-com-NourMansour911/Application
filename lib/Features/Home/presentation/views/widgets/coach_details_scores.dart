@@ -1,6 +1,5 @@
-import 'package:e_gem/constants.dart';
+import 'package:e_gem/constants/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:e_gem/core/utils/styles.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -19,9 +18,9 @@ class CoachScores extends StatelessWidget {
         bottom: 16,
       ),
       decoration: ShapeDecoration(
-        color: k_lightGrey,
+        color: MyColors.lightGrey,
         shape: RoundedRectangleBorder(
-          side: BorderSide(width: 1.5, color: k_primaryLightColor),
+          side: BorderSide(width: 1.5, color: MyColors.primaryLightColor),
           borderRadius: BorderRadius.circular(16),
         ),
       ),
@@ -31,32 +30,50 @@ class CoachScores extends StatelessWidget {
         children: [
           Column(
             children: [
-              Text('7',textAlign: TextAlign.center,
+              Text(
+                '7',
+                textAlign: TextAlign.center,
                 style: scoresNum,
               ),
-              Text('Experience',textAlign: TextAlign.center,
+              Text(
+                'Experience',
+                textAlign: TextAlign.center,
                 style: scoresText,
               ),
             ],
           ),
-          VerticalDivider(color: kprimaryColor,thickness: 1.5,),
+          VerticalDivider(
+            color: MyColors.primaryColor,
+            thickness: 1.5,
+          ),
           Column(
             children: [
-              Text('46',textAlign: TextAlign.center,
+              Text(
+                '46',
+                textAlign: TextAlign.center,
                 style: scoresNum,
               ),
-              Text('Completed',textAlign: TextAlign.center,
+              Text(
+                'Completed',
+                textAlign: TextAlign.center,
                 style: scoresText,
               ),
             ],
           ),
-          VerticalDivider(color: kprimaryColor,thickness: 1.5,),
+          VerticalDivider(
+            color: MyColors.primaryColor,
+            thickness: 1.5,
+          ),
           Column(
             children: [
-              Text('25',textAlign: TextAlign.center,
+              Text(
+                '25',
+                textAlign: TextAlign.center,
                 style: scoresNum,
               ),
-              Text('Active Clients',textAlign: TextAlign.center,
+              Text(
+                'Active Clients',
+                textAlign: TextAlign.center,
                 style: scoresText,
               ),
             ],

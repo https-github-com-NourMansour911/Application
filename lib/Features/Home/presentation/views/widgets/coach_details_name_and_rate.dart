@@ -1,6 +1,5 @@
-import 'package:e_gem/constants.dart';
+import 'package:e_gem/constants/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CoachNameRate extends StatelessWidget {
@@ -10,7 +9,8 @@ class CoachNameRate extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text('Mohamed Ali',
+        Text(
+          'Mohamed Ali',
           style: TextStyle(
             color: Colors.black,
             fontSize: 20.sp,
@@ -18,11 +18,18 @@ class CoachNameRate extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-        SizedBox(width: 200,),
-        Icon(Icons.star_rate_rounded,color: Colors.amber,size: 30,),
-        Text('5',
+        SizedBox(
+          width: 200,
+        ),
+        Icon(
+          Icons.star_rate_rounded,
+          color: Colors.amber,
+          size: 30,
+        ),
+        Text(
+          '5',
           style: TextStyle(
-            color: k_grey,
+            color: MyColors.grey,
             fontSize: 16.sp,
             fontFamily: 'Open Sans',
             fontWeight: FontWeight.w400,

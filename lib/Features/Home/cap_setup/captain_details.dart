@@ -1,5 +1,6 @@
 import 'package:e_gem/Features/Home/cap_setup/reviews.dart';
 import 'package:e_gem/Features/Home/cap_setup/transformation.dart';
+import 'package:e_gem/Features/Home/choose_plan/choose_plan.dart';
 import 'package:flutter/material.dart';
 
 class CaptainDetails extends StatefulWidget {
@@ -14,7 +15,7 @@ class _CaptainDetailsState extends State<CaptainDetails>
   TabController? _tabController;
   @override
   void initState() {
-    _tabController = new TabController(length: 2, vsync: this);
+    _tabController = TabController(length: 2, vsync: this);
     super.initState();
   }
 
@@ -185,6 +186,7 @@ class _CaptainDetailsState extends State<CaptainDetails>
                           labelColor: Colors.white,
                           tabs: [
                             Tab(
+                              height: 41,
                               child: Text(
                                 'Reviews',
                                 textAlign: TextAlign.right,
@@ -194,9 +196,9 @@ class _CaptainDetailsState extends State<CaptainDetails>
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
-                              height: 41,
                             ),
                             Tab(
+                              height: 41,
                               child: Text(
                                 'Transformation',
                                 textAlign: TextAlign.right,
@@ -206,7 +208,6 @@ class _CaptainDetailsState extends State<CaptainDetails>
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
-                              height: 41,
                             )
                           ]),
                     ),
@@ -235,6 +236,11 @@ class _CaptainDetailsState extends State<CaptainDetails>
                             MaterialPageRoute(
                                 builder: (context) => ChoosePlan()));
                       },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color(0xFFBB2525),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8)),
+                      ),
                       child: Text(
                         'Book an Appointment',
                         textAlign: TextAlign.center,
@@ -244,11 +250,6 @@ class _CaptainDetailsState extends State<CaptainDetails>
                           fontFamily: 'Open Sans',
                           fontWeight: FontWeight.w600,
                         ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFFBB2525),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8)),
                       ),
                     ),
                   ),
