@@ -17,33 +17,23 @@ class MessagingViewBody extends StatelessWidget {
             children: [
               SizedBox(height: 35.h),
               ChatBuble(
+                message: 'Qui qui proident elit dolore et.',
+                isReceiver: false,
+              ),
+              ChatBuble(
                 message:
-                    'Firstssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss',
+                    'Ea non fugiat occaecat sint deserunt laboris consequat nisi eu aliqua consequat dolor sit cupidatat. Anim ad consequat ad ea.',
                 isReceiver: false,
               ),
               ChatBuble(
-                message: 'F',
-                isReceiver: false,
-              ),
-              ChatBuble(
-                message: 'Fuck uuu alll help me',
+                message:
+                    'Ad velit ut ut veniam aliquip sint ullamco elit exercitation ut veniam.',
                 isReceiver: true,
               ),
               ChatBuble(
-                message: 'Fucksssssssssss',
-                isReceiver: false,
-              ),
-              ChatBuble(
-                message: 'Fuck uuu alll help me',
-                isReceiver: false,
-              ),
-              ChatBuble(
-                message: 'Fuck uuu alll help me',
-                isReceiver: false,
-              ),
-              ChatBuble(
-                message: 'Fuck uuu alll help me',
-                isReceiver: false,
+                message:
+                    'Labore pariatur sint est laboris excepteur officia non excepteur elit',
+                isReceiver: true,
               ),
             ],
           ),

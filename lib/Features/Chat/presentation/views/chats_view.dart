@@ -8,7 +8,7 @@ class ChatsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 16.w),
+      margin: EdgeInsets.symmetric(horizontal: 12.w),
       child: ChatsViewBody(),
     );
   }
