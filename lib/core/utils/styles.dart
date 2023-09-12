@@ -28,9 +28,3 @@ final TextStyle scoresText = TextStyle(
   fontFamily: 'Open Sans',
   fontWeight: FontWeight.w400,
 );
-final TextStyle plansProvideText = TextStyle(
-  color: Color(0xFF110805),
-  fontSize: 13.sp,
-  fontFamily: 'Roboto',
-  fontWeight: FontWeight.w400,
-);

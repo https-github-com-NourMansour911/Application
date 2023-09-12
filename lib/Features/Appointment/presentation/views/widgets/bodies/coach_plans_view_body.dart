@@ -13,63 +13,53 @@ class CoachPlansViewBody extends StatelessWidget {
   var groupValue = ['3 months', '6 months', '12 months'];
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.w),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CustomAppBar(title: ''),
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 20.w),
-            child: SvgPicture.asset(Assets.imagesChoosePlan, width: 340.w),
-          ),
-          SizedBox(height: 15.h),
-          PlansProvide(plansProvide: 'Establishing a healthy lifestyle'),
-          SizedBox(height: 8.h),
-          PlansProvide(
-              plansProvide:
-                  'Nutrition plan and customized workout schedule for you'),
-          SizedBox(height: 8.h),
-          PlansProvide(plansProvide: 'Daily reply to your inquiries'),
-          SizedBox(height: 8.h),
-          PlansProvide(
-              plansProvide:
-                  'Nutrition plan and customized workout schedule for you'),
-          SizedBox(height: 8.h),
-          PlansProvide(
-              plansProvide: 'Customized Dietary Program Every 14 Days'),
-          SizedBox(
-            height: 20.h,
-          ),
-          Plan(
-            choosedPlan: '3 months',
-            planType: 'Basic',
-            planPrice: '150',
-            planTime: 'm',
-            groupValue: groupValue,
-          ),
-          SizedBox(height: 8.h),
-          Plan(
-            choosedPlan: '6 months',
-            planType: 'Standard',
-            planPrice: '250',
-            planTime: 'm',
-            groupValue: groupValue,
-          ),
-          SizedBox(
-            height: 8,
-          ),
-          Plan(
-            choosedPlan: '12 months',
-            planType: 'Premium',
-            planPrice: '450',
-            planTime: 'Y',
-            groupValue: groupValue,
-          ),
-          SizedBox(height: 26.h),
-          WideButton(title: 'Choose'),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        CustomAppBar(title: ''),
+        SvgPicture.asset(
+          Assets.imagesChoosePlan,
+          width: 300.w,
+          height: 200.h,
+        ),
+        SizedBox(height: 25.h),
+        PlansProvide(plansProvide: 'Establishing a healthy lifestyle'),
+        SizedBox(height: 8.h),
+        PlansProvide(
+            plansProvide:
+                'Nutrition plan and customized workout schedule\nfor you'),
+        SizedBox(height: 8.h),
+        PlansProvide(plansProvide: 'Daily reply to your inquiries'),
+        SizedBox(height: 8.h),
+        PlansProvide(plansProvide: 'Customized Dietary Program Every 14 Days'),
+        SizedBox(height: 25.h),
+        Plan(
+          choosedPlan: 1,
+          planTitle: groupValue[0],
+          planType: 'Basic',
+          planPrice: 150,
+          planTime: 'm',
+        ),
+        SizedBox(height: 12.h),
+        Plan(
+          choosedPlan: 1,
+          planTitle: groupValue[1],
+          planType: 'Standard',
+          planPrice: 250,
+          planTime: 'm',
+        ),
+        SizedBox(height: 12.h),
+        Plan(
+          choosedPlan: 1,
+          planTitle: groupValue[2],
+          planType: 'Premium',
+          planPrice: 450,
+          planTime: 'Y',
+        ),
+        SizedBox(height: 25.h),
+        WideButton(title: 'Choose'),
+        SizedBox(height: 25.h),
+      ],
     );
   }
 }

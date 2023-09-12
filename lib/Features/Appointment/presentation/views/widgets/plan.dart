@@ -1,39 +1,44 @@
 import 'package:e_gem/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Plan extends StatefulWidget {
-  Plan({
+  const Plan({
     Key? key,
     required this.choosedPlan,
     required this.planType,
+    required this.planTitle,
     required this.planPrice,
     required this.planTime,
-    required this.groupValue,
   }) : super(key: key);
 
-  var choosedPlan, planType, planPrice, planTime, groupValue;
+  final int choosedPlan;
+  final String planType;
+  final String planTitle;
+  final double planPrice;
+  final String planTime;
 
   @override
   State<Plan> createState() => _PlanState();
 }
 
 class _PlanState extends State<Plan> {
+  int? selectedPlan;
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      height: 65,
-      padding: const EdgeInsets.all(12),
+      height: 60.h,
+      padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w),
       decoration: ShapeDecoration(
         color: MyColors.lightGrey,
         shape: RoundedRectangleBorder(
           side: BorderSide(
             width: 1.0,
-            color: widget.choosedPlan == widget.groupValue
-                ? Color(0xFFBB2525)
-                : Color(0xff848484),
+            color: widget.choosedPlan == selectedPlan
+                ? MyColors.primaryLightColor
+                : MyColors.grey,
           ),
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(8.r),
         ),
       ),
       child: Row(
@@ -43,7 +48,7 @@ class _PlanState extends State<Plan> {
         children: [
           Expanded(
             child: Container(
-              height: 36,
+              height: 36.h,
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -55,20 +60,20 @@ class _PlanState extends State<Plan> {
                       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                       fillColor: MaterialStateProperty.resolveWith<Color>(
                           (Set<MaterialState> states) {
-                        return (widget.choosedPlan == widget.groupValue)
-                            ? Color(0xFFBB2525)
-                            : Color(0xff848484);
+                        return (widget.choosedPlan == selectedPlan)
+                            ? MyColors.primaryLightColor
+                            : MyColors.grey;
                       }),
                       value: widget.choosedPlan,
-                      groupValue: widget.groupValue,
+                      groupValue: selectedPlan,
                       onChanged: (val) {
                         setState(() {
-                          widget.groupValue = val!;
+                          selectedPlan = val as int;
                         });
                       },
                     ),
                   ),
-                  const SizedBox(width: 8),
+                  SizedBox(width: 8.w),
                   Container(
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
@@ -76,23 +81,20 @@ class _PlanState extends State<Plan> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          widget.choosedPlan,
+                          widget.planTitle.toString(),
                           style: TextStyle(
-                            color: Color(0xFF110906),
-                            fontSize: 15,
-                            fontFamily: 'Open Sans',
+                            fontSize: 15.sp,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                        const SizedBox(height: 2),
+                        SizedBox(height: 2.h),
                         Text(
                           widget.planType,
                           style: TextStyle(
-                            color: widget.choosedPlan == widget.groupValue
-                                ? Color(0xFFBB2525)
-                                : Color(0xff848484),
-                            fontSize: 9,
-                            fontFamily: 'Open Sans',
+                            color: widget.choosedPlan == selectedPlan
+                                ? MyColors.primaryColor
+                                : MyColors.grey,
+                            fontSize: 9.sp,
                             fontWeight: FontWeight.w400,
                           ),
                         ),
@@ -103,7 +105,7 @@ class _PlanState extends State<Plan> {
               ),
             ),
           ),
-          const SizedBox(width: 41),
+          SizedBox(width: 40.h),
           Container(
             child: Row(
               mainAxisSize: MainAxisSize.min,
@@ -115,7 +117,6 @@ class _PlanState extends State<Plan> {
                   style: TextStyle(
                     color: Color(0xFF110906),
                     fontSize: 20,
-                    fontFamily: 'Open Sans',
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -125,7 +126,6 @@ class _PlanState extends State<Plan> {
                   style: TextStyle(
                     color: Color(0xFF110906),
                     fontSize: 11,
-                    fontFamily: 'Open Sans',
                     fontWeight: FontWeight.w400,
                     height: 1.18,
                   ),
