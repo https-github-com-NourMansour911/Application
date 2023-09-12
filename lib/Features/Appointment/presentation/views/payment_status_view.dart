@@ -1,4 +1,4 @@
-import 'package:e_gem/Features/Home/presentation/views/widgets/bodies/payment_status_view_body.dart';
+import 'package:e_gem/Features/Appointment/presentation/views/widgets/bodies/payment_status_view_body.dart';
 import 'package:flutter/material.dart';
 
 class PaymentStatusView extends StatelessWidget {

@@ -9,13 +9,13 @@ class CustomTextField extends StatelessWidget {
     this.maxLines = 1,
     this.onSaved,
     this.onChanged,
-    required this.icon,
+    this.icon,
     this.obscure = false,
     this.suffixIcon,
     this.textInputType = TextInputType.text,
   });
   final bool obscure;
-  final String icon;
+  final String? icon;
   final Widget? suffixIcon;
   final String hint;
   final int maxLines;
@@ -43,9 +43,11 @@ class CustomTextField extends StatelessWidget {
       keyboardType: textInputType,
       decoration: InputDecoration(
         suffixIcon: suffixIcon,
-        prefixIcon: Image.asset(
-          icon,
-        ),
+        prefixIcon: icon == null
+            ? null
+            : Image.asset(
+                icon!,
+              ),
         hintText: hint,
         hintStyle: formStyle,
         border: buildBorder(),

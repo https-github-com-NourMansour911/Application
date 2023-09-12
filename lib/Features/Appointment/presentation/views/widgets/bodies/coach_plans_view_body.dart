@@ -1,9 +1,10 @@
-import 'package:e_gem/Features/Home/presentation/views/widgets/back_button.dart';
-import 'package:e_gem/Features/Home/presentation/views/widgets/plan.dart';
-import 'package:e_gem/Features/Home/presentation/views/widgets/plans_provide.dart';
+import 'package:e_gem/Features/Appointment/presentation/views/widgets/plan.dart';
+import 'package:e_gem/Features/Appointment/presentation/views/widgets/plans_provide.dart';
+import 'package:e_gem/Features/Profile/presentation/views/widgets/app_bar.dart';
 import 'package:e_gem/core/utils/images.dart';
 import 'package:e_gem/core/widgets/wide_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CoachPlansViewBody extends StatelessWidget {
@@ -13,45 +14,32 @@ class CoachPlansViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CostomizedBackButton(),
+          CustomAppBar(title: ''),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-            child: SvgPicture.asset(
-              Assets.imagesChoosePlan,
-              width: 340,
-            ),
+            padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 20.w),
+            child: SvgPicture.asset(Assets.imagesChoosePlan, width: 340.w),
           ),
-          SizedBox(
-            height: 15,
-          ),
+          SizedBox(height: 15.h),
           PlansProvide(plansProvide: 'Establishing a healthy lifestyle'),
-          SizedBox(
-            height: 8,
-          ),
+          SizedBox(height: 8.h),
           PlansProvide(
               plansProvide:
                   'Nutrition plan and customized workout schedule for you'),
-          SizedBox(
-            height: 8,
-          ),
+          SizedBox(height: 8.h),
           PlansProvide(plansProvide: 'Daily reply to your inquiries'),
-          SizedBox(
-            height: 8,
-          ),
+          SizedBox(height: 8.h),
           PlansProvide(
               plansProvide:
                   'Nutrition plan and customized workout schedule for you'),
-          SizedBox(
-            height: 8,
-          ),
+          SizedBox(height: 8.h),
           PlansProvide(
               plansProvide: 'Customized Dietary Program Every 14 Days'),
           SizedBox(
-            height: 20,
+            height: 20.h,
           ),
           Plan(
             choosedPlan: '3 months',
@@ -60,9 +48,7 @@ class CoachPlansViewBody extends StatelessWidget {
             planTime: 'm',
             groupValue: groupValue,
           ),
-          SizedBox(
-            height: 8,
-          ),
+          SizedBox(height: 8.h),
           Plan(
             choosedPlan: '6 months',
             planType: 'Standard',
@@ -80,9 +66,7 @@ class CoachPlansViewBody extends StatelessWidget {
             planTime: 'Y',
             groupValue: groupValue,
           ),
-          SizedBox(
-            height: 26,
-          ),
+          SizedBox(height: 26.h),
           WideButton(title: 'Choose'),
         ],
       ),

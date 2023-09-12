@@ -8,6 +8,7 @@ class CoachNameRate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
           'Mohamed Ali',
@@ -18,22 +19,24 @@ class CoachNameRate extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-        SizedBox(
-          width: 200,
-        ),
-        Icon(
-          Icons.star_rate_rounded,
-          color: Colors.amber,
-          size: 30,
-        ),
-        Text(
-          '5',
-          style: TextStyle(
-            color: MyColors.grey,
-            fontSize: 16.sp,
-            fontFamily: 'Open Sans',
-            fontWeight: FontWeight.w400,
-          ),
+        Row(
+          children: [
+            Icon(
+              Icons.star_rate_rounded,
+              color: Colors.amber,
+              size: 25.w,
+            ),
+            Text(
+              '5',
+              style: TextStyle(
+                color: MyColors.grey,
+                fontSize: 16.sp,
+                height: 1.5,
+                fontFamily: 'Open Sans',
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+          ],
         ),
       ],
     );

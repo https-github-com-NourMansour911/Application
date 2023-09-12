@@ -1,4 +1,4 @@
-import 'package:e_gem/Features/Home/presentation/views/widgets/back_button.dart';
+import 'package:e_gem/Features/Profile/presentation/views/widgets/app_bar.dart';
 import 'package:e_gem/core/utils/images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +20,10 @@ class CoachImage extends StatelessWidget {
             fit: BoxFit.fitWidth,
           ),
         ),
-        CostomizedBackButton(),
+        Padding(
+          padding: EdgeInsets.only(left: 16.0.w),
+          child: CustomAppBar(title: ''),
+        ),
       ],
     );
   }

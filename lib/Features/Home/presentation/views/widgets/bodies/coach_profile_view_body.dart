@@ -1,9 +1,9 @@
-import 'package:e_gem/Features/Home/cap_setup/reviews.dart';
-import 'package:e_gem/Features/Home/cap_setup/transformation.dart';
 import 'package:e_gem/Features/Home/presentation/views/widgets/coach_details_image.dart';
 import 'package:e_gem/Features/Home/presentation/views/widgets/coach_details_name_and_rate.dart';
 import 'package:e_gem/Features/Home/presentation/views/widgets/coach_details_scores.dart';
 import 'package:e_gem/Features/Home/presentation/views/widgets/coach_details_tabBar.dart';
+import 'package:e_gem/Features/Home/presentation/views/widgets/reviews.dart';
+import 'package:e_gem/Features/Home/presentation/views/widgets/transformations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -30,7 +30,7 @@ class _CoachProfileViewBodyState extends State<CoachProfileViewBody>
         children: [
           CoachImage(),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 16),
+            padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 16.w),
             child: Column(
               children: [
                 CoachNameRate(),

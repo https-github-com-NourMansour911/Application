@@ -11,17 +11,17 @@ class CoachScores extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: 75.h,
-      padding: const EdgeInsets.only(
-        top: 16,
-        left: 32.10,
-        right: 22.07,
-        bottom: 16,
+      padding: EdgeInsets.only(
+        top: 16.h,
+        left: 32.10.w,
+        right: 22.07.w,
+        bottom: 16.h,
       ),
       decoration: ShapeDecoration(
         color: MyColors.lightGrey,
         shape: RoundedRectangleBorder(
-          side: BorderSide(width: 1.5, color: MyColors.primaryLightColor),
-          borderRadius: BorderRadius.circular(16),
+          side: BorderSide(width: 1.5.w, color: MyColors.primaryLightColor),
+          borderRadius: BorderRadius.circular(16.r),
         ),
       ),
       child: Row(

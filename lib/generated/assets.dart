@@ -4,11 +4,14 @@ class Assets {
 
   static const String assetsImagesChoosePlan = 'assets/images/choose_plan.svg';
   static const String fontsOpenSansBold = 'assets/fonts/OpenSans-Bold.ttf';
-  static const String fontsOpenSansExtraBold = 'assets/fonts/OpenSans-ExtraBold.ttf';
+  static const String fontsOpenSansExtraBold =
+      'assets/fonts/OpenSans-ExtraBold.ttf';
   static const String fontsOpenSansLight = 'assets/fonts/OpenSans-Light.ttf';
   static const String fontsOpenSansMedium = 'assets/fonts/OpenSans-Medium.ttf';
-  static const String fontsOpenSansRegular = 'assets/fonts/OpenSans-Regular.ttf';
-  static const String fontsOpenSansSemiBold = 'assets/fonts/OpenSans-SemiBold.ttf';
+  static const String fontsOpenSansRegular =
+      'assets/fonts/OpenSans-Regular.ttf';
+  static const String fontsOpenSansSemiBold =
+      'assets/fonts/OpenSans-SemiBold.ttf';
   static const String imagesArrowBackIcon = 'assets/images/arrow_back_icon.svg';
   static const String imagesAsCoachIcon = 'assets/images/as_coach_icon.svg';
   static const String imagesCap1 = 'assets/images/cap1.png';
@@ -20,12 +23,14 @@ class Assets {
   static const String imagesChoosePlan = 'assets/images/choose_plan.png';
   static const String imagesCreditCard = 'assets/images/credit_card.svg';
   static const String imagesDropDownIcon = 'assets/images/drop_down_icon.jpg';
-  static const String imagesEditProfileIcon = 'assets/images/edit_profile_icon.svg';
+  static const String imagesEditProfileIcon =
+      'assets/images/edit_profile_icon.svg';
   static const String imagesEmailIcon = 'assets/images/email_icon.png';
   static const String imagesExerciseIcon = 'assets/images/exercise_icon.svg';
   static const String imagesFacebookIcon = 'assets/images/facebook_icon.svg';
   static const String imagesFlagIcon = 'assets/images/flag_icon.png';
-  static const String imagesForgotPassword = 'assets/images/forgot_password.svg';
+  static const String imagesForgotPassword =
+      'assets/images/forgot_password.svg';
   static const String imagesGenderIcon = 'assets/images/gender_icon.jpg';
   static const String imagesGoogleIcon = 'assets/images/google_icon.svg';
   static const String imagesHomeIcon = 'assets/images/home_icon.svg';
@@ -33,11 +38,13 @@ class Assets {
   static const String imagesLogo = 'assets/images/logo.png';
   static const String imagesMohamedAli = 'assets/images/mohamed_ali.png';
   static const String imagesNotification = 'assets/images/Notification.svg';
-  static const String imagesNotificationIcon = 'assets/images/notification_icon.svg';
+  static const String imagesNotificationIcon =
+      'assets/images/notification_icon.svg';
   static const String imagesP1 = 'assets/images/p1.svg';
   static const String imagesP2 = 'assets/images/p2.svg';
   static const String imagesP3 = 'assets/images/p3.svg';
-  static const String imagesPasswordChanged = 'assets/images/password_changed.svg';
+  static const String imagesPasswordChanged =
+      'assets/images/password_changed.svg';
   static const String imagesPasswordIcon = 'assets/images/password_icon.png';
   static const String imagesProfile = 'assets/images/profile.svg';
   static const String imagesResetPassword = 'assets/images/reset_password.svg';
@@ -51,5 +58,4 @@ class Assets {
   static const String imagesSlider3 = 'assets/images/slider3.png';
   static const String imagesSplash = 'assets/images/splash.svg';
   static const String imagesTransformation = 'assets/images/transformation.png';
-
 }

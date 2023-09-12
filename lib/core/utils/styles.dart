@@ -30,7 +30,7 @@ final TextStyle scoresText = TextStyle(
 );
 final TextStyle plansProvideText = TextStyle(
   color: Color(0xFF110805),
-  fontSize: 13,
+  fontSize: 13.sp,
   fontFamily: 'Roboto',
   fontWeight: FontWeight.w400,
 );

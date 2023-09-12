@@ -1,6 +1,6 @@
 class Assets {
   Assets._();
-  
+
   /// Assets for imagesArrowBackIcon
   /// assets/images/arrow_back_icon.svg
   static const String imagesArrowBackIcon = "assets/images/arrow_back_icon.svg";
@@ -51,7 +51,8 @@ class Assets {
 
   /// Assets for imagesEditProfileIcon
   /// assets/images/edit_profile_icon.svg
-  static const String imagesEditProfileIcon = "assets/images/edit_profile_icon.svg";
+  static const String imagesEditProfileIcon =
+      "assets/images/edit_profile_icon.svg";
 
   /// Assets for imagesEmailIcon
   /// assets/images/email_icon.png
@@ -71,7 +72,8 @@ class Assets {
 
   /// Assets for imagesForgotPassword
   /// assets/images/forgot_password.svg
-  static const String imagesForgotPassword = "assets/images/forgot_password.svg";
+  static const String imagesForgotPassword =
+      "assets/images/forgot_password.svg";
 
   /// Assets for imagesGenderIcon
   /// assets/images/gender_icon.jpg
@@ -99,7 +101,8 @@ class Assets {
 
   /// Assets for imagesNotificationIcon
   /// assets/images/notification_icon.svg
-  static const String imagesNotificationIcon = "assets/images/notification_icon.svg";
+  static const String imagesNotificationIcon =
+      "assets/images/notification_icon.svg";
 
   /// Assets for imagesP1
   /// assets/images/p1.svg
@@ -115,7 +118,8 @@ class Assets {
 
   /// Assets for imagesPasswordChanged
   /// assets/images/password_changed.svg
-  static const String imagesPasswordChanged = "assets/images/password_changed.svg";
+  static const String imagesPasswordChanged =
+      "assets/images/password_changed.svg";
 
   /// Assets for imagesPasswordIcon
   /// assets/images/password_icon.png

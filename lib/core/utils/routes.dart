@@ -4,7 +4,7 @@ import 'package:e_gem/Features/Auth/presentation/views/ResetPassword_view.dart';
 import 'package:e_gem/Features/Auth/presentation/views/Verify_view.dart';
 import 'package:e_gem/Features/Chat/presentation/views/chats_view.dart';
 import 'package:e_gem/Features/Chat/presentation/views/messaging_view.dart';
-import 'package:e_gem/Features/Home/presentation/views/coach_plans_view.dart';
+import 'package:e_gem/Features/Appointment/presentation/views/coach_plans_view.dart';
 import 'package:e_gem/Features/Home/presentation/views/coach_profile_view.dart';
 import 'package:e_gem/Features/Home/presentation/views/home_view.dart';
 import 'package:e_gem/Features/Nav_Bar/presentation/views/nav_bar.dart';
