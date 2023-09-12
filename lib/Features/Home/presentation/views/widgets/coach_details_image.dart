@@ -13,11 +13,11 @@ class CoachImage extends StatelessWidget {
       alignment: Alignment(-0.9, -0.8),
       children: [
         SizedBox(
-          height: 240.h,
+          height: 250.h,
           child: Image.asset(
             Assets.imagesMohamedAli,
             width: double.infinity,
-            fit: BoxFit.fitWidth,
+            fit: BoxFit.fill,
           ),
         ),
         Padding(
