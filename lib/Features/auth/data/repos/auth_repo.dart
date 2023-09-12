@@ -6,4 +6,3 @@ abstract class AuthRepo {
   Future<Either<Failure, String>> register();
   Future forget_password();
 }
-  

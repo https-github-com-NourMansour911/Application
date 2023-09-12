@@ -1,5 +1,5 @@
 import 'package:e_gem/Features/OnBoarding/views/widgets/singleview.dart';
-import 'package:e_gem/constants.dart';
+import 'package:e_gem/constants/colors.dart';
 import 'package:e_gem/core/utils/images.dart';
 import 'package:e_gem/core/widgets/wide_button.dart';
 import 'package:flutter/material.dart';
@@ -59,7 +59,7 @@ class _PreviewState extends State<Preview> {
               count: 3,
               effect: ExpandingDotsEffect(
                 dotColor: Colors.black12,
-                activeDotColor: kprimaryColor,
+                activeDotColor: MyColors.primaryColor,
                 dotHeight: 12.h,
                 dotWidth: 12.w,
               ),
@@ -80,7 +80,7 @@ class _PreviewState extends State<Preview> {
                             duration: const Duration(milliseconds: 500),
                             curve: Curves.linear);
                       },
-                      color: const Color(0xFFEFEFEF),
+                      color: MyColors.lightGrey,
                       title: "Next",
                     ),
             ),

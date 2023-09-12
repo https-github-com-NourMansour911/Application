@@ -1,4 +1,4 @@
-import 'package:e_gem/constants.dart';
+import 'package:e_gem/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -6,7 +6,7 @@ class WideButton extends StatelessWidget {
   const WideButton(
       {Key? key,
       required this.title,
-      this.color = kprimaryColor,
+      this.color = MyColors.primaryColor,
       this.onPressed})
       : super(key: key);
   final String title;
@@ -22,14 +22,16 @@ class WideButton extends StatelessWidget {
         decoration: BoxDecoration(
             color: color,
             borderRadius: BorderRadius.circular(10.r),
-            border: Border.all(color: kprimaryColor, width: 1.w)),
+            border: Border.all(color: MyColors.primaryColor, width: 1.w)),
         child: Center(
           child: Text(
             title,
             style: TextStyle(
               fontSize: 16.sp,
               fontWeight: FontWeight.w600,
-              color: color == kprimaryColor ? Colors.white : kprimaryColor,
+              color: color == MyColors.primaryColor
+                  ? Colors.white
+                  : MyColors.primaryColor,
             ),
           ),
         ),

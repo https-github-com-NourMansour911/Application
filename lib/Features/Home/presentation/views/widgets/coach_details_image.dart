@@ -20,7 +20,7 @@ class CoachImage extends StatelessWidget {
             fit: BoxFit.fitWidth,
           ),
         ),
-        CustomizedBackButton(),
+        CostomizedBackButton(),
       ],
     );
   }

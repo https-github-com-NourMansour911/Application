@@ -17,7 +17,7 @@ class CoachPlansViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomizedBackButton(),
+          CostomizedBackButton(),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: SvgPicture.asset(
