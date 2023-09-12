@@ -1,6 +1,11 @@
 class Assets {
   Assets._();
 
+  /// Assets for imagesAddAttachmentIcon
+  /// assets/images/add_attachment_icon.svg
+  static const String imagesAddAttachmentIcon =
+      "assets/images/add_attachment_icon.svg";
+
   /// Assets for imagesArrowBackIcon
   /// assets/images/arrow_back_icon.svg
   static const String imagesArrowBackIcon = "assets/images/arrow_back_icon.svg";
@@ -15,15 +20,11 @@ class Assets {
 
   /// Assets for imagesCap1Zoom
   /// assets/images/cap1_zoom.png
-  static const String imagesMohamedAli = "assets/images/mohamed_ali.png";
+  static const String imagesCap1Zoom = "assets/images/cap1_zoom.png";
 
   /// Assets for imagesCap2
   /// assets/images/cap2.png
   static const String imagesCap2 = "assets/images/cap2.png";
-
-  /// Assets for imagesCap2
-  /// assets/images/cap2.png
-  static const String imagesTransformation = "assets/images/transformation.png";
 
   /// Assets for imagesChatIcon
   /// assets/images/chat_icon.svg
@@ -41,9 +42,15 @@ class Assets {
   /// assets/images/choose_plan.svg
   static const String imagesChoosePlan = "assets/images/choose_plan.svg";
 
+  /// Assets for imagesChoosePlan
+  /// assets/images/choose_plan.png
+
   /// Assets for imagesCreditCard
   /// assets/images/credit_card.svg
   static const String imagesCreditCard = "assets/images/credit_card.svg";
+
+  /// Assets for imagesCreditCard
+  /// assets/images/credit_card.png
 
   /// Assets for imagesDropDownIcon
   /// assets/images/drop_down_icon.jpg
@@ -95,6 +102,10 @@ class Assets {
   /// assets/images/logo.png
   static const String imagesLogo = "assets/images/logo.png";
 
+  /// Assets for imagesMohamedAli
+  /// assets/images/mohamed_ali.png
+  static const String imagesMohamedAli = "assets/images/mohamed_ali.png";
+
   /// Assets for imagesNotification
   /// assets/images/Notification.svg
   static const String imagesNotification = "assets/images/Notification.svg";
@@ -138,8 +149,8 @@ class Assets {
   static const String imagesReview = "assets/images/review.png";
 
   /// Assets for imagesReview1
-  /// assets/images/review1.png
-  static const String imagesReview1 = "assets/images/review1.png";
+  /// assets/images/review1.svg
+  static const String imagesReview1 = "assets/images/review1.svg";
 
   /// Assets for imagesReview2
   /// assets/images/review2.svg
@@ -148,6 +159,10 @@ class Assets {
   /// Assets for imagesSearch
   /// assets/images/search.svg
   static const String imagesSearch = "assets/images/search.svg";
+
+  /// Assets for imagesSendIcon
+  /// assets/images/send_icon.svg
+  static const String imagesSendIcon = "assets/images/send_icon.svg";
 
   /// Assets for imagesShareIcon
   /// assets/images/share_icon.svg
@@ -168,4 +183,8 @@ class Assets {
   /// Assets for imagesSplash
   /// assets/images/splash.svg
   static const String imagesSplash = "assets/images/splash.svg";
+
+  /// Assets for imagesTransformation
+  /// assets/images/transformation.png
+  static const String imagesTransformation = "assets/images/transformation.png";
 }
