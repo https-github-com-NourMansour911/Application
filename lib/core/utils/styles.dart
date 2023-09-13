@@ -17,7 +17,7 @@ final TextStyle notes = TextStyle(
   fontWeight: FontWeight.w400,
 );
 final TextStyle scoresNum = TextStyle(
-  color: MyColors.grey,
+  color: MyColors.primaryColor,
   fontSize: 22.sp,
   fontFamily: 'Open Sans',
   fontWeight: FontWeight.w600,
@@ -27,4 +27,10 @@ final TextStyle scoresText = TextStyle(
   fontSize: 11.sp,
   fontFamily: 'Open Sans',
   fontWeight: FontWeight.w400,
+);
+
+final TextStyle coachTab =  TextStyle(
+  fontSize: 10.sp,
+  fontFamily: 'Open Sans',
+  fontWeight: FontWeight.w600,
 );

@@ -3,34 +3,34 @@ class Assets {
   Assets._();
 
   static const String assetsImagesChoosePlan = 'assets/images/choose_plan.svg';
+  static const String assetsImagesCreditCard = 'assets/images/credit_card.svg';
   static const String fontsOpenSansBold = 'assets/fonts/OpenSans-Bold.ttf';
-  static const String fontsOpenSansExtraBold =
-      'assets/fonts/OpenSans-ExtraBold.ttf';
+  static const String fontsOpenSansExtraBold = 'assets/fonts/OpenSans-ExtraBold.ttf';
   static const String fontsOpenSansLight = 'assets/fonts/OpenSans-Light.ttf';
   static const String fontsOpenSansMedium = 'assets/fonts/OpenSans-Medium.ttf';
-  static const String fontsOpenSansRegular =
-      'assets/fonts/OpenSans-Regular.ttf';
-  static const String fontsOpenSansSemiBold =
-      'assets/fonts/OpenSans-SemiBold.ttf';
+  static const String fontsOpenSansRegular = 'assets/fonts/OpenSans-Regular.ttf';
+  static const String fontsOpenSansSemiBold = 'assets/fonts/OpenSans-SemiBold.ttf';
+  static const String imagesAddAttachmentIcon = 'assets/images/add_attachment_icon.svg';
   static const String imagesArrowBackIcon = 'assets/images/arrow_back_icon.svg';
   static const String imagesAsCoachIcon = 'assets/images/as_coach_icon.svg';
   static const String imagesCap1 = 'assets/images/cap1.png';
   static const String imagesCap1Zoom = 'assets/images/cap1_zoom.png';
   static const String imagesCap2 = 'assets/images/cap2.png';
+  static const String imagesCertificate1 = 'assets/images/certificate1.png';
+  static const String imagesCertificate2 = 'assets/images/certificate2.png';
+  static const String imagesCertificate3 = 'assets/images/certificate3.png';
   static const String imagesChatIcon = 'assets/images/chat_icon.svg';
   static const String imagesCheck = 'assets/images/check.svg';
   static const String imagesCheckMail = 'assets/images/check_mail.svg';
   static const String imagesChoosePlan = 'assets/images/choose_plan.png';
-  static const String imagesCreditCard = 'assets/images/credit_card.svg';
+  static const String imagesCreditCard = 'assets/images/credit_card.png';
   static const String imagesDropDownIcon = 'assets/images/drop_down_icon.jpg';
-  static const String imagesEditProfileIcon =
-      'assets/images/edit_profile_icon.svg';
+  static const String imagesEditProfileIcon = 'assets/images/edit_profile_icon.svg';
   static const String imagesEmailIcon = 'assets/images/email_icon.png';
   static const String imagesExerciseIcon = 'assets/images/exercise_icon.svg';
   static const String imagesFacebookIcon = 'assets/images/facebook_icon.svg';
   static const String imagesFlagIcon = 'assets/images/flag_icon.png';
-  static const String imagesForgotPassword =
-      'assets/images/forgot_password.svg';
+  static const String imagesForgotPassword = 'assets/images/forgot_password.svg';
   static const String imagesGenderIcon = 'assets/images/gender_icon.jpg';
   static const String imagesGoogleIcon = 'assets/images/google_icon.svg';
   static const String imagesHomeIcon = 'assets/images/home_icon.svg';
@@ -38,13 +38,11 @@ class Assets {
   static const String imagesLogo = 'assets/images/logo.png';
   static const String imagesMohamedAli = 'assets/images/mohamed_ali.png';
   static const String imagesNotification = 'assets/images/Notification.svg';
-  static const String imagesNotificationIcon =
-      'assets/images/notification_icon.svg';
+  static const String imagesNotificationIcon = 'assets/images/notification_icon.svg';
   static const String imagesP1 = 'assets/images/p1.svg';
   static const String imagesP2 = 'assets/images/p2.svg';
   static const String imagesP3 = 'assets/images/p3.svg';
-  static const String imagesPasswordChanged =
-      'assets/images/password_changed.svg';
+  static const String imagesPasswordChanged = 'assets/images/password_changed.svg';
   static const String imagesPasswordIcon = 'assets/images/password_icon.png';
   static const String imagesProfile = 'assets/images/profile.svg';
   static const String imagesResetPassword = 'assets/images/reset_password.svg';
@@ -52,10 +50,12 @@ class Assets {
   static const String imagesReview1 = 'assets/images/review1.svg';
   static const String imagesReview2 = 'assets/images/review2.svg';
   static const String imagesSearch = 'assets/images/search.svg';
+  static const String imagesSendIcon = 'assets/images/send_icon.svg';
   static const String imagesShareIcon = 'assets/images/share_icon.svg';
   static const String imagesSlider = 'assets/images/slider.png';
   static const String imagesSlider2 = 'assets/images/slider2.png';
   static const String imagesSlider3 = 'assets/images/slider3.png';
   static const String imagesSplash = 'assets/images/splash.svg';
   static const String imagesTransformation = 'assets/images/transformation.png';
+
 }

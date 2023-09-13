@@ -10,12 +10,12 @@ class CoachScores extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 75.h,
+      height: 76.h,
       padding: EdgeInsets.only(
-        top: 16.h,
+        top: 10.h,
         left: 32.10.w,
         right: 22.07.w,
-        bottom: 16.h,
+        bottom: 10.h,
       ),
       decoration: ShapeDecoration(
         color: MyColors.lightGrey,
@@ -45,6 +45,7 @@ class CoachScores extends StatelessWidget {
           VerticalDivider(
             color: MyColors.primaryColor,
             thickness: 1.5,
+            indent: 5,endIndent: 5,
           ),
           Column(
             children: [
@@ -63,6 +64,7 @@ class CoachScores extends StatelessWidget {
           VerticalDivider(
             color: MyColors.primaryColor,
             thickness: 1.5,
+            indent: 5,endIndent: 5,
           ),
           Column(
             children: [

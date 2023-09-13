@@ -1,3 +1,5 @@
+import 'package:e_gem/Features/Home/presentation/views/widgets/about_coach.dart';
+import 'package:e_gem/Features/Home/presentation/views/widgets/about_me.dart';
 import 'package:e_gem/Features/Home/presentation/views/widgets/coach_details_image.dart';
 import 'package:e_gem/Features/Home/presentation/views/widgets/coach_details_name_and_rate.dart';
 import 'package:e_gem/Features/Home/presentation/views/widgets/coach_details_scores.dart';
@@ -19,7 +21,7 @@ class _CoachProfileViewBodyState extends State<CoachProfileViewBody>
   TabController? _tabController;
   @override
   void initState() {
-    _tabController = TabController(length: 2, vsync: this);
+    _tabController = TabController(length: 3, vsync: this);
     super.initState();
   }
 
@@ -30,25 +32,26 @@ class _CoachProfileViewBodyState extends State<CoachProfileViewBody>
         children: [
           CoachImage(),
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 16.w),
+            padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 16.w),
             child: Column(
               children: [
                 CoachNameRate(),
                 SizedBox(
-                  height: 16.h,
+                  height: 12.h,
                 ),
                 CoachScores(),
                 SizedBox(
-                  height: 16.h,
+                  height: 14.h,
                 ),
                 CoachTabBar(tabController: _tabController),
                 SizedBox(
                   height: 12.h,
                 ),
                 SizedBox(
-                  height: 180.h,
+                  height: 250.h,
                   width: double.infinity,
                   child: TabBarView(controller: _tabController, children: [
+                    AboutCoach(),
                     Review(),
                     Transformation(),
                   ]),

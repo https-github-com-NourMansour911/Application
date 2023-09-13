@@ -42,8 +42,17 @@ class Assets {
   /// assets/images/choose_plan.svg
   static const String imagesChoosePlan = "assets/images/choose_plan.svg";
 
-  /// Assets for imagesChoosePlan
-  /// assets/images/choose_plan.png
+  /// Assets for imagesCertificate1
+  /// assets/images/certificate1.png
+  static const String imagesCertificate1 = "assets/images/certificate1.png";
+
+  /// Assets for imagesCertificate2
+  /// assets/images/certificate2.png
+  static const String imagesCertificate2 = "assets/images/certificate2.png";
+
+  /// Assets for imagesCertificate3
+  /// assets/images/certificate3.png
+  static const String imagesCertificate3 = "assets/images/certificate3.png";
 
   /// Assets for imagesCreditCard
   /// assets/images/credit_card.svg

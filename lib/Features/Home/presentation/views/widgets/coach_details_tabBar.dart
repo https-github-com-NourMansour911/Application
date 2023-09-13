@@ -1,4 +1,5 @@
 import 'package:e_gem/constants/colors.dart';
+import 'package:e_gem/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -9,7 +10,7 @@ class CoachTabBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 41.h,
+      height: 36.h,
       decoration: ShapeDecoration(
         color: MyColors.lightGrey,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(3)),
@@ -27,29 +28,29 @@ class CoachTabBar extends StatelessWidget {
             labelColor: Colors.white,
             tabs: [
               Tab(
-                height: 41.h,
+                height: 36.h,
                 child: Text(
-                  'Reviews',
+                  'About me',
                   textAlign: TextAlign.right,
-                  style: TextStyle(
-                    fontSize: 12.sp,
-                    fontFamily: 'Open Sans',
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: coachTab,
                 ),
               ),
               Tab(
-                height: 41.h,
+                height: 36.h,
+                child: Text(
+                  'Reviews',
+                  textAlign: TextAlign.right,
+                  style: coachTab,
+                ),
+              ),
+              Tab(
+                height: 36.h,
                 child: Text(
                   'Transformation',
                   textAlign: TextAlign.right,
-                  style: TextStyle(
-                    fontSize: 12.sp,
-                    fontFamily: 'Open Sans',
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: coachTab,
                 ),
-              )
+              ),
             ]),
       ),
     );
