@@ -41,3 +41,9 @@ final TextStyle dateTime =  TextStyle(
   fontWeight: FontWeight.w600,
   height: 0.09,
 );
+final TextStyle exerciseDetails = TextStyle(
+  color: Color(0xFF110906),
+  fontSize: 16.sp,
+  fontFamily: 'Open Sans',
+  fontWeight: FontWeight.w600,
+);

@@ -1,16 +1,20 @@
+import 'package:e_gem/Features/Exercise/presentation/views/bodies/exercise_details_view_body.dart';
+import 'package:e_gem/Features/Exercise/presentation/views/exercise_details_view.dart';
 import 'package:e_gem/Features/Exercise/presentation/views/widgets/exercises_card.dart';
 import 'package:e_gem/Features/Exercise/presentation/views/widgets/exercises_categories.dart';
 import 'package:e_gem/constants/colors.dart';
 import 'package:e_gem/constants/exercisesImages.dart';
 import 'package:e_gem/constants/strings.dart';
+import 'package:e_gem/core/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 class ExecisesViewBody extends StatelessWidget {
   ExecisesViewBody({Key? key}) : super(key: key);
 
   List keys = Strings().exercisesAndCals.keys.toList();
-  List value = Strings().exercisesAndCals.values.toList();
+  List value2 = Strings().stepsAndReps.values.toList();
 
   @override
   Widget build(BuildContext context) {
@@ -28,12 +32,17 @@ class ExecisesViewBody extends StatelessWidget {
             child: ListView.builder(
               itemCount: 10,
               itemBuilder: (BuildContext context, int index) {
+                int idx = index;
                 return Column(
                   children: [
-                    ExerciseCard(
-                      exercise: keys[index],
-                      timeCal: value[index],
-                      exeImage: ExeImg().exeImg[index],
+                    GestureDetector(
+                      onTap: () => Navigator.push(context,MaterialPageRoute(builder: (context)=>
+                          ExerciseDetailsViewBody(idx))),
+                child: ExerciseCard(
+                        exercise: keys[index],
+                        reps: value2[index],
+                        exeImage: ExeImg().exeImg[index],
+                      ),
                     ),
                     SizedBox(
                       height: 8.h,
