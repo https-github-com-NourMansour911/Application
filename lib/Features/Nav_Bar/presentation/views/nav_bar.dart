@@ -1,4 +1,5 @@
 import 'package:e_gem/Features/Chat/presentation/views/chats_view.dart';
+import 'package:e_gem/Features/Exercise/presentation/views/exercises_view.dart';
 import 'package:e_gem/Features/Home/presentation/views/home_view.dart';
 import 'package:e_gem/Features/Nav_Bar/presentation/view_models/nav_bar_cubit/nav_bar_cubit.dart';
 import 'package:e_gem/Features/Nav_Bar/presentation/views/widgets/nav_bar_item.dart';
@@ -20,7 +21,7 @@ class _NavBarState extends State<NavBar> {
   Widget build(BuildContext context) {
     List<Widget> navScreens = [
       HomeView(),
-      Container(),
+      ExercisesView(),
       ChatsView(),
       ProfileView(),
     ];

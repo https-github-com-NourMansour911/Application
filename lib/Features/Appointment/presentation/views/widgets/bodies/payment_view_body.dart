@@ -19,7 +19,7 @@ class PaymentViewBody extends StatelessWidget {
           SizedBox(height: 18.h),
           CustomAppBar(title: 'Add new card'),
           SizedBox(height: 30.h),
-          Image.asset(Assets.imagesCreditCard),
+          Image.asset(Asset.imagesCreditCard),
           SizedBox(height: 35.h),
           CustomTextField(
               hint: 'Card Holder Name', textInputType: TextInputType.text),
