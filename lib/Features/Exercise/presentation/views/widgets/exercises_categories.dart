@@ -21,7 +21,7 @@ class ExercisesCategories extends StatelessWidget {
             borderWidth: 1.2.w,
             borderColor: Colors.transparent,
             unselectedBorderColor: MyColors.grey,
-            height: 65.h,
+            height: 56.h,
             contentPadding: EdgeInsets.symmetric(vertical: 10.h,horizontal: 17.w),
             radius: 8,
             controller: _tabController,
