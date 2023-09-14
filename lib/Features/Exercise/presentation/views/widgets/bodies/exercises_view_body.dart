@@ -11,7 +11,7 @@ class ExecisesViewBody extends StatelessWidget {
   ExecisesViewBody({Key? key}) : super(key: key);
 
   List keys = Strings().exercisesAndCals.keys.toList();
-  List value = Strings().exercisesAndCals.values.toList();
+  List value = Strings().stepsAndReps.values.toList();
 
   @override
   Widget build(BuildContext context) {
