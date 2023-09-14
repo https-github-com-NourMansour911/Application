@@ -1,4 +1,4 @@
-import 'package:e_gem/Features/Auth/presentation/views/widgets/bodies/LogIn_body.dart';
+import 'package:e_gem/Features/Auth/presentation/views/bodies/LogIn_body.dart';
 import 'package:e_gem/Features/auth/presentation/view_models/UserForm_cubit/UserForm_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,9 +20,7 @@ class LogIn extends StatelessWidget {
               right: 16.w,
               bottom: MediaQuery.of(context).viewInsets.bottom,
             ),
-            child: Builder(builder: (context) {
-              return SingleChildScrollView(child: const LogInBody());
-            }),
+            child: SingleChildScrollView(child: const LogInBody()),
           ),
         ),
       ),

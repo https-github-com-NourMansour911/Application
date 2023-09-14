@@ -1,5 +1,5 @@
 import 'package:e_gem/Features/Home/presentation/view_models/home_cubit/home_cubit.dart';
-import 'package:e_gem/Features/Home/presentation/views/widgets/bodies/home_view_body.dart';
+import 'package:e_gem/Features/Home/presentation/views/bodies/home_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

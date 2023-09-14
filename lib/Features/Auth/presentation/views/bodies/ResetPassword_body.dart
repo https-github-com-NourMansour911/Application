@@ -1,4 +1,4 @@
-import 'package:e_gem/Features/auth/presentation/view_models/auth_bloc/auth_bloc.dart';
+import 'package:e_gem/Features/Auth/presentation/view_models/auth_bloc/auth_bloc.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/auth_messages.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/password_field.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/switch_auth.dart';
@@ -18,7 +18,7 @@ class ResetPasswordBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        SizedBox(height: 50.h),
+        SizedBox(height: 30.h),
         SvgPicture.asset(Assets.imagesResetPassword),
         SizedBox(height: 25.h),
         const AuthMessages(

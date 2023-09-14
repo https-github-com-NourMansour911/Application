@@ -1,8 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:e_gem/Features/Auth/presentation/view_models/auth_bloc/auth_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:e_gem/Features/auth/presentation/view_models/auth_bloc/auth_bloc.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/square_tile.dart';
 
 class AuthOptions extends StatelessWidget {

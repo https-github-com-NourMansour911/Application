@@ -1,4 +1,4 @@
-import 'package:e_gem/Features/Appointment/presentation/views/widgets/bodies/appointment_view_body.dart';
+import 'package:e_gem/Features/Appointment/presentation/views/bodies/appointment_view_body.dart';
 import 'package:flutter/material.dart';
 
 class AppointmentView extends StatelessWidget {

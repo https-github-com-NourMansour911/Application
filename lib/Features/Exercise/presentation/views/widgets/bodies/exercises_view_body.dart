@@ -3,7 +3,6 @@ import 'package:e_gem/Features/Exercise/presentation/views/widgets/exercises_cat
 import 'package:e_gem/constants/colors.dart';
 import 'package:e_gem/constants/exercisesImages.dart';
 import 'package:e_gem/constants/strings.dart';
-import 'package:e_gem/generated/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -20,12 +19,17 @@ class ExecisesViewBody extends StatelessWidget {
       child: Column(
         children: [
           ExercisesCategories(),
-          Divider(color: MyColors.primaryColor,thickness: 0.9,),
-          SizedBox(height: 15.h,),
+          Divider(
+            color: MyColors.primaryColor,
+            thickness: 0.9,
+          ),
+          SizedBox(
+            height: 15.h,
+          ),
           Expanded(
             child: ListView.builder(
               itemCount: 10,
-              itemBuilder: (BuildContext context, int index){
+              itemBuilder: (BuildContext context, int index) {
                 return Column(
                   children: [
                     ExerciseCard(

@@ -7,10 +7,8 @@ import 'package:e_gem/Features/Chat/presentation/views/messaging_view.dart';
 import 'package:e_gem/Features/Appointment/presentation/views/coach_plans_view.dart';
 import 'package:e_gem/Features/Exercise/presentation/views/exercise_details_view.dart';
 import 'package:e_gem/Features/Home/presentation/views/coach_profile_view.dart';
-import 'package:e_gem/Features/Home/presentation/views/home_view.dart';
 import 'package:e_gem/Features/Nav_Bar/presentation/views/nav_bar.dart';
 import 'package:e_gem/Features/Notifications/presentation/views/notifications_view.dart';
-import 'package:e_gem/Features/OnBoarding/views/Splash_view.dart';
 import 'package:e_gem/Features/OnBoarding/views/preview.dart';
 import 'package:e_gem/Features/Profile/presentation/views/edit_profile_view.dart';
 import 'package:e_gem/Features/Profile/presentation/views/profile_view.dart';
@@ -32,12 +30,10 @@ abstract class AppRouter {
   static const kmessagingView = '/messagingView';
   // Home
   static const kNavBar = '/NavBar';
-  static const kHomeView = '/home_view';
-  static const kAppointmentView = '/appointment_view';
+  static const kCoachProfileView = '/appointment_view';
   static const kCoachPlansView = '/coachPlansView';
   //Exercise
   static const kExerciseDetailsView = '/ExerciseDetailsView';
-
 
   // Profile
   static const kProfileView = '/ProfileView';
@@ -50,10 +46,6 @@ abstract class AppRouter {
       // OnBoarding
       GoRoute(
         path: '/',
-        builder: (context, state) => const SplashView(),
-      ),
-      GoRoute(
-        path: kpreview,
         builder: (context, state) => const Preview(),
       ),
       // Auth
@@ -87,12 +79,9 @@ abstract class AppRouter {
         path: kNavBar,
         builder: (context, state) => const NavBar(),
       ),
+
       GoRoute(
-        path: kHomeView,
-        builder: (context, state) => const HomeView(),
-      ),
-      GoRoute(
-        path: kAppointmentView,
+        path: kCoachProfileView,
         builder: (context, state) => const CoachProfileView(),
       ),
       GoRoute(

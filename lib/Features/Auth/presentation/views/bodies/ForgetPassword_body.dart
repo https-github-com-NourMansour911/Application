@@ -1,4 +1,4 @@
-import 'package:e_gem/Features/auth/presentation/view_models/auth_bloc/auth_bloc.dart';
+import 'package:e_gem/Features/Auth/presentation/view_models/auth_bloc/auth_bloc.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/TxtField.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/auth_messages.dart';
 import 'package:e_gem/core/utils/images.dart';
@@ -16,7 +16,7 @@ class ForgetPasswordBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 50.h),
+        SizedBox(height: 30.h),
         SvgPicture.asset(Assets.imagesForgotPassword),
         const AuthMessages(
           title: 'Forgot Password?',

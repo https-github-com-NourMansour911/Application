@@ -1,4 +1,4 @@
-import 'package:e_gem/Features/Chat/presentation/views/widgets/bodies/messaging_view_body.dart';
+import 'package:e_gem/Features/Chat/presentation/views/bodies/messaging_view_body.dart';
 import 'package:e_gem/Features/Chat/presentation/views/widgets/chat_footer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

@@ -11,7 +11,7 @@ class CoachCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => GoRouter.of(context).push(AppRouter.kAppointmentView),
+      onTap: () => GoRouter.of(context).push(AppRouter.kCoachProfileView),
       child: SizedBox(
         width: 130.w,
         child: Card(

@@ -1,4 +1,4 @@
-import 'package:e_gem/Features/Home/presentation/views/widgets/bodies/coach_profile_view_body.dart';
+import 'package:e_gem/Features/Home/presentation/views/bodies/coach_profile_view_body.dart';
 import 'package:e_gem/core/utils/routes.dart';
 import 'package:e_gem/core/widgets/wide_button.dart';
 import 'package:flutter/material.dart';

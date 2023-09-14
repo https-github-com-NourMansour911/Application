@@ -1,4 +1,4 @@
-import 'package:e_gem/Features/Auth/presentation/views/widgets/bodies/SignUp_body.dart';
+import 'package:e_gem/Features/Auth/presentation/views/bodies/SignUp_body.dart';
 import 'package:e_gem/Features/auth/presentation/view_models/UserForm_cubit/UserForm_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,7 +20,10 @@ class SignUp extends StatelessWidget {
               right: 16.w,
               bottom: MediaQuery.of(context).viewInsets.bottom,
             ),
-            child: SingleChildScrollView(child: const SignUpBody()),
+            child: SingleChildScrollView(
+              keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+              child: const SignUpBody(),
+            ),
           ),
         ),
       ),

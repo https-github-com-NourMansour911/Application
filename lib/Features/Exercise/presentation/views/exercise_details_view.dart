@@ -1,4 +1,4 @@
-import 'package:e_gem/Features/Exercise/presentation/views/widgets/bodies/exercise_details_view_body.dart';
+import 'package:e_gem/Features/Exercise/presentation/views/bodies/exercise_details_view_body.dart';
 import 'package:flutter/material.dart';
 
 class ExerciseDetailsView extends StatelessWidget {
@@ -6,6 +6,8 @@ class ExerciseDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SafeArea(child: ExerciseDetailsViewBody()),);
+    return Scaffold(
+      body: SafeArea(child: ExerciseDetailsViewBody()),
+    );
   }
 }

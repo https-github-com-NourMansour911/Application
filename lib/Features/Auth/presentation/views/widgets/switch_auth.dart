@@ -1,10 +1,9 @@
+import 'package:e_gem/Features/Auth/presentation/view_models/auth_bloc/auth_bloc.dart';
 import 'package:e_gem/constants/colors.dart';
 import 'package:e_gem/core/utils/routes.dart';
 import 'package:e_gem/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
-import '../../view_models/auth_bloc/auth_bloc.dart';
 
 class SwitchAuth extends StatelessWidget {
   const SwitchAuth({Key? key, this.authMode = AuthMode.LogIn})

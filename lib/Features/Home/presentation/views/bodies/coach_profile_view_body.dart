@@ -1,5 +1,4 @@
 import 'package:e_gem/Features/Home/presentation/views/widgets/about_coach.dart';
-import 'package:e_gem/Features/Home/presentation/views/widgets/about_me.dart';
 import 'package:e_gem/Features/Home/presentation/views/widgets/coach_details_image.dart';
 import 'package:e_gem/Features/Home/presentation/views/widgets/coach_details_name_and_rate.dart';
 import 'package:e_gem/Features/Home/presentation/views/widgets/coach_details_scores.dart';

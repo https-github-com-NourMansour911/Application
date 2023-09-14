@@ -1,4 +1,4 @@
-import 'package:e_gem/Features/auth/presentation/view_models/auth_bloc/auth_bloc.dart';
+import 'package:e_gem/Features/Auth/presentation/view_models/auth_bloc/auth_bloc.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/auth_messages.dart';
 import 'package:e_gem/core/utils/images.dart';
 import 'package:e_gem/core/utils/routes.dart';
@@ -16,7 +16,7 @@ class PasswordChangedBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        SizedBox(height: 50.h),
+        SizedBox(height: 30.h),
         SvgPicture.asset(Assets.imagesPasswordChanged),
         SizedBox(height: 30.h),
         const AuthMessages(

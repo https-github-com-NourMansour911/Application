@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -6,8 +7,10 @@ import 'core/BlocObserver.dart';
 import 'core/utils/routes.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = SimpleBlocObserver();
-  runApp(const MyApp());
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((_) => runApp(const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -23,7 +26,8 @@ class MyApp extends StatelessWidget {
         return MaterialApp.router(
           debugShowCheckedModeBanner: false,
           routerConfig: AppRouter.router,
-          theme: ThemeData(fontFamily: 'OpenSans'),
+          theme:
+              ThemeData(fontFamily: 'OpenSans', brightness: Brightness.light),
         );
       },
     );

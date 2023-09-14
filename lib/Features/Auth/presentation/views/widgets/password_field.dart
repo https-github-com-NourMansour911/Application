@@ -10,8 +10,10 @@ class PasswordField extends StatelessWidget {
   const PasswordField({
     Key? key,
     this.mode = PasswordFieldMode.Password,
+    this.onChanged,
   }) : super(key: key);
   final PasswordFieldMode mode;
+  final dynamic Function(String)? onChanged;
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<UserFormCubit, UserFormState>(
@@ -23,6 +25,7 @@ class PasswordField extends StatelessWidget {
                   ? 'New Password'
                   : "Confirm New Password",
           icon: Assets.imagesPasswordIcon,
+          onChanged: onChanged,
           obscure: mode == PasswordFieldMode.Password ||
                   mode == PasswordFieldMode.New
               ? BlocProvider.of<UserFormCubit>(context).isHidden

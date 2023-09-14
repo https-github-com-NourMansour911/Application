@@ -57,7 +57,13 @@ class CoachPlansViewBody extends StatelessWidget {
           planTime: 'Y',
         ),
         SizedBox(height: 25.h),
-        WideButton(title: 'Choose'),
+        WideButton(
+          title: 'Choose',
+          onPressed: () {
+            /* 
+           GoRouter.of(context).push(AppRouter.kAppointmentView); */
+          },
+        ),
         SizedBox(height: 25.h),
       ],
     );

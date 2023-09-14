@@ -12,48 +12,54 @@ class DropDownField extends StatelessWidget {
   final String label;
   @override
   Widget build(BuildContext context) {
-    return CustomTextField(
-      hint: '',
-      textInputType: TextInputType.none,
-      icon: Assets.imagesGenderIcon,
-      suffixIcon: BlocBuilder<UserFormCubit, UserFormState>(
-        builder: (context, state) {
-          return DecoratedDropdownButton(
-            value: BlocProvider.of<UserFormCubit>(context).Gender,
-            border: Border.all(style: BorderStyle.none),
-            style: formStyle,
-            alignment: Alignment.center,
-            padding: EdgeInsets.symmetric(horizontal: 10.w),
-            icon: const Icon(Icons.keyboard_arrow_down),
-            items: [
-              DropdownMenuItem(
-                value: "Gender",
-                child: Container(
-                  margin: EdgeInsets.only(left: 35.w),
-                  child: Text(label),
-                ),
-              ),
-              DropdownMenuItem(
-                value: "Male",
-                child: Container(
-                  margin: EdgeInsets.only(left: 35.w),
-                  child: const Text("Male"),
-                ),
-              ),
-              DropdownMenuItem(
-                value: "Female",
-                child: Container(
-                    margin: EdgeInsets.only(left: 35.w),
-                    child: const Text("Female")),
-              )
-            ],
-            onChanged: (value) {
-              BlocProvider.of<UserFormCubit>(context)
-                  .selectGender(value.toString());
+    return BlocBuilder<UserFormCubit, UserFormState>(
+      builder: (context, state) {
+        print(BlocProvider.of<UserFormCubit>(context).Gender);
+        return CustomTextField(
+          hint: '',
+          validate: BlocProvider.of<UserFormCubit>(context).Gender == 'Gender',
+          textInputType: TextInputType.none,
+          icon: Assets.imagesGenderIcon,
+          suffixIcon: BlocBuilder<UserFormCubit, UserFormState>(
+            builder: (context, state) {
+              return DecoratedDropdownButton(
+                value: BlocProvider.of<UserFormCubit>(context).Gender,
+                border: Border.all(style: BorderStyle.none),
+                style: formStyle,
+                alignment: Alignment.center,
+                padding: EdgeInsets.symmetric(horizontal: 10.w),
+                icon: const Icon(Icons.keyboard_arrow_down),
+                items: [
+                  DropdownMenuItem(
+                    value: "Gender",
+                    child: Container(
+                      margin: EdgeInsets.only(left: 35.w),
+                      child: Text(label),
+                    ),
+                  ),
+                  DropdownMenuItem(
+                    value: "Male",
+                    child: Container(
+                      margin: EdgeInsets.only(left: 35.w),
+                      child: const Text("Male"),
+                    ),
+                  ),
+                  DropdownMenuItem(
+                    value: "Female",
+                    child: Container(
+                        margin: EdgeInsets.only(left: 35.w),
+                        child: const Text("Female")),
+                  )
+                ],
+                onChanged: (value) {
+                  BlocProvider.of<UserFormCubit>(context)
+                      .selectGender(value.toString());
+                },
+              );
             },
-          );
-        },
-      ),
+          ),
+        );
+      },
     );
   }
 }
