@@ -57,6 +57,7 @@ class Asset {
   static const String imagesPlank = 'assets/images/plank.png';
   static const String imagesProfile = 'assets/images/profile.svg';
   static const String imagesPullUps = 'assets/images/pull_ups.png';
+  static const String imagesRLogoIcon = 'assets/images/r_logo_icon.png';
   static const String imagesResetPassword = 'assets/images/reset_password.svg';
   static const String imagesReview = 'assets/images/review.png';
   static const String imagesReview1 = 'assets/images/review1.svg';
@@ -72,5 +73,6 @@ class Asset {
   static const String imagesSquats = 'assets/images/squats.png';
   static const String imagesTransformation = 'assets/images/transformation.png';
   static const String imagesTricepDips = 'assets/images/tricep_dips.png';
+  static const String utilsRoutes = 'lib/core/utils/routes.dart';
 
 }

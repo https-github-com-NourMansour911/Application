@@ -1,4 +1,5 @@
 import 'package:e_gem/constants/colors.dart';
+import 'package:e_gem/generated/assets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -9,7 +10,7 @@ class Certificate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
+      width: 102.w,
       height: 93.h,
       decoration: ShapeDecoration(
         image: DecorationImage(

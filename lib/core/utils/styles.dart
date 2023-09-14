@@ -34,3 +34,10 @@ final TextStyle coachTab =  TextStyle(
   fontFamily: 'Open Sans',
   fontWeight: FontWeight.w600,
 );
+final TextStyle dateTime =  TextStyle(
+  color: Color(0xFF110805),
+  fontSize: 14,
+  fontFamily: 'Open Sans',
+  fontWeight: FontWeight.w600,
+  height: 0.09,
+);

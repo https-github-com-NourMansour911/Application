@@ -1,8 +1,12 @@
 import 'package:e_gem/Features/Home/presentation/views/widgets/certificate.dart';
 import 'package:e_gem/constants/colors.dart';
 import 'package:e_gem/core/utils/images.dart';
+import 'package:e_gem/core/utils/routes.dart';
+import 'package:e_gem/generated/assets.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 class AboutCoach extends StatelessWidget {
   const AboutCoach({Key? key}) : super(key: key);
@@ -23,16 +27,18 @@ class AboutCoach extends StatelessWidget {
                       "understand their needs, and provide personalized coaching experiences through virtual interactions. ",
                   style: TextStyle(
                     color: Color(0xFF626262),
-                    fontSize: 12,
+                    fontSize: 11.sp,
                     fontFamily: 'Open Sans',
                     fontWeight: FontWeight.w400,
                   ),
                 ),
                 TextSpan(
                   text: 'Subscribe now.',
+                  recognizer: TapGestureRecognizer()..onTap = () =>
+                      GoRouter.of(context).push(AppRouter.kCoachPlansView),
                   style: TextStyle(
                     color: MyColors.primaryColor,
-                    fontSize: 12,
+                    fontSize: 12.sp,
                     fontFamily: 'Open Sans',
                     fontWeight: FontWeight.w600,
                   ),
@@ -57,7 +63,11 @@ class AboutCoach extends StatelessWidget {
           ),
           Row(
             children: [
-              Certificate(certificate: Assets.imagesCertificate3),
+              Certificate(certificate: Asset.imagesCertificate3),
+              SizedBox(width: 10.w,),
+              Certificate(certificate: Asset.imagesCertificate2),
+              SizedBox(width: 10.w,),
+              Certificate(certificate: Asset.imagesCertificate1),
             ],
           )
         ],

@@ -1,3 +1,5 @@
+import 'package:e_gem/Features/Appointment/presentation/views/payment_status_view.dart';
+import 'package:e_gem/Features/Appointment/presentation/views/payment_view.dart';
 import 'package:e_gem/Features/Auth/presentation/views/ForgetPassword_view.dart';
 import 'package:e_gem/Features/Auth/presentation/views/PasswordChanged_view.dart';
 import 'package:e_gem/Features/Auth/presentation/views/ResetPassword_view.dart';
@@ -7,6 +9,7 @@ import 'package:e_gem/Features/Chat/presentation/views/messaging_view.dart';
 import 'package:e_gem/Features/Appointment/presentation/views/coach_plans_view.dart';
 import 'package:e_gem/Features/Exercise/presentation/views/exercise_details_view.dart';
 import 'package:e_gem/Features/Home/presentation/views/coach_profile_view.dart';
+import 'package:e_gem/Features/Home/presentation/views/home_view.dart';
 import 'package:e_gem/Features/Nav_Bar/presentation/views/nav_bar.dart';
 import 'package:e_gem/Features/Notifications/presentation/views/notifications_view.dart';
 import 'package:e_gem/Features/OnBoarding/views/preview.dart';
@@ -32,6 +35,9 @@ abstract class AppRouter {
   static const kNavBar = '/NavBar';
   static const kCoachProfileView = '/appointment_view';
   static const kCoachPlansView = '/coachPlansView';
+  static const kPaymentView = '/paymentView';
+  static const kPaymentStatusView = '/paymentStatusView';
+
   //Exercise
   static const kExerciseDetailsView = '/ExerciseDetailsView';
 
@@ -80,6 +86,7 @@ abstract class AppRouter {
         builder: (context, state) => const NavBar(),
       ),
 
+
       GoRoute(
         path: kCoachProfileView,
         builder: (context, state) => const CoachProfileView(),
@@ -88,6 +95,15 @@ abstract class AppRouter {
         path: kCoachPlansView,
         builder: (context, state) => const CoachPlansView(),
       ),
+      GoRoute(
+        path: kPaymentView,
+        builder: (context, state) => const PaymentView(),
+      ),
+      GoRoute(
+        path: kPaymentStatusView,
+        builder: (context, state) => const PaymentStatusView(),
+      ),
+
 
       // Exercise
       GoRoute(

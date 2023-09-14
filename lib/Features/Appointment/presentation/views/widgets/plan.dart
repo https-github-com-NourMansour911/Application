@@ -27,8 +27,8 @@ class _PlanState extends State<Plan> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60.h,
-      padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w),
+      height: 55.h,
+      padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 12.w),
       decoration: ShapeDecoration(
         color: MyColors.lightGrey,
         shape: RoundedRectangleBorder(

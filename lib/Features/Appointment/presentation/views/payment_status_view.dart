@@ -6,6 +6,6 @@ class PaymentStatusView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PaymentStatusViewBody();
+    return Scaffold(body: SafeArea(child: PaymentStatusViewBody()));
   }
 }
