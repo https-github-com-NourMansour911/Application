@@ -31,7 +31,7 @@ class ExerciseDetailsViewBody extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              ExerciseVideos(),
+              ExerciseVideos(idx: idx),
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(

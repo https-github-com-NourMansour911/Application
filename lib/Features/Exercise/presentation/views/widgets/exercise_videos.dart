@@ -1,12 +1,14 @@
 import 'package:e_gem/Features/Profile/presentation/views/widgets/app_bar.dart';
+import 'package:e_gem/constants/exercises_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:video_player/video_player.dart';
 
 /// Stateful widget to fetch and then display video content.
 class ExerciseVideos extends StatefulWidget {
-  const ExerciseVideos({super.key});
+  const ExerciseVideos({super.key,required this.idx});
 
+  final idx;
   @override
   _ExerciseVideosState createState() => _ExerciseVideosState();
 }
@@ -18,7 +20,7 @@ class _ExerciseVideosState extends State<ExerciseVideos> {
   void initState() {
     super.initState();
     _controller = VideoPlayerController.networkUrl(Uri.parse(
-        'https://app.fitnessai.com/exercises/00431201-Barbell-Full-Squat-Thighs.mp4'))
+        ExeURL().url[widget.idx]))
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});

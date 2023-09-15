@@ -27,7 +27,7 @@ class ExecisesViewBody extends StatelessWidget {
             color: MyColors.primaryColor,
             thickness: 0.9,
           ),
-          SizedBox(height: 15.h),
+          SizedBox(height: 8.h),
           Expanded(
             child: ListView.builder(
               itemCount: 10,
