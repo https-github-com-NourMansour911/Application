@@ -51,6 +51,7 @@ dependencies:
   buttons_tabbar:
   image_picker: ^1.0.4
   video_player:
+  readmore:
 
 dev_dependencies:
   flutter_test:
