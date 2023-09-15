@@ -1,5 +1,5 @@
 import 'package:e_gem/Features/Profile/presentation/views/widgets/app_bar.dart';
-import 'package:e_gem/constants/exercises_routes.dart';
+import 'package:e_gem/constants/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:video_player/video_player.dart';
@@ -20,7 +20,7 @@ class _ExerciseVideosState extends State<ExerciseVideos> {
   void initState() {
     super.initState();
     _controller = VideoPlayerController.networkUrl(Uri.parse(
-        ExeURL().url[widget.idx]))
+        Strings().url[widget.idx]))
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});
@@ -61,10 +61,8 @@ class _ExerciseVideosState extends State<ExerciseVideos> {
                         : _controller.play();
                   });
                 },
-                icon: Icon(
-                  size: 50,
-                  _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
-                ),
+                icon: Icon(size: 50,
+                  _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,),
               ),
             ),
           ],

@@ -3,7 +3,6 @@ import 'package:e_gem/Features/Exercise/presentation/views/exercise_details_view
 import 'package:e_gem/Features/Exercise/presentation/views/widgets/exercises_card.dart';
 import 'package:e_gem/Features/Exercise/presentation/views/widgets/exercises_categories.dart';
 import 'package:e_gem/constants/colors.dart';
-import 'package:e_gem/constants/exercisesImages.dart';
 import 'package:e_gem/constants/strings.dart';
 import 'package:e_gem/core/utils/routes.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +40,7 @@ class ExecisesViewBody extends StatelessWidget {
                 child: ExerciseCard(
                         exercise: keys[index],
                         reps: value2[index],
-                        exeImage: ExeImg().exeImg[index],
+                        exeImage: Strings().exeImg[index],
                       ),
                     ),
                     SizedBox(

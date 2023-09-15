@@ -1,11 +1,9 @@
 import 'package:e_gem/Features/Exercise/presentation/views/widgets/exercise_name.dart';
 import 'package:e_gem/Features/Exercise/presentation/views/widgets/exercise_reps.dart';
-import 'package:e_gem/Features/Exercise/presentation/views/widgets/exercise_video.dart';
 import 'package:e_gem/Features/Exercise/presentation/views/widgets/calories.dart';
 import 'package:e_gem/Features/Exercise/presentation/views/widgets/exercise_videos.dart';
 import 'package:e_gem/Features/Exercise/presentation/views/widgets/exercises_card.dart';
 import 'package:e_gem/Features/Exercise/presentation/views/widgets/steps.dart';
-import 'package:e_gem/constants/exercisesImages.dart';
 import 'package:e_gem/constants/strings.dart';
 import 'package:e_gem/core/utils/styles.dart';
 import 'package:flutter/cupertino.dart';
@@ -59,11 +57,11 @@ class ExerciseDetailsViewBody extends StatelessWidget {
                       style: exerciseDetails,
                     ),
                     SizedBox(height: 8.h,),
-                    ExerciseCard(exercise: exercise[idx+1], reps: reps[idx+1], exeImage: ExeImg().exeImg[idx+1]),
+                    ExerciseCard(exercise: exercise[idx+1], reps: reps[idx+1], exeImage: Strings().exeImg[idx+1]),
                     SizedBox(height: 8.h,),
-                    ExerciseCard(exercise: exercise[idx+2], reps: reps[idx+2], exeImage: ExeImg().exeImg[idx+2]),
+                    ExerciseCard(exercise: exercise[idx+2], reps: reps[idx+2], exeImage: Strings().exeImg[idx+2]),
                     SizedBox(height: 8.h,),
-                    ExerciseCard(exercise: exercise[idx+3], reps: reps[idx+3], exeImage: ExeImg().exeImg[idx+3]),
+                    ExerciseCard(exercise: exercise[idx+3], reps: reps[idx+3], exeImage: Strings().exeImg[idx+3]),
 
                   ],
                 ),
