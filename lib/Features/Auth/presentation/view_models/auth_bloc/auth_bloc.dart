@@ -26,7 +26,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             },
             (user_model) {
               pref.setString(Strings.k_token, user_model.name);
-
+              pref.setString('name', user_model.name);
               emit(LoginSuccess());
             },
           );

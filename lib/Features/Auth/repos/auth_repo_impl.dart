@@ -29,7 +29,6 @@ class AuthRepoImpl implements AuthRepo {
         endPoint: '/login',
         body: body,
       );
-      print(logIn_token);
       return right(
         UserModel(
           email: logIn_token['email'],
