@@ -103,4 +103,5 @@ class Strings {
     Asset.imagesBicepCurls,
     Asset.imagesTricepDips,
   ];
+
 }

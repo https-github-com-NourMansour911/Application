@@ -3,6 +3,7 @@ import 'package:e_gem/Features/Exercise/presentation/views/widgets/exercise_reps
 import 'package:e_gem/Features/Exercise/presentation/views/widgets/calories.dart';
 import 'package:e_gem/Features/Exercise/presentation/views/widgets/exercise_videos.dart';
 import 'package:e_gem/Features/Exercise/presentation/views/widgets/exercises_card.dart';
+import 'package:e_gem/Features/Exercise/presentation/views/widgets/next_card.dart';
 import 'package:e_gem/Features/Exercise/presentation/views/widgets/steps.dart';
 import 'package:e_gem/constants/strings.dart';
 import 'package:e_gem/core/utils/styles.dart';
@@ -52,17 +53,7 @@ class ExerciseDetailsViewBody extends StatelessWidget {
                     SizedBox(height: 8.h,),
                     Steps(steps: steps[idx]),
                     SizedBox(height: 12.h,),
-                    Text(
-                      'Next',
-                      style: exerciseDetails,
-                    ),
-                    SizedBox(height: 8.h,),
-                    ExerciseCard(exercise: exercise[idx+1], reps: reps[idx+1], exeImage: Strings().exeImg[idx+1]),
-                    SizedBox(height: 8.h,),
-                    ExerciseCard(exercise: exercise[idx+2], reps: reps[idx+2], exeImage: Strings().exeImg[idx+2]),
-                    SizedBox(height: 8.h,),
-                    ExerciseCard(exercise: exercise[idx+3], reps: reps[idx+3], exeImage: Strings().exeImg[idx+3]),
-
+                    NextCard(idx: idx),
                   ],
                 ),
               ),
@@ -73,3 +64,4 @@ class ExerciseDetailsViewBody extends StatelessWidget {
     );
   }
 }
+
