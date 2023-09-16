@@ -1,11 +1,11 @@
-import 'package:e_gem/core/utils/initialRoute.dart';
+import 'package:e_gem/core/utils/initial_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'core/BlocObserver.dart';
+import 'core/bloc_observer.dart';
 import 'core/utils/routes.dart';
 
 void main() async {
@@ -14,9 +14,7 @@ void main() async {
   InitialRoute.seen = pref.getInt('seen');
   Bloc.observer = SimpleBlocObserver();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then(
-    (_) => runApp(
-      MyApp(),
-    ),
+    (_) => runApp(MyApp()),
   );
 }
 

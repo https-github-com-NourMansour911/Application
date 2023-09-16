@@ -1,5 +1,6 @@
 import 'package:e_gem/Features/Chat/presentation/views/chats_view.dart';
 import 'package:e_gem/Features/Exercise/presentation/views/exercises_view.dart';
+import 'package:e_gem/Features/Home/presentation/view_models/home_cubit/home_cubit.dart';
 import 'package:e_gem/Features/Home/presentation/views/home_view.dart';
 import 'package:e_gem/Features/Nav_Bar/presentation/view_models/nav_bar_cubit/nav_bar_cubit.dart';
 import 'package:e_gem/Features/Nav_Bar/presentation/views/widgets/nav_bar_item.dart';
@@ -9,14 +10,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class NavBar extends StatefulWidget {
+class NavBar extends StatelessWidget {
   const NavBar({Key? key}) : super(key: key);
 
-  @override
-  State<NavBar> createState() => _NavBarState();
-}
-
-class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     List<Widget> navScreens = [
@@ -33,11 +29,19 @@ class _NavBarState extends State<NavBar> {
       BottomNavigationBarItem(icon: NavBarItem(index: 3), label: "Profile"),
     ];
 
-    return BlocProvider(
-      create: (context) => NavBarCubit(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => NavBarCubit(),
+        ),
+        BlocProvider(
+          create: (context) => HomeCubit(),
+        ),
+      ],
       child: BlocBuilder<NavBarCubit, NavBarState>(
         builder: (context, state) {
-          var cubit = BlocProvider.of<NavBarCubit>(context);
+          BlocProvider.of<HomeCubit>(context).getCoaches('token');
+          var nav_cubit = BlocProvider.of<NavBarCubit>(context);
           return Scaffold(
             bottomNavigationBar: SizedBox(
                 height: 75.h,
@@ -57,14 +61,14 @@ class _NavBarState extends State<NavBar> {
                     height: 2.5.h,
                   ),
                   type: BottomNavigationBarType.fixed,
-                  currentIndex: cubit.currentIndex,
+                  currentIndex: nav_cubit.currentIndex,
                   iconSize: 24,
                   onTap: (value) {
-                    cubit.select(value);
+                    nav_cubit.select(value);
                   },
                   items: items,
                 )),
-            body: SafeArea(child: navScreens[cubit.currentIndex]),
+            body: SafeArea(child: navScreens[nav_cubit.currentIndex]),
           );
         },
       ),

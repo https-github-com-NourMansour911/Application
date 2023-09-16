@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:e_gem/Features/Auth/data/repos/auth_repo_impl.dart';
+import 'package:e_gem/Features/Auth/repos/auth_repo_impl.dart';
 import 'package:e_gem/constants/strings.dart';
 import 'package:meta/meta.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -25,8 +25,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
               emit(LoginFailure(error: failure.errorMessage));
             },
             (login_token) {
-              _pref.setString(Strings.k_login_token, login_token);
-              print(_pref.getString(Strings.k_login_token));
+              _pref.setString(Strings.k_token, login_token);
+              print(_pref.getString(Strings.k_token));
               emit(LoginSuccess());
             },
           );
@@ -39,8 +39,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
               emit(RegisterFailure(error: failure.errorMessage));
             },
             (register_token) {
-              _pref.setString(Strings.k_register_token, register_token);
-              print(_pref.getString(Strings.k_register_token));
               emit(RegisterSuccess());
             },
           );

@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:e_gem/Features/Auth/data/repos/auth_repo.dart';
+import 'package:e_gem/Features/Auth/repos/auth_repo.dart';
 import 'package:e_gem/core/errors/failures.dart';
-import 'package:e_gem/core/utils/Dio_requests.dart';
+import 'package:e_gem/core/utils/dio_requests.dart';
 
 class AuthRepoImpl implements AuthRepo {
   @override
@@ -13,7 +13,7 @@ class AuthRepoImpl implements AuthRepo {
         endPoint: '/register',
         body: body,
       );
-      return right(regiter_token['token']);
+      return right(regiter_token);
     } on DioException catch (e) {
       return left(ServerFailure.fromDioException(e));
     } catch (e) {

@@ -1,5 +1,5 @@
 import 'package:e_gem/Features/Auth/presentation/view_models/auth_bloc/auth_bloc.dart';
-import 'package:e_gem/Features/auth/presentation/view_models/UserForm_cubit/UserForm_cubit.dart';
+import 'package:e_gem/Features/Auth/presentation/view_models/user_from/user_form_cubit.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/Age_Gender_options.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/ScreenDivider.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/TxtField.dart';
@@ -7,7 +7,7 @@ import 'package:e_gem/Features/auth/presentation/views/widgets/auth_options.dart
 import 'package:e_gem/Features/auth/presentation/views/widgets/password_field.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/switch_auth.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/auth_messages.dart';
-import 'package:e_gem/core/utils/functions/showFlushbar.dart';
+import 'package:e_gem/core/utils/functions/show_flushbar.dart';
 import 'package:e_gem/core/utils/images.dart';
 import 'package:e_gem/core/utils/routes.dart';
 import 'package:e_gem/core/widgets/wide_button.dart';
@@ -80,7 +80,7 @@ class _SignUpBodyState extends State<SignUpBody> {
                 if (state is RegisterSuccess) {
                   GoRouter.of(context).pushReplacement(AppRouter.kNavBar);
                 } else if (state is RegisterFailure) {
-                  showFlusbar(context, state.error!);
+                  show_Flusbar(context, state.error!);
                 }
               },
               builder: (context, state) {

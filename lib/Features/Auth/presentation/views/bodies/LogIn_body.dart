@@ -6,7 +6,7 @@ import 'package:e_gem/Features/auth/presentation/views/widgets/password_field.da
 import 'package:e_gem/Features/auth/presentation/views/widgets/remember_password.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/auth_messages.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/switch_auth.dart';
-import 'package:e_gem/core/utils/functions/showFlushbar.dart';
+import 'package:e_gem/core/utils/functions/show_flushbar.dart';
 import 'package:e_gem/core/utils/images.dart';
 import 'package:e_gem/core/utils/routes.dart';
 import 'package:e_gem/core/utils/styles.dart';
@@ -82,7 +82,7 @@ class _LogInBodyState extends State<LogInBody> {
                 if (state is LoginSuccess) {
                   GoRouter.of(context).pushReplacement(AppRouter.kNavBar);
                 } else if (state is LoginFailure) {
-                  showFlusbar(context, state.error!);
+                  show_Flusbar(context, state.error!);
                 }
               },
               builder: (context, state) {

@@ -1,5 +1,5 @@
+import 'package:e_gem/Features/Auth/presentation/view_models/user_from/user_form_cubit.dart';
 import 'package:e_gem/Features/Auth/presentation/views/bodies/ResetPassword_body.dart';
-import 'package:e_gem/Features/auth/presentation/view_models/UserForm_cubit/UserForm_cubit.dart';
 import 'package:e_gem/Features/auth/presentation/view_models/auth_bloc/auth_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

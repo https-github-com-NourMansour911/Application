@@ -10,4 +10,15 @@ class HomeCubit extends Cubit<HomeState> {
     slider_Index = index;
     emit(ImageSliderChanged());
   }
+
+  getCoaches(String token) async {
+    try {
+      print('done');
+      /* 
+      var response = await Api.get(endPoint: '/coaches', token: token);
+      return response; */
+    } on Exception catch (e) {
+      print(e.toString());
+    }
+  }
 }

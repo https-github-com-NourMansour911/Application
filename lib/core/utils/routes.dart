@@ -1,9 +1,9 @@
 import 'package:e_gem/Features/Appointment/presentation/views/payment_status_view.dart';
 import 'package:e_gem/Features/Appointment/presentation/views/payment_view.dart';
-import 'package:e_gem/Features/Auth/presentation/views/ForgetPassword_view.dart';
-import 'package:e_gem/Features/Auth/presentation/views/PasswordChanged_view.dart';
-import 'package:e_gem/Features/Auth/presentation/views/ResetPassword_view.dart';
-import 'package:e_gem/Features/Auth/presentation/views/Verify_view.dart';
+import 'package:e_gem/Features/Auth/presentation/views/forgetPassword_view.dart';
+import 'package:e_gem/Features/Auth/presentation/views/passwordchanged_view.dart';
+import 'package:e_gem/Features/Auth/presentation/views/resetPassword_view.dart';
+import 'package:e_gem/Features/Auth/presentation/views/verify_view.dart';
 import 'package:e_gem/Features/Chat/presentation/views/chats_view.dart';
 import 'package:e_gem/Features/Chat/presentation/views/messaging_view.dart';
 import 'package:e_gem/Features/Appointment/presentation/views/coach_plans_view.dart';
@@ -15,7 +15,7 @@ import 'package:e_gem/Features/Profile/presentation/views/edit_profile_view.dart
 import 'package:e_gem/Features/Profile/presentation/views/profile_view.dart';
 import 'package:e_gem/Features/auth/presentation/views/LogIn_view.dart';
 import 'package:e_gem/Features/auth/presentation/views/SignUp_view.dart';
-import 'package:e_gem/core/utils/initialRoute.dart';
+import 'package:e_gem/core/utils/initial_route.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {

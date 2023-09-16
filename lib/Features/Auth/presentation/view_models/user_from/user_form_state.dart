@@ -1,7 +1,11 @@
-part of 'UserForm_cubit.dart';
+part of 'user_form_cubit.dart';
 
-@immutable
-sealed class UserFormState {}
+sealed class UserFormState extends Equatable {
+  const UserFormState();
+
+  @override
+  List<Object> get props => [];
+}
 
 final class UserFormInitial extends UserFormState {}
 

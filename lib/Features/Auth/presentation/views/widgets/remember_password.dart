@@ -1,9 +1,9 @@
-import 'package:e_gem/Features/auth/presentation/view_models/UserForm_cubit/UserForm_cubit.dart';
+import 'package:e_gem/Features/Auth/presentation/view_models/user_from/user_form_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/utils/styles.dart';
-import 'Custom_CheckBox.dart';
+import 'custom_checkBox.dart';
 
 class RememberPassword extends StatelessWidget {
   const RememberPassword({

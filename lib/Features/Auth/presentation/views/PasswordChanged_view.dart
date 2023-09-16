@@ -1,4 +1,4 @@
-import 'package:e_gem/Features/Auth/presentation/views/bodies/PasswordChanged_body.dart';
+import 'package:e_gem/Features/Auth/presentation/views/bodies/Password_changed_body.dart';
 import 'package:e_gem/Features/auth/presentation/view_models/auth_bloc/auth_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

@@ -1,8 +1,7 @@
 import 'package:e_gem/generated/assets.dart';
 
 class Strings {
-  static const k_register_token = 'register_token';
-  static const k_login_token = 'login_token';
+  static const k_token = 'login_token';
 
   final Map<String, String> exercisesAndCals = {
     "Squats": "5-8 Cal/min",

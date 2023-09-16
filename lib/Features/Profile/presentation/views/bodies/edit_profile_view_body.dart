@@ -1,4 +1,4 @@
-import 'package:e_gem/Features/Auth/presentation/views/widgets/TxtField.dart';
+import 'package:e_gem/Features/Auth/presentation/views/widgets/txtField.dart';
 import 'package:e_gem/Features/Auth/presentation/views/widgets/drop_down_field.dart';
 import 'package:e_gem/Features/Profile/presentation/views/widgets/app_bar.dart';
 import 'package:e_gem/Features/Profile/presentation/views/widgets/user_info.dart';

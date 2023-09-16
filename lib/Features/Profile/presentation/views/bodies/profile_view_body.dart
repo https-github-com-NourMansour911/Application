@@ -30,9 +30,10 @@ class ProfileViewBody extends StatelessWidget {
             pre_icon: SvgPicture.asset(Assets.imagesShareIcon),
             title: "Share App"),
         OptionTile(
-            pre_icon: SvgPicture.asset(Assets.imagesLogOutIcon),
-            title: "Log Out",
-            path: AppRouter.klogin),
+          pre_icon: SvgPicture.asset(Assets.imagesLogOutIcon),
+          title: "Log Out",
+          path: AppRouter.klogin,
+        ),
       ],
     );
   }

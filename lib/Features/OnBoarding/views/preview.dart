@@ -82,16 +82,15 @@ class _PreviewState extends State<Preview> {
                   : WideButton(
                       onPressed: () {
                         _controller.nextPage(
-                            duration: const Duration(milliseconds: 500),
-                            curve: Curves.linear);
+                          duration: const Duration(milliseconds: 500),
+                          curve: Curves.linear,
+                        );
                       },
                       color: MyColors.lightGrey,
                       title: "Next",
                     ),
             ),
-            SizedBox(
-              height: 50.h,
-            )
+            SizedBox(height: 50.h)
           ],
         ),
       ),
