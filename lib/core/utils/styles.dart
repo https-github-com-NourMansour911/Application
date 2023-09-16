@@ -29,12 +29,12 @@ final TextStyle scoresText = TextStyle(
   fontWeight: FontWeight.w400,
 );
 
-final TextStyle coachTab =  TextStyle(
+final TextStyle coachTab = TextStyle(
   fontSize: 10.sp,
   fontFamily: 'Open Sans',
   fontWeight: FontWeight.w600,
 );
-final TextStyle dateTime =  TextStyle(
+final TextStyle dateTime = TextStyle(
   color: Color(0xFF110805),
   fontSize: 14,
   fontFamily: 'Open Sans',

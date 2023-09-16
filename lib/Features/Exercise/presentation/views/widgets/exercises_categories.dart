@@ -22,10 +22,11 @@ class ExercisesCategories extends StatelessWidget {
             borderColor: Colors.transparent,
             unselectedBorderColor: MyColors.grey,
             height: 56.h,
-            contentPadding: EdgeInsets.symmetric(vertical: 10.h,horizontal: 17.w),
+            contentPadding:
+                EdgeInsets.symmetric(vertical: 10.h, horizontal: 17.w),
             radius: 8,
             controller: _tabController,
-            buttonMargin: EdgeInsets.symmetric(vertical: 12.h,horizontal: 4.w),
+            buttonMargin: EdgeInsets.symmetric(vertical: 12.h, horizontal: 4.w),
             labelStyle: TextStyle(
               color: MyColors.lightGrey,
               fontSize: 12.sp,
@@ -40,13 +41,20 @@ class ExercisesCategories extends StatelessWidget {
             ),
             // Add your tabs here
             tabs: [
-              Tab(text: '     All    ',),
-              Tab(text: "  Chest  ",),
-              Tab(text: "Shoulder",),
-              Tab(text: "Biceps",),
+              Tab(
+                text: '     All    ',
+              ),
+              Tab(
+                text: "  Chest  ",
+              ),
+              Tab(
+                text: "Shoulder",
+              ),
+              Tab(
+                text: "Biceps",
+              ),
             ],
           ),
-
         ],
       ),
     );

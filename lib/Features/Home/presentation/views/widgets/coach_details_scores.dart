@@ -45,7 +45,8 @@ class CoachScores extends StatelessWidget {
           VerticalDivider(
             color: MyColors.primaryColor,
             thickness: 1.5,
-            indent: 5,endIndent: 5,
+            indent: 5,
+            endIndent: 5,
           ),
           Column(
             children: [
@@ -64,7 +65,8 @@ class CoachScores extends StatelessWidget {
           VerticalDivider(
             color: MyColors.primaryColor,
             thickness: 1.5,
-            indent: 5,endIndent: 5,
+            indent: 5,
+            endIndent: 5,
           ),
           Column(
             children: [

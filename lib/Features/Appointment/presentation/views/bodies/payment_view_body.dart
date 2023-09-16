@@ -21,27 +21,51 @@ class PaymentViewBody extends StatelessWidget {
           children: [
             SizedBox(height: 18.h),
             CustomAppBar(title: 'Add new card'),
-            SizedBox(height: 30.h,),
+            SizedBox(
+              height: 30.h,
+            ),
             Image.asset(Asset.imagesCreditCard),
-            SizedBox(height: 35.h,),
-            CustomTextField(hint: 'Card Holder Name', textInputType: TextInputType.text),
-            SizedBox(height: 16.h,),
-            CustomTextField(hint: 'Card Number',textInputType: TextInputType.number),
-            SizedBox(height: 16.h,),
+            SizedBox(
+              height: 35.h,
+            ),
+            CustomTextField(
+                hint: 'Card Holder Name', textInputType: TextInputType.text),
+            SizedBox(
+              height: 16.h,
+            ),
+            CustomTextField(
+                hint: 'Card Number', textInputType: TextInputType.number),
+            SizedBox(
+              height: 16.h,
+            ),
             Row(
               children: [
-                SizedBox(width: 156.w,
-                    child: CustomTextField(hint: 'Expiry (MM/YY)',textInputType: TextInputType.datetime,)),
-                SizedBox(width: 16.h,),
-                SizedBox(width: 156.w,
-                    child: CustomTextField(hint: 'CVC', textInputType: TextInputType.number)),
+                SizedBox(
+                    width: 156.w,
+                    child: CustomTextField(
+                      hint: 'Expiry (MM/YY)',
+                      textInputType: TextInputType.datetime,
+                    )),
+                SizedBox(
+                  width: 16.h,
+                ),
+                SizedBox(
+                    width: 156.w,
+                    child: CustomTextField(
+                        hint: 'CVC', textInputType: TextInputType.number)),
               ],
             ),
-            SizedBox(height: 21.5.h,),
+            SizedBox(
+              height: 21.5.h,
+            ),
             CardDefault(),
-            SizedBox(height: 85.5.h,),
-            WideButton(title: 'Done',
-              onPressed: () => GoRouter.of(context).push(AppRouter.kPaymentStatusView),
+            SizedBox(
+              height: 85.5.h,
+            ),
+            WideButton(
+              title: 'Done',
+              onPressed: () =>
+                  GoRouter.of(context).push(AppRouter.kPaymentStatusView),
             )
           ],
         ),

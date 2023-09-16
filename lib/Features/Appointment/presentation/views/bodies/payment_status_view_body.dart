@@ -18,8 +18,11 @@ class PaymentStatusViewBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           PaymentCompleted(),
-          SizedBox(height: 14.h,),
-          Text('You’ve book a new appointment\nwith your trainer.',
+          SizedBox(
+            height: 14.h,
+          ),
+          Text(
+            'You’ve book a new appointment\nwith your trainer.',
             style: TextStyle(
               color: Color(0xFF626262),
               fontSize: 15.sp,
@@ -27,10 +30,15 @@ class PaymentStatusViewBody extends StatelessWidget {
               fontWeight: FontWeight.w400,
             ),
           ),
-          SizedBox(height: 32.h,),
+          SizedBox(
+            height: 32.h,
+          ),
           PickedCoach(),
-          SizedBox(height: 93.h,),
-          WideButton(title: 'Done',
+          SizedBox(
+            height: 93.h,
+          ),
+          WideButton(
+            title: 'Done',
             onPressed: () => GoRouter.of(context).push(AppRouter.kNavBar),
           ),
         ],

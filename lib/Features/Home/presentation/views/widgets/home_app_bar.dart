@@ -2,9 +2,19 @@ import 'package:e_gem/core/utils/images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class HomeAppBar extends StatelessWidget {
+class HomeAppBar extends StatefulWidget {
   const HomeAppBar({Key? key}) : super(key: key);
+
+  @override
+  State<HomeAppBar> createState() => _HomeAppBarState();
+}
+
+class _HomeAppBarState extends State<HomeAppBar> {
+  final name = SharedPreferences.getInstance().then(
+    (value) => value.getString('name')!,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +46,7 @@ class HomeAppBar extends StatelessWidget {
               ],
             ),
             Text(
-              'Hello, Yahia',
+              'Hello, $name',
               style: TextStyle(
                 fontSize: 24.sp,
                 fontWeight: FontWeight.w600,

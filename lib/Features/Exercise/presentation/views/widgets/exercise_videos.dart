@@ -6,7 +6,7 @@ import 'package:video_player/video_player.dart';
 
 /// Stateful widget to fetch and then display video content.
 class ExerciseVideos extends StatefulWidget {
-  const ExerciseVideos({super.key,required this.idx});
+  const ExerciseVideos({super.key, required this.idx});
 
   final idx;
   @override
@@ -19,12 +19,12 @@ class _ExerciseVideosState extends State<ExerciseVideos> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.networkUrl(Uri.parse(
-        Strings().url[widget.idx]))
-      ..initialize().then((_) {
-        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
-        setState(() {});
-      });
+    _controller =
+        VideoPlayerController.networkUrl(Uri.parse(Strings().url[widget.idx]))
+          ..initialize().then((_) {
+            // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
+            setState(() {});
+          });
   }
 
   @override
@@ -61,8 +61,10 @@ class _ExerciseVideosState extends State<ExerciseVideos> {
                         : _controller.play();
                   });
                 },
-                icon: Icon(size: 50,
-                  _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,),
+                icon: Icon(
+                  size: 50,
+                  _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+                ),
               ),
             ),
           ],

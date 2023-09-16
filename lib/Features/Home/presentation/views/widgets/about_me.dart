@@ -17,7 +17,8 @@ class AboutMeCoach extends StatelessWidget {
             TextSpan(
               children: [
                 TextSpan(
-                  text: "I've been working with clients remotely for seven years, you have developed a "
+                  text:
+                      "I've been working with clients remotely for seven years, you have developed a "
                       "deep understanding of leveraging digital tools and platforms to deliver practical coaching sessions."
                       " My experience has likely allowed you to build strong communication skills, enabling me to connect with clients, "
                       "understand their needs, and provide personalized coaching experiences through virtual interactions. ",

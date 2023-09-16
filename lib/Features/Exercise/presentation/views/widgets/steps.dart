@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:readmore/readmore.dart';
 
 class Steps extends StatelessWidget {
-  const Steps({Key? key,required this.steps}) : super(key: key);
+  const Steps({Key? key, required this.steps}) : super(key: key);
 
   final steps;
   @override

@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:e_gem/core/utils/dio_requests.dart';
 import 'package:meta/meta.dart';
 
 part 'home_state.dart';
@@ -13,10 +14,8 @@ class HomeCubit extends Cubit<HomeState> {
 
   getCoaches(String token) async {
     try {
-      print('done');
-      /* 
       var response = await Api.get(endPoint: '/coaches', token: token);
-      return response; */
+      return response;
     } on Exception catch (e) {
       print(e.toString());
     }

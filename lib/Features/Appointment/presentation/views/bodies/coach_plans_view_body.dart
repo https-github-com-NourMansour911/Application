@@ -21,7 +21,7 @@ class CoachPlansViewBody extends StatelessWidget {
         CustomAppBar(title: ''),
         SizedBox(height: 10),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 0,horizontal: 12),
+          padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 12),
           child: SvgPicture.asset(
             Assets.imagesChoosePlan,
             width: 300.w,
@@ -66,7 +66,7 @@ class CoachPlansViewBody extends StatelessWidget {
         WideButton(
           title: 'Choose',
           onPressed: () {
-           GoRouter.of(context).push(AppRouter.kPaymentView);
+            GoRouter.of(context).push(AppRouter.kPaymentView);
           },
         ),
         SizedBox(height: 25.h),

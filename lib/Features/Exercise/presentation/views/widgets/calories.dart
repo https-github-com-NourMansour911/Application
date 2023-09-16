@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Calories extends StatelessWidget {
-  const Calories({Key? key,required this.cals}) : super(key: key);
+  const Calories({Key? key, required this.cals}) : super(key: key);
 
   final cals;
   @override
@@ -23,7 +23,10 @@ class Calories extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Icon(Icons.local_fire_department,color: MyColors.primaryColor,),
+          Icon(
+            Icons.local_fire_department,
+            color: MyColors.primaryColor,
+          ),
           Text(
             cals,
             style: TextStyle(

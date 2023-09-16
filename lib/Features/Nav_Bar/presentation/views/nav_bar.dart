@@ -15,13 +15,6 @@ class NavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> navScreens = [
-      HomeView(),
-      ExercisesView(),
-      ChatsView(),
-      ProfileView(),
-    ];
-
     List<BottomNavigationBarItem> items = [
       BottomNavigationBarItem(icon: NavBarItem(index: 0), label: "Home"),
       BottomNavigationBarItem(icon: NavBarItem(index: 1), label: "Exercise"),
@@ -37,11 +30,20 @@ class NavBar extends StatelessWidget {
         BlocProvider(
           create: (context) => HomeCubit(),
         ),
+        BlocProvider(
+          create: (context) => HomeCubit(),
+        ),
       ],
       child: BlocBuilder<NavBarCubit, NavBarState>(
         builder: (context, state) {
           BlocProvider.of<HomeCubit>(context).getCoaches('token');
           var nav_cubit = BlocProvider.of<NavBarCubit>(context);
+          List<Widget> navScreens = [
+            HomeView(),
+            ExercisesView(),
+            ChatsView(),
+            ProfileView(),
+          ];
           return Scaffold(
             bottomNavigationBar: SizedBox(
                 height: 75.h,
