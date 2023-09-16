@@ -1,5 +1,4 @@
 import 'package:e_gem/Features/Auth/presentation/views/widgets/txtField.dart';
-import 'package:e_gem/Features/Auth/presentation/views/widgets/drop_down_field.dart';
 import 'package:e_gem/Features/Profile/presentation/views/widgets/app_bar.dart';
 import 'package:e_gem/Features/Profile/presentation/views/widgets/user_info.dart';
 import 'package:e_gem/core/utils/images.dart';
@@ -20,27 +19,24 @@ class EditProfileViewBody extends StatelessWidget {
           title: 'Edit Profile',
         ),
         SizedBox(height: 16.h),
-        UserInfo(name: "Yahia Ahmed", email: "yehiaahmed4589@gmail.com"),
+        UserInfo(
+          name: "Yahia Ahmed",
+          email: "yehiaahmed4589@gmail.com",
+        ),
         SizedBox(height: 35.h),
         CustomTextField(
           hint: 'Full name',
           prefixIcon: SvgPicture.asset(Assets.imagesPersonIcon),
         ),
-        SizedBox(height: 8.h),
+        SizedBox(height: 16.h),
         CustomTextField(
-            hint: 'Email',
-            prefixIcon: SvgPicture.asset(Assets.imagesEmailIcon)),
-        SizedBox(height: 8.h),
+          hint: 'Email',
+          prefixIcon: SvgPicture.asset(Assets.imagesEmailIcon),
+        ),
+        SizedBox(height: 16.h),
         CustomTextField(
-            hint: 'Phone number',
-            prefixIcon: SvgPicture.asset(Assets.imagesFlagIcon)),
-        SizedBox(height: 8.h),
-        Row(
-          children: [
-            Expanded(child: DropDownField(label: "Country")),
-            SizedBox(width: 16.w),
-            Expanded(child: DropDownField(label: "Gender")),
-          ],
+          hint: 'Phone number',
+          prefixIcon: Image.asset(Assets.imagesFlagIcon),
         ),
         SizedBox(height: 36.h),
         const WideButton(title: "Save"),

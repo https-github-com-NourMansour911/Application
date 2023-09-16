@@ -1,5 +1,5 @@
 import 'package:e_gem/Features/Auth/presentation/view_models/auth_bloc/auth_bloc.dart';
-import 'package:e_gem/Features/Auth/presentation/view_models/user_from/user_form_cubit.dart';
+import 'package:e_gem/Features/Auth/presentation/view_models/user_form/user_form_cubit.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/Age_Gender_options.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/ScreenDivider.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/TxtField.dart';

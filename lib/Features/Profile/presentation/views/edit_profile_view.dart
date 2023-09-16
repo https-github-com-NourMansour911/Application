@@ -1,4 +1,4 @@
-import 'package:e_gem/Features/Auth/presentation/view_models/user_from/user_form_cubit.dart';
+import 'package:e_gem/Features/Auth/presentation/view_models/user_form/user_form_cubit.dart';
 import 'package:e_gem/Features/Profile/presentation/views/bodies/edit_profile_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

@@ -12,9 +12,10 @@ class UserFormCubit extends Cubit<UserFormState> {
   bool ConfirmisHidden = true;
 
   void SavePassword(isSaved) async {
+    this.isSaved = isSaved;
+
     SharedPreferences preferences = await SharedPreferences.getInstance();
 
-    this.isSaved = isSaved;
     if (isSaved) {
       preferences.setInt('seen', 2);
     } else {

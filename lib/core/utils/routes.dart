@@ -42,7 +42,7 @@ class AppRouter {
 
   // Profile
   static const kProfileView = '/ProfileView';
-  static const kEditProfileView = '/EditProfileView';
+  static const kEditProfileView = '/editProfileView';
   // Notifications
   static const kNotificationsView = '/NotificationsView';
 

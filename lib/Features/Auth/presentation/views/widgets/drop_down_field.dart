@@ -1,5 +1,5 @@
 import 'package:decorated_dropdownbutton/decorated_dropdownbutton.dart';
-import 'package:e_gem/Features/Auth/presentation/view_models/user_from/user_form_cubit.dart';
+import 'package:e_gem/Features/Auth/presentation/view_models/user_form/user_form_cubit.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/TxtField.dart';
 import 'package:e_gem/core/utils/images.dart';
 import 'package:e_gem/core/utils/styles.dart';

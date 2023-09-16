@@ -2,8 +2,9 @@ import 'package:e_gem/Features/Profile/presentation/views/bodies/profile_view_bo
 import 'package:flutter/material.dart';
 
 class ProfileView extends StatelessWidget {
-  const ProfileView({Key? key}) : super(key: key);
-
+  const ProfileView({
+    Key? key,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(

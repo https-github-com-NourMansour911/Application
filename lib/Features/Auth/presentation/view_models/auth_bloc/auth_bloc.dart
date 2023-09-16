@@ -11,8 +11,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   AuthBloc() : super(AuthInitial()) {
     on<AuthEvent>(
       (event, emit) async {
+        SharedPreferences pref = await SharedPreferences.getInstance();
         AuthRepoImpl _repoImpl = AuthRepoImpl();
-        SharedPreferences _pref = await SharedPreferences.getInstance();
         if (event is LoginEvent) {
           emit(LoginLoading());
           var result = await _repoImpl.getLogin({
@@ -24,9 +24,9 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
               print(failure.errorMessage);
               emit(LoginFailure(error: failure.errorMessage));
             },
-            (login_token) {
-              _pref.setString(Strings.k_token, login_token);
-              print(_pref.getString(Strings.k_token));
+            (user_model) {
+              pref.setString(Strings.k_token, user_model.name);
+
               emit(LoginSuccess());
             },
           );

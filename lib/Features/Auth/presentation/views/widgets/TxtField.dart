@@ -14,8 +14,10 @@ class CustomTextField extends StatelessWidget {
     this.textInputType = TextInputType.text,
     this.validate = true,
     this.prefixIcon,
+    this.isEdit = false,
   });
   final bool obscure;
+  final bool isEdit;
   final bool validate;
   final Widget? suffixIcon;
   final Widget? prefixIcon;
@@ -33,6 +35,7 @@ class CustomTextField extends StatelessWidget {
       onChanged: onChanged,
       obscureText: obscure,
       onSaved: onSaved,
+      initialValue: isEdit ? hint : null,
       validator: (value) {
         if (value!.isEmpty && validate) {
           return 'Field is required ';

@@ -30,13 +30,11 @@ class NavBar extends StatelessWidget {
         BlocProvider(
           create: (context) => HomeCubit(),
         ),
-        BlocProvider(
-          create: (context) => HomeCubit(),
-        ),
       ],
       child: BlocBuilder<NavBarCubit, NavBarState>(
         builder: (context, state) {
           BlocProvider.of<HomeCubit>(context).getCoaches('token');
+
           var nav_cubit = BlocProvider.of<NavBarCubit>(context);
           List<Widget> navScreens = [
             HomeView(),
