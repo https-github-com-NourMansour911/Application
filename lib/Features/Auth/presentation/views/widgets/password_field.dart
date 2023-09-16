@@ -3,6 +3,7 @@ import 'package:e_gem/Features/auth/presentation/views/widgets/TxtField.dart';
 import 'package:e_gem/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../core/utils/images.dart';
 
@@ -24,7 +25,7 @@ class PasswordField extends StatelessWidget {
               : mode == PasswordFieldMode.New
                   ? 'New Password'
                   : "Confirm New Password",
-          icon: Assets.imagesPasswordIcon,
+          prefixIcon: SvgPicture.asset(Assets.imagesPasswordIcon),
           onChanged: onChanged,
           obscure: mode == PasswordFieldMode.Password ||
                   mode == PasswordFieldMode.New

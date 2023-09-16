@@ -1,6 +1,7 @@
-import 'package:e_gem/Features/Auth/data/models/user_model.dart';
+import 'package:dartz/dartz.dart';
+import 'package:e_gem/core/errors/failures.dart';
 
 abstract class AuthRepo {
-  getToken(UserModel user);
-  logIn({required String token});
+  Future<Either<Failure, String?>> getToken(Map<String, String> body);
+  logIn(Map<String, String> body);
 }

@@ -21,7 +21,6 @@ class SignUp extends StatelessWidget {
               bottom: MediaQuery.of(context).viewInsets.bottom,
             ),
             child: SingleChildScrollView(
-              keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
               child: const SignUpBody(),
             ),
           ),

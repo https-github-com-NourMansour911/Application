@@ -25,7 +25,9 @@ class ForgetPasswordBody extends StatelessWidget {
           authMode: AuthMode.Verifying,
         ),
         SizedBox(height: 25.h),
-        const CustomTextField(hint: 'Email', icon: Assets.imagesEmailIcon),
+        CustomTextField(
+            hint: 'Email',
+            prefixIcon: SvgPicture.asset(Assets.imagesAddAttachmentIcon)),
         SizedBox(height: 30.h),
         WideButton(
           title: 'SendCode',

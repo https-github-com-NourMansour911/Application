@@ -1,35 +1,33 @@
-import 'package:e_gem/Features/Auth/data/models/user_model.dart';
+import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 import 'package:e_gem/Features/Auth/data/repos/auth_repo.dart';
+import 'package:e_gem/core/errors/failures.dart';
 import 'package:e_gem/core/utils/Dio_requests.dart';
 
 class AuthRepoImpl implements AuthRepo {
   @override
-  getToken(UserModel user) {
+  Future<Either<Failure, String>> getToken(body) async {
+    var regiter_token;
     try {
-      print(user.toMap());
-      var token = Api.post(
+      regiter_token = await Api.post(
         endPoint: '/register',
-        body: {
-          'name': 'user.name',
-          'email': 'user.email@user',
-          'age': 15,
-          'gender': 'male',
-        },
+        body: body,
       );
-      return token;
-    } on Exception catch (e) {
-      user.toString;
-      print('$e in getToken');
+      return right(regiter_token['token']);
+    } on DioException catch (e) {
+      return left(ServerFailure.fromDioException(e));
+    } catch (e) {
+      return left(ServerFailure(e.toString()));
     }
   }
 
   @override
-  logIn({required String token}) {
+  logIn(Map<String, dynamic> body) {
     try {
-      var user = Api.get(endPoint: '/login', token: token);
-      return user;
+      var logIn_token = Api.post(endPoint: '/login', body: body);
+      return logIn_token['token'];
     } on Exception catch (e) {
-      print('$e in getUser');
+      print('$e in get LogIn Token');
     }
   }
 }

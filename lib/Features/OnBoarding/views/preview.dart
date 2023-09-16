@@ -5,6 +5,7 @@ import 'package:e_gem/core/widgets/wide_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../core/utils/routes.dart';
@@ -70,8 +71,12 @@ class _PreviewState extends State<Preview> {
               child: index == 2
                   ? WideButton(
                       title: '''Let's Started''',
-                      onPressed: () {
+                      onPressed: () async {
                         GoRouter.of(context).pushReplacement(AppRouter.klogin);
+
+                        SharedPreferences pref =
+                            await SharedPreferences.getInstance();
+                        pref.setInt('seen', 1);
                       },
                     )
                   : WideButton(

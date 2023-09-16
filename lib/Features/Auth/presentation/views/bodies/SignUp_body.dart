@@ -1,5 +1,5 @@
-import 'package:dio/dio.dart';
 import 'package:e_gem/Features/Auth/presentation/view_models/auth_bloc/auth_bloc.dart';
+import 'package:e_gem/Features/auth/presentation/view_models/UserForm_cubit/UserForm_cubit.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/Age_Gender_options.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/ScreenDivider.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/TxtField.dart';
@@ -7,11 +7,15 @@ import 'package:e_gem/Features/auth/presentation/views/widgets/auth_options.dart
 import 'package:e_gem/Features/auth/presentation/views/widgets/password_field.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/switch_auth.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/auth_messages.dart';
+import 'package:e_gem/core/utils/functions/showFlushbar.dart';
+import 'package:e_gem/core/utils/functions/showSnackBar.dart';
 import 'package:e_gem/core/utils/images.dart';
+import 'package:e_gem/core/utils/routes.dart';
 import 'package:e_gem/core/widgets/wide_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SignUpBody extends StatefulWidget {
   const SignUpBody({Key? key}) : super(key: key);
@@ -43,7 +47,7 @@ class _SignUpBodyState extends State<SignUpBody> {
           SizedBox(height: 26.h),
           CustomTextField(
             hint: 'User Name',
-            icon: Assets.imagesGenderIcon,
+            prefixIcon: SvgPicture.asset(Assets.imagesPersonIcon),
             onChanged: (p0) {
               _name = p0;
             },
@@ -51,7 +55,7 @@ class _SignUpBodyState extends State<SignUpBody> {
           SizedBox(height: 10.h),
           CustomTextField(
             hint: 'Email',
-            icon: Assets.imagesEmailIcon,
+            prefixIcon: SvgPicture.asset(Assets.imagesEmailIcon),
             onChanged: (p0) {
               _email = p0;
             },
@@ -72,38 +76,31 @@ class _SignUpBodyState extends State<SignUpBody> {
           BlocProvider(
             create: (context) => AuthBloc(),
             child: BlocConsumer<AuthBloc, AuthState>(
-              listener: (context, state) {},
+              listener: (context, state) {
+                if (state is RegisterSuccess) {
+                  Navigator.pushNamed(context, AppRouter.kNavBar);
+                } else if (state is RegisterFailure) {
+                  showFlusbar(context, state.error!);
+                }
+              },
               builder: (context, state) {
                 return WideButton(
                   title: "Sign Up",
-                  onPressed: () async {
+                  onPressed: () {
                     if (_formkey.currentState!.validate()) {
-                      /* BlocProvider.of<AuthBloc>(context).add(
+                      BlocProvider.of<AuthBloc>(context).add(
                         RegisterEvent(
-                          UserModel(
-                            password: _password!,
-                            name: _name!,
-                            email: _email!,
-                            gender: 'male',
-                            age: int.parse(_age!),
-                          ),
-                        ),
-                      ); */
-                      try {
-                        var token = await Dio().post(
-                          'https://techtitans.puiux.org/api/register',
-                          data: {
-                            "email": 'noussssssrafff@gmail.com',
-                            'name': 'yarab',
-                            "password": 'sssssssssss',
-                            "age": 5,
-                            "gender": 'male'
+                          {
+                            'email': _email!,
+                            'password': _password!,
+                            'name': _name!,
+                            'age': _age!,
+                            'gender': BlocProvider.of<UserFormCubit>(context)
+                                .Gender
+                                .toLowerCase(),
                           },
-                        );
-                        return token.data;
-                      } on Exception catch (e) {
-                        print('$e in getToken');
-                      }
+                        ),
+                      );
                     }
                   },
                 );
@@ -116,6 +113,7 @@ class _SignUpBodyState extends State<SignUpBody> {
           const AuthOptions(authMode: AuthMode.SignUp),
           SizedBox(height: 20.h),
           const SwitchAuth(authMode: AuthMode.SignUp),
+          SizedBox(height: 20.h),
         ],
       ),
     );

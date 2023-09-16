@@ -1,5 +1,4 @@
 import 'package:e_gem/constants/colors.dart';
-import 'package:e_gem/generated/assets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

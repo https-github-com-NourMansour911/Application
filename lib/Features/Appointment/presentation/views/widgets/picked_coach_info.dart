@@ -3,7 +3,6 @@ import 'package:e_gem/constants/colors.dart';
 import 'package:e_gem/core/utils/styles.dart';
 import 'package:e_gem/generated/assets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PickedCoach extends StatelessWidget {
@@ -28,13 +27,19 @@ class PickedCoach extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CircleAvatar(backgroundImage: AssetImage(Asset.imagesMohamedAli),radius: 45,),
-              SizedBox(width: 25.w,),
+              CircleAvatar(
+                backgroundImage: AssetImage(Asset.imagesMohamedAli),
+                radius: 45,
+              ),
+              SizedBox(
+                width: 25.w,
+              ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Salah MO',
+                  Text(
+                    'Salah MO',
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 20,
@@ -42,32 +47,51 @@ class PickedCoach extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  SizedBox(height: 7.h,),
-                  Text('7 years experience',
+                  SizedBox(
+                    height: 7.h,
+                  ),
+                  Text(
+                    '7 years experience',
                     style: scoresText,
                   ),
-                  SizedBox(height: 7.h,),
+                  SizedBox(
+                    height: 7.h,
+                  ),
                   CustomizedRateBar(),
                 ],
               ),
             ],
           ),
-          SizedBox(height: 12.h,),
-          Divider(color: MyColors.primaryColor,thickness: 1),
-          SizedBox(height: 12.h,),
-          Text('Date',
+          SizedBox(
+            height: 12.h,
+          ),
+          Divider(color: MyColors.primaryColor, thickness: 1),
+          SizedBox(
+            height: 12.h,
+          ),
+          Text(
+            'Date',
             style: scoresText,
           ),
-          SizedBox(height: 10.h,),
-          Text('20 October 2021 - Wednesday',
+          SizedBox(
+            height: 10.h,
+          ),
+          Text(
+            '20 October 2021 - Wednesday',
             style: dateTime,
           ),
-          SizedBox(height: 10.h,),
-          Text('Time',
+          SizedBox(
+            height: 10.h,
+          ),
+          Text(
+            'Time',
             style: scoresText,
           ),
-          SizedBox(height: 10.h,),
-          Text('09:30 AM',
+          SizedBox(
+            height: 10.h,
+          ),
+          Text(
+            '09:30 AM',
             style: dateTime,
           ),
         ],

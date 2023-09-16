@@ -1,13 +1,10 @@
 import 'package:e_gem/Features/Exercise/presentation/views/bodies/exercise_details_view_body.dart';
-import 'package:e_gem/Features/Exercise/presentation/views/exercise_details_view.dart';
 import 'package:e_gem/Features/Exercise/presentation/views/widgets/exercises_card.dart';
 import 'package:e_gem/Features/Exercise/presentation/views/widgets/exercises_categories.dart';
 import 'package:e_gem/constants/colors.dart';
 import 'package:e_gem/constants/strings.dart';
-import 'package:e_gem/core/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 
 class ExecisesViewBody extends StatelessWidget {
   ExecisesViewBody({Key? key}) : super(key: key);
@@ -35,9 +32,12 @@ class ExecisesViewBody extends StatelessWidget {
                 return Column(
                   children: [
                     GestureDetector(
-                      onTap: () => Navigator.push(context,MaterialPageRoute(builder: (context)=>
-                          ExerciseDetailsViewBody(idx))),
-                child: ExerciseCard(
+                      onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  ExerciseDetailsViewBody(idx))),
+                      child: ExerciseCard(
                         exercise: keys[index],
                         reps: value2[index],
                         exeImage: Strings().exeImg[index],

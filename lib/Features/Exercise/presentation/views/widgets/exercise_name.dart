@@ -1,9 +1,8 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ExerciseName extends StatelessWidget {
-  const ExerciseName({Key? key,required this.exercise}) : super(key: key);
+  const ExerciseName({Key? key, required this.exercise}) : super(key: key);
 
   final exercise;
   @override

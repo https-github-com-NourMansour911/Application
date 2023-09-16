@@ -6,6 +6,7 @@ import 'package:e_gem/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class DropDownField extends StatelessWidget {
   const DropDownField({Key? key, required this.label}) : super(key: key);
@@ -14,12 +15,11 @@ class DropDownField extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<UserFormCubit, UserFormState>(
       builder: (context, state) {
-        print(BlocProvider.of<UserFormCubit>(context).Gender);
         return CustomTextField(
           hint: '',
           validate: BlocProvider.of<UserFormCubit>(context).Gender == 'Gender',
           textInputType: TextInputType.none,
-          icon: Assets.imagesGenderIcon,
+          prefixIcon: SvgPicture.asset(Assets.imagesPersonIcon),
           suffixIcon: BlocBuilder<UserFormCubit, UserFormState>(
             builder: (context, state) {
               return DecoratedDropdownButton(

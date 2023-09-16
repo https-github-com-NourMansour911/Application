@@ -9,17 +9,16 @@ import 'package:e_gem/Features/Chat/presentation/views/messaging_view.dart';
 import 'package:e_gem/Features/Appointment/presentation/views/coach_plans_view.dart';
 import 'package:e_gem/Features/Exercise/presentation/views/exercise_details_view.dart';
 import 'package:e_gem/Features/Home/presentation/views/coach_profile_view.dart';
-import 'package:e_gem/Features/Home/presentation/views/home_view.dart';
 import 'package:e_gem/Features/Nav_Bar/presentation/views/nav_bar.dart';
 import 'package:e_gem/Features/Notifications/presentation/views/notifications_view.dart';
-import 'package:e_gem/Features/OnBoarding/views/preview.dart';
 import 'package:e_gem/Features/Profile/presentation/views/edit_profile_view.dart';
 import 'package:e_gem/Features/Profile/presentation/views/profile_view.dart';
 import 'package:e_gem/Features/auth/presentation/views/LogIn_view.dart';
 import 'package:e_gem/Features/auth/presentation/views/SignUp_view.dart';
+import 'package:e_gem/core/utils/initialRoute.dart';
 import 'package:go_router/go_router.dart';
 
-abstract class AppRouter {
+class AppRouter {
   static const kpreview = '/preview';
   // Auth
   static const klogin = '/login';
@@ -52,7 +51,7 @@ abstract class AppRouter {
       // OnBoarding
       GoRoute(
         path: '/',
-        builder: (context, state) => const Preview(),
+        builder: (context, state) => InitialRoute(),
       ),
       // Auth
       GoRoute(
@@ -86,7 +85,6 @@ abstract class AppRouter {
         builder: (context, state) => const NavBar(),
       ),
 
-
       GoRoute(
         path: kCoachProfileView,
         builder: (context, state) => const CoachProfileView(),
@@ -103,7 +101,6 @@ abstract class AppRouter {
         path: kPaymentStatusView,
         builder: (context, state) => const PaymentStatusView(),
       ),
-
 
       // Exercise
       GoRoute(

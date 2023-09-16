@@ -1,10 +1,8 @@
 import 'package:e_gem/Features/Exercise/presentation/views/widgets/exercise_name.dart';
 import 'package:e_gem/Features/Exercise/presentation/views/widgets/exercise_reps.dart';
 import 'package:e_gem/constants/colors.dart';
-import 'package:e_gem/core/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 
 class ExerciseCard extends StatelessWidget {
   const ExerciseCard(

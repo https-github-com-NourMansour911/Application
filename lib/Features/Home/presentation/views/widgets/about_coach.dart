@@ -1,6 +1,5 @@
 import 'package:e_gem/Features/Home/presentation/views/widgets/certificate.dart';
 import 'package:e_gem/constants/colors.dart';
-import 'package:e_gem/core/utils/images.dart';
 import 'package:e_gem/core/utils/routes.dart';
 import 'package:e_gem/generated/assets.dart';
 import 'package:flutter/cupertino.dart';
@@ -21,7 +20,8 @@ class AboutCoach extends StatelessWidget {
             TextSpan(
               children: [
                 TextSpan(
-                  text: "I've been working with clients remotely for seven years, you have developed a "
+                  text:
+                      "I've been working with clients remotely for seven years, you have developed a "
                       "deep understanding of leveraging digital tools and platforms to deliver practical coaching sessions."
                       " My experience has likely allowed you to build strong communication skills, enabling me to connect with clients, "
                       "understand their needs, and provide personalized coaching experiences through virtual interactions. ",
@@ -34,8 +34,9 @@ class AboutCoach extends StatelessWidget {
                 ),
                 TextSpan(
                   text: 'Subscribe now.',
-                  recognizer: TapGestureRecognizer()..onTap = () =>
-                      GoRouter.of(context).push(AppRouter.kCoachPlansView),
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () =>
+                        GoRouter.of(context).push(AppRouter.kCoachPlansView),
                   style: TextStyle(
                     color: MyColors.primaryColor,
                     fontSize: 12.sp,
@@ -64,9 +65,13 @@ class AboutCoach extends StatelessWidget {
           Row(
             children: [
               Certificate(certificate: Asset.imagesCertificate3),
-              SizedBox(width: 10.w,),
+              SizedBox(
+                width: 10.w,
+              ),
               Certificate(certificate: Asset.imagesCertificate2),
-              SizedBox(width: 10.w,),
+              SizedBox(
+                width: 10.w,
+              ),
               Certificate(certificate: Asset.imagesCertificate1),
             ],
           )

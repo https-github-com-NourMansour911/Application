@@ -1,8 +1,8 @@
 import 'package:e_gem/constants/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 class ExerciseReps extends StatelessWidget {
-  const ExerciseReps({Key? key,required this.reps}) : super(key: key);
+  const ExerciseReps({Key? key, required this.reps}) : super(key: key);
 
   final reps;
   @override

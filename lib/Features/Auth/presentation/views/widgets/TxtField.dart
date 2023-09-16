@@ -9,16 +9,16 @@ class CustomTextField extends StatelessWidget {
     this.maxLines = 1,
     this.onSaved,
     this.onChanged,
-    this.icon,
     this.obscure = false,
     this.suffixIcon,
     this.textInputType = TextInputType.text,
     this.validate = true,
+    this.prefixIcon,
   });
   final bool obscure;
   final bool validate;
-  final String? icon;
   final Widget? suffixIcon;
+  final Widget? prefixIcon;
   final String hint;
   final int maxLines;
   final TextInputType textInputType;
@@ -45,11 +45,16 @@ class CustomTextField extends StatelessWidget {
       keyboardType: textInputType,
       decoration: InputDecoration(
         suffixIcon: suffixIcon,
-        prefixIcon: icon == null
-            ? null
-            : Image.asset(
-                icon!,
-              ),
+        prefixIcon: prefixIcon != null
+            ? Row(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  SizedBox(width: 12.w),
+                  prefixIcon!,
+                  SizedBox(width: 8.w),
+                ],
+              )
+            : null,
         hintText: hint,
         hintStyle: formStyle,
         border: buildBorder(),
@@ -61,9 +66,13 @@ class CustomTextField extends StatelessWidget {
 
   OutlineInputBorder buildBorder() {
     return OutlineInputBorder(
-        borderRadius: BorderRadius.circular(
-          8.r,
-        ),
-        borderSide: BorderSide(color: Colors.black, width: 1.h));
+      borderRadius: BorderRadius.circular(
+        8.r,
+      ),
+      borderSide: BorderSide(
+        color: Colors.black.withOpacity(0.7),
+        width: 1.h,
+      ),
+    );
   }
 }

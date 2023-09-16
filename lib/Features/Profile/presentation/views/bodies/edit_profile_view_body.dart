@@ -6,6 +6,7 @@ import 'package:e_gem/core/utils/images.dart';
 import 'package:e_gem/core/widgets/wide_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 
 class EditProfileViewBody extends StatelessWidget {
   const EditProfileViewBody({Key? key}) : super(key: key);
@@ -21,12 +22,18 @@ class EditProfileViewBody extends StatelessWidget {
         SizedBox(height: 16.h),
         UserInfo(name: "Yahia Ahmed", email: "yehiaahmed4589@gmail.com"),
         SizedBox(height: 35.h),
-        const CustomTextField(hint: 'Full name', icon: Assets.imagesGenderIcon),
+        CustomTextField(
+          hint: 'Full name',
+          prefixIcon: SvgPicture.asset(Assets.imagesPersonIcon),
+        ),
         SizedBox(height: 8.h),
-        const CustomTextField(hint: 'Email', icon: Assets.imagesEmailIcon),
+        CustomTextField(
+            hint: 'Email',
+            prefixIcon: SvgPicture.asset(Assets.imagesEmailIcon)),
         SizedBox(height: 8.h),
-        const CustomTextField(
-            hint: 'Phone number', icon: Assets.imagesFlagIcon),
+        CustomTextField(
+            hint: 'Phone number',
+            prefixIcon: SvgPicture.asset(Assets.imagesFlagIcon)),
         SizedBox(height: 8.h),
         Row(
           children: [

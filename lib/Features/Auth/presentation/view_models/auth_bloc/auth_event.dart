@@ -15,6 +15,8 @@ class LoginEvent extends AuthEvent {
 }
 
 class RegisterEvent extends AuthEvent {
-  final UserModel userModel;
-  RegisterEvent(this.userModel);
+  final Map<String, String> body;
+  RegisterEvent(this.body);
 }
+
+class LogoutEvent extends AuthEvent {}

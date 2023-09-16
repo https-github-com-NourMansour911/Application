@@ -12,6 +12,7 @@ import 'package:e_gem/core/utils/styles.dart';
 import 'package:e_gem/core/widgets/wide_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 
 class LogInBody extends StatefulWidget {
@@ -44,7 +45,7 @@ class _LogInBodyState extends State<LogInBody> {
           SizedBox(height: 26.h),
           CustomTextField(
             hint: 'Email',
-            icon: Assets.imagesEmailIcon,
+            prefixIcon: SvgPicture.asset(Assets.imagesEmailIcon),
             onChanged: (p0) {
               _email = p0;
             },

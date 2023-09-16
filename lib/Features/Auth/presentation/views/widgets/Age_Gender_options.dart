@@ -3,6 +3,7 @@ import 'package:e_gem/Features/auth/presentation/views/widgets/TxtField.dart';
 import 'package:e_gem/core/utils/images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 
 class AgeGenderOptions extends StatelessWidget {
   const AgeGenderOptions({Key? key, this.onChanged}) : super(key: key);
@@ -14,7 +15,7 @@ class AgeGenderOptions extends StatelessWidget {
         Expanded(
           child: CustomTextField(
             hint: 'Age',
-            icon: Assets.imagesGenderIcon,
+            prefixIcon: SvgPicture.asset(Assets.imagesPersonIcon),
             textInputType: TextInputType.number,
             onChanged: onChanged,
           ),
