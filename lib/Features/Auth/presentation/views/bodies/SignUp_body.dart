@@ -8,7 +8,6 @@ import 'package:e_gem/Features/auth/presentation/views/widgets/password_field.da
 import 'package:e_gem/Features/auth/presentation/views/widgets/switch_auth.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/auth_messages.dart';
 import 'package:e_gem/core/utils/functions/showFlushbar.dart';
-import 'package:e_gem/core/utils/functions/showSnackBar.dart';
 import 'package:e_gem/core/utils/images.dart';
 import 'package:e_gem/core/utils/routes.dart';
 import 'package:e_gem/core/widgets/wide_button.dart';
@@ -16,6 +15,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
 class SignUpBody extends StatefulWidget {
   const SignUpBody({Key? key}) : super(key: key);
@@ -78,7 +78,7 @@ class _SignUpBodyState extends State<SignUpBody> {
             child: BlocConsumer<AuthBloc, AuthState>(
               listener: (context, state) {
                 if (state is RegisterSuccess) {
-                  Navigator.pushNamed(context, AppRouter.kNavBar);
+                  GoRouter.of(context).pushReplacement(AppRouter.kNavBar);
                 } else if (state is RegisterFailure) {
                   showFlusbar(context, state.error!);
                 }

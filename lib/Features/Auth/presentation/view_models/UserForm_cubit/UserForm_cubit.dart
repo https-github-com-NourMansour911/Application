@@ -10,8 +10,9 @@ class UserFormCubit extends Cubit<UserFormState> {
   bool isHidden = true;
   bool ConfirmisHidden = true;
 
-  void SavePassword(isSaved) {
+  void SavePassword(isSaved) async {
     this.isSaved = isSaved;
+
     emit(PasswordSave());
   }
 

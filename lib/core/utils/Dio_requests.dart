@@ -8,18 +8,9 @@ abstract class Api {
     if (token != null) {
       headers.addAll({'Authorization': 'Bearer $token'});
     }
-    try {
-      var response = await _dio.get(_baseUrl + endPoint,
-          options: Options(headers: headers));
-      if (response.statusCode == 200 && response.data != null) {
-        return response.data;
-      } else {
-        print("Error in <statusCode> Your's = ${response.statusCode}\n");
-        throw Exception("${response.data}");
-      }
-    } catch (error) {
-      print(error.toString());
-    }
+    var response =
+        await _dio.get(_baseUrl + endPoint, options: Options(headers: headers));
+    return response.data;
   }
 
   static post({

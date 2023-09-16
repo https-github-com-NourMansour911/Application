@@ -45,6 +45,8 @@ class ServerFailure extends Failure {
       } catch (e) {
         return ServerFailure(response['error']['password'][0]);
       }
+    } else if (statusCode == 401) {
+      return ServerFailure(response['message']);
     } else if (statusCode == 404) {
       return ServerFailure('Your request not found, Please try later!');
     } else if (statusCode == 500) {

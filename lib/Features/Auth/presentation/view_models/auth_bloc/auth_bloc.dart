@@ -15,17 +15,21 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         SharedPreferences _pref = await SharedPreferences.getInstance();
         if (event is LoginEvent) {
           emit(LoginLoading());
-          try {
-            _repoImpl.logIn(
-              {
-                'email': event.email,
-                'password': event.password,
-              },
-            );
-            emit(LoginSuccess());
-          } catch (e) {
-            emit(LoginFailure(error: e.toString()));
-          }
+          var result = await _repoImpl.getLogin({
+            'email': event.email,
+            'password': event.password,
+          });
+          result.fold(
+            (failure) {
+              print(failure.errorMessage);
+              emit(LoginFailure(error: failure.errorMessage));
+            },
+            (login_token) {
+              _pref.setString(Strings.k_login_token, login_token);
+              print(_pref.getString(Strings.k_login_token));
+              emit(LoginSuccess());
+            },
+          );
         } else if (event is RegisterEvent) {
           emit(RegisterLoading());
           var result = await _repoImpl.getToken(event.body);

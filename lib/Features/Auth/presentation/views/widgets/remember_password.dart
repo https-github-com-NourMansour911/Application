@@ -29,7 +29,7 @@ class RememberPassword extends StatelessWidget {
               );
             },
           ),
-          Text('Remember Password', style: notes),
+          Text('Remember me', style: notes),
         ],
       ),
     );

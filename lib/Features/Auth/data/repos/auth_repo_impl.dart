@@ -22,12 +22,18 @@ class AuthRepoImpl implements AuthRepo {
   }
 
   @override
-  logIn(Map<String, dynamic> body) {
+  Future<Either<Failure, String>> getLogin(body) async {
+    var logIn_token;
     try {
-      var logIn_token = Api.post(endPoint: '/login', body: body);
-      return logIn_token['token'];
-    } on Exception catch (e) {
-      print('$e in get LogIn Token');
+      logIn_token = await Api.post(
+        endPoint: '/login',
+        body: body,
+      );
+      return right(logIn_token['token']);
+    } on DioException catch (e) {
+      return left(ServerFailure.fromDioException(e));
+    } catch (e) {
+      return left(ServerFailure(e.toString()));
     }
   }
 }

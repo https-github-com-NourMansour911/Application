@@ -6,11 +6,13 @@ import 'package:e_gem/Features/auth/presentation/views/widgets/password_field.da
 import 'package:e_gem/Features/auth/presentation/views/widgets/remember_password.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/auth_messages.dart';
 import 'package:e_gem/Features/auth/presentation/views/widgets/switch_auth.dart';
+import 'package:e_gem/core/utils/functions/showFlushbar.dart';
 import 'package:e_gem/core/utils/images.dart';
 import 'package:e_gem/core/utils/routes.dart';
 import 'package:e_gem/core/utils/styles.dart';
 import 'package:e_gem/core/widgets/wide_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
@@ -73,11 +75,32 @@ class _LogInBodyState extends State<LogInBody> {
           SizedBox(
             height: 25.h,
           ),
-          WideButton(
-            title: 'Sign In',
-            onPressed: () {
-              GoRouter.of(context).push(AppRouter.kNavBar);
-            },
+          BlocProvider(
+            create: (context) => AuthBloc(),
+            child: BlocConsumer<AuthBloc, AuthState>(
+              listener: (context, state) {
+                if (state is LoginSuccess) {
+                  GoRouter.of(context).pushReplacement(AppRouter.kNavBar);
+                } else if (state is LoginFailure) {
+                  showFlusbar(context, state.error!);
+                }
+              },
+              builder: (context, state) {
+                return WideButton(
+                  title: "Sign In",
+                  onPressed: () {
+                    if (_formkey.currentState!.validate()) {
+                      BlocProvider.of<AuthBloc>(context).add(
+                        LoginEvent(
+                          email: _email!,
+                          password: _password!,
+                        ),
+                      );
+                    }
+                  },
+                );
+              },
+            ),
           ),
           SizedBox(height: 40.h),
           const ScreenDivider(),
