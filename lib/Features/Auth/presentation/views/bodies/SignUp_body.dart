@@ -16,6 +16,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:quickalert/models/quickalert_type.dart';
+import 'package:quickalert/widgets/quickalert_dialog.dart';
 
 class SignUpBody extends StatefulWidget {
   const SignUpBody({Key? key}) : super(key: key);
@@ -78,7 +80,46 @@ class _SignUpBodyState extends State<SignUpBody> {
             child: BlocConsumer<AuthBloc, AuthState>(
               listener: (context, state) {
                 if (state is RegisterSuccess) {
-                  GoRouter.of(context).pushReplacement(AppRouter.kNavBar);
+                  QuickAlert.show(
+                    context: context,
+                    type: QuickAlertType.success,
+                    title: 'Success',
+                    showConfirmBtn: false,
+                    borderRadius: 10.r,
+                    widget: Column(
+                      children: [
+                        Text(
+                          'thank you for registrtion, your account has been created successfully',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 14.sp, height: 1.5),
+                        ),
+                        SizedBox(height: 25.h),
+                        GestureDetector(
+                          onTap: () {
+                            GoRouter.of(context)
+                                .pushReplacement(AppRouter.klogin);
+                          },
+                          child: Container(
+                            height: 40.h,
+                            width: 150.w,
+                            decoration: BoxDecoration(
+                              color: Colors.green,
+                              borderRadius: BorderRadius.circular(10.r),
+                            ),
+                            child: Center(
+                              child: Text(
+                                'Log In',
+                                style: TextStyle(
+                                  fontSize: 16.sp,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  );
                 } else if (state is RegisterFailure) {
                   show_Flusbar(context, state.error!);
                 }
