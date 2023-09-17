@@ -19,10 +19,7 @@ class EditProfileViewBody extends StatelessWidget {
           title: 'Edit Profile',
         ),
         SizedBox(height: 16.h),
-        UserInfo(
-          name: "Yahia Ahmed",
-          email: "yehiaahmed4589@gmail.com",
-        ),
+        UserInfo(),
         SizedBox(height: 35.h),
         CustomTextField(
           hint: 'Full name',

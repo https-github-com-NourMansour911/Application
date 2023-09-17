@@ -172,9 +172,6 @@ class Assets {
   /// assets/images/password_icon.svg
   static const String imagesPasswordIcon = "assets/images/password_icon.svg";
 
-  /// Assets for imagesPasswordIcon
-  /// assets/images/password_icon.png
-
   /// Assets for imagesPersonIcon
   /// assets/images/person_icon.svg
   static const String imagesPersonIcon = "assets/images/person_icon.svg";

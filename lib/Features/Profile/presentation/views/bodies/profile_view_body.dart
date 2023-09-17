@@ -6,15 +6,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class ProfileViewBody extends StatelessWidget {
+class ProfileViewBody extends StatefulWidget {
   const ProfileViewBody({Key? key}) : super(key: key);
 
+  @override
+  State<ProfileViewBody> createState() => _ProfileViewBodyState();
+}
+
+class _ProfileViewBodyState extends State<ProfileViewBody> {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         SizedBox(height: 35.h),
-        UserInfo(name: "Yahia Ahmed", email: "yehiaahmed4589@gmail.com"),
+        UserInfo(),
         SizedBox(height: 18.h),
         OptionTile(
             pre_icon: SvgPicture.asset(Assets.imagesEditProfileIcon),
